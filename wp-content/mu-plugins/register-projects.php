@@ -16,6 +16,7 @@ add_action('init', function () {
     'label' => __('Project'),
     'description' => __('Post Type Description'),
     'labels' => $labels,
+    'show_in_rest' => true,
     'supports' => ['title', 'editor'],
     'hierarchical' => false,
     'public' => true,

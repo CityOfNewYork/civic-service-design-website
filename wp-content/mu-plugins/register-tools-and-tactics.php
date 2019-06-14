@@ -18,6 +18,7 @@ add_action('init', function () {
       introduction to service design for public servants, and a set of \
       practical ways to include design methods in your work.'),
     'labels' => $labels,
+    'show_in_rest' => true,
     'supports' => ['title', 'editor'],
     'hierarchical' => false,
     'public' => true,
