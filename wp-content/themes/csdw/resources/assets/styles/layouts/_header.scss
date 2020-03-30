@@ -1,0 +1,23 @@
+.site-header {
+  max-width: 1160px;
+  margin: 38px auto;
+  background-color: #fbd9ff;
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-branding {
+    display: flex;
+    align-items: center;
+  }
+
+  &-nav {
+    display: flex;
+  }
+
+  &-logo {
+    background-color: #284cca;
+  }
+}
