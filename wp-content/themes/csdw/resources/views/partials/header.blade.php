@@ -20,7 +20,7 @@
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
       @endif
         <button type="button" class="btn searchButton searchButton-header" title="Search button">
-          <i class="fas fa-search" aria-hidden="true"></i>Search
+          Search
         </button>
     </nav>
 
