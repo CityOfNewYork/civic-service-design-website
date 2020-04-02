@@ -1,0 +1,38 @@
+.tactics-section {
+  padding-bottom: 53px;
+
+  .section-header {
+    margin-bottom: 103px;
+  }
+
+  .row {
+    margin: 0 -20px;
+  }
+}
+
+.tactic-item {
+  width: calc(33.3333% - 40px);
+  background: #f9a5da;
+  backdrop-filter: blur(20px);
+  border: 4px solid #24325b;
+  text-align: center;
+  padding: 90px 15px 117px;
+  margin: 0 20px 45px;
+  color: $text-color;
+
+  @include transition();
+
+  &__tag {
+    font-size: 14px;
+    line-height: 1.5;
+    color: $text-color;
+  }
+
+  &__title {
+    display: block;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 1.1;
+    color: $text-color;
+  }
+}

@@ -1,0 +1,127 @@
+article,
+header,
+main {
+  display: block;
+}
+
+html,
+body {
+  .hiddens {
+    overflow: hidden;
+  }
+}
+
+body {
+  font-size: #{$default-font-size};
+  position: relative;
+  line-height: 1.4;
+  font-family: #{$default-font};
+  overflow-x: hidden;
+  color: #{$text-color};
+  background-color: #{$body-background};
+}
+
+a {
+  text-decoration: none;
+
+  @include transition();
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: auto;
+
+  &.img-width {
+    width: 100%;
+  }
+}
+
+.type-h1,
+.type-h2,
+h1,
+h2 {
+  font-family: #{$default-font};
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.searchButton {
+  font-size: 0;
+  background: #fc5d52;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-radius: 0;
+
+  &-header {
+    width: 83px;
+  }
+
+  &-section {
+    position: absolute;
+    right: 0;
+    top: 1px;
+    height: calc(100% - 2px);
+    padding: 15px;
+  }
+
+  &:hover {
+    background-color: #ff4336;
+  }
+}
+
+.btn {
+  border-radius: 0;
+
+  &-red {
+    background: #fc5d52;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    padding: 27px 34px;
+
+    &:visited,
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &-secondary {
+    border: 2px solid $text-color;
+    background: transparent;
+    padding: 25px 35px;
+    font-size: 18px;
+    color: $text-color;
+
+    &:hover,
+    &:visited,
+    &:link {
+      background-color: $text-color;
+      color: #fff;
+    }
+  }
+}
+
+.hover-state {
+  @include transition();
+
+  &:hover {
+    box-shadow: 9px 9px 0 0 #24325b, 0 0 0 3px hsla(0, 0%, 100%, 0);
+  }
+}

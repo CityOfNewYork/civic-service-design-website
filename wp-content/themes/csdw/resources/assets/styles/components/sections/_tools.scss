@@ -1,0 +1,46 @@
+.tools-section {
+  padding-bottom: 30px;
+
+  .section-header {
+    margin-bottom: 103px;
+  }
+
+  .row {
+    margin: 0 -20px;
+  }
+
+  .load-more-wrapper {
+    margin-top: 30px;
+  }
+}
+
+.tool-item {
+  width: calc(33.3333% - 40px);
+  background: transparent;
+  backdrop-filter: blur(20px);
+  border: 4px solid #24325b;
+  text-align: center;
+  padding: 18px 15px 45px;
+  margin: 0 20px 64px;
+  color: $text-color;
+
+  @include transition();
+
+  &__tag {
+    font-size: 14px;
+    line-height: 1.5;
+    color: $text-color;
+  }
+
+  &__title {
+    display: block;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1.25;
+    color: $text-color;
+  }
+
+  &__img {
+    margin-top: 30px;
+  }
+}

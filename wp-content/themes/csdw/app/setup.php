@@ -11,8 +11,9 @@ use Roots\Sage\Template\BladeProvider;
  * Theme assets
  */
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
     wp_enqueue_style('nyc-patterns', 'https://cdn.jsdelivr.net/gh/cityofnewyork/access-nyc-patterns@v0.1.0/dist/styles/site-default.css', false, null);
+    wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
+
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
@@ -78,10 +79,10 @@ add_action('after_setup_theme', function () {
  */
 add_action('widgets_init', function () {
     $config = [
-        'before_widget' => '<section class="widget %1$s %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h3>',
-        'after_title'   => '</h3>'
+        'before_widget' => '<div class="widget-wrapper">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<div class="widget-title">',
+        'after_title'   => '</div>'
     ];
     register_sidebar([
         'name'          => __('Primary', 'sage'),
@@ -131,3 +132,108 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+/**
+ * Setup Custom Post Types
+ */
+add_action('init', function () {
+    $labels = array(
+        'name' => __('Phases'),
+        'singular_name' => __('Phase')
+    );
+
+    register_post_type('phases', array(
+        'label' => __('Phase'),
+        'description' => __('Phase Description'),
+        'labels' => $labels,
+        'show_in_rest' => true,
+        'supports' => ['title', 'editor', 'thumbnail'],
+        'hierarchical' => false,
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 16,
+        'menu_icon' => 'dashicons-networking',
+        'show_in_admin_bar' => true,
+        'show_in_nav_menus' => true,
+        'can_export' => true,
+        'has_archive' => true,
+        'exclude_from_search' => false,
+        'publicly_queryable' => true,
+        'capability_type' => 'post'
+    ));
+
+    $labels = array(
+        'name' => __('Tactics'),
+        'singular_name' => __('Tactic')
+    );
+
+    register_post_type('tactics', array(
+        'label' => __('Tactic'),
+        'description' => __('Tactic Description'),
+        'labels' => $labels,
+        'show_in_rest' => true,
+        'supports' => ['title', 'editor', 'thumbnail'],
+        'hierarchical' => false,
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 17,
+        'menu_icon' => 'dashicons-list-view',
+        'show_in_admin_bar' => true,
+        'show_in_nav_menus' => true,
+        'can_export' => true,
+        'has_archive' => true,
+        'exclude_from_search' => false,
+        'publicly_queryable' => true,
+        'capability_type' => 'post'
+    ));
+
+    $labels = array(
+        'name' => __('Tools'),
+        'singular_name' => __('Tool')
+    );
+
+    register_post_type('tools', array(
+        'label' => __('Tool'),
+        'description' => __('Tool Description'),
+        'labels' => $labels,
+        'show_in_rest' => true,
+        'supports' => ['title', 'editor', 'thumbnail'],
+        'hierarchical' => false,
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 18,
+        'menu_icon' => 'dashicons-hammer',
+        'show_in_admin_bar' => true,
+        'show_in_nav_menus' => true,
+        'can_export' => true,
+        'has_archive' => true,
+        'exclude_from_search' => false,
+        'publicly_queryable' => true,
+        'capability_type' => 'post'
+    ));
+}, 0);
+
+/**
+ * Setup Image Sizes
+ */
+if ( function_exists( 'add_image_size' ) ) {
+    add_image_size( 'Phase Listing', 149, 135, true );
+    add_image_size( 'Tools Listing', 210, 178, true );
+}
+
+/**
+ * Setup ACF Options Pages
+ */
+if ( function_exists( 'acf_add_options_page' ) ) {
+
+    $general_settings_parent = acf_add_options_page(array(
+        'page_title' => 'Theme Settings',
+        'menu_title' => 'Theme Settings',
+        'redirect' => false,
+        'icon_url' => 'dashicons-admin-generic',
+    ));
+
+}

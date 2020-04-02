@@ -1,0 +1,42 @@
+.section {
+  padding: 100px 0;
+
+  &-pink-30t {
+    background-color: #fff0fe;
+  }
+
+  &-header {
+    text-align: center;
+
+    &--left {
+      text-align: left;
+      margin-bottom: 85px;
+    }
+
+    &__row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .button-wrapper {
+      margin-top: 5px;
+    }
+  }
+
+  &-title {
+    font-weight: bold;
+    font-size: 62px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+
+  &-description {
+    line-height: 1.65;
+    max-width: 701px;
+  }
+
+  .load-more-wrapper {
+    text-align: center;
+    margin-top: 68px;
+  }
+}

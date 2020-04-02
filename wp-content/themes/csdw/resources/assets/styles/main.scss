@@ -1,4 +1,6 @@
 @import "common/variables";
+@import "common/fonts";
+@import "_mixins/transition";
 
 /** Import everything from autoload */
 @import "./autoload/**/*";
@@ -13,10 +15,16 @@
 
 /** Import theme styles */
 @import "common/global";
-@import "components/buttons";
 @import "components/comments";
 @import "components/forms";
 @import "components/wp-classes";
+@import "components/page_header";
+@import "components/sections/section_global";
+@import "components/sections/search";
+@import "components/sections/phases";
+@import "components/sections/tactics";
+@import "components/sections/tools";
+@import "components/sections/goals";
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";

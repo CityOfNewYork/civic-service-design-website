@@ -1,0 +1,54 @@
+.phases-section {
+  padding-bottom: 36px;
+
+  .row {
+    //justify-content: space-between;
+    margin: 0 -20px;
+  }
+}
+
+.phase-item {
+  width: calc(33.3333% - 40px);
+  background: #24325b;
+  backdrop-filter: blur(20px);
+  border-radius: 50%;
+  text-align: center;
+  padding: 53px 15px 70px;
+  margin: 0 20px 50px;
+  color: #fff;
+
+  @include transition();
+
+  &__tag {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  &__title {
+    display: block;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1.25;
+    margin-bottom: 30px;
+    color: #fff;
+
+    &:visited {
+      color: #fff;
+    }
+  }
+
+  &__image {
+    a {
+      display: block;
+    }
+  }
+
+  &:hover {
+    background-color: #fff;
+    color: #24325b;
+
+    a {
+      color: #24325b;
+    }
+  }
+}

@@ -30,4 +30,13 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+    public function footerFields()
+    {
+        return [
+            'footer_logo' => get_field( 'footer_logo', 'option' ),
+            'middle_section' => get_field( 'middle_section', 'option' ),
+            'bottom_section' => get_field( 'bottom_section', 'option' ),
+        ];
+    }
 }

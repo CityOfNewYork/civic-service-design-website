@@ -1,0 +1,3 @@
+@mixin transition($rule: all, $time: 0.25s, $delay: ease) {
+  transition: $rule $time $delay;
+}

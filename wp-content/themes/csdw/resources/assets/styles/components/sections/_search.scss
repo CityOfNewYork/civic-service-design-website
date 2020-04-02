@@ -1,0 +1,42 @@
+.search-section {
+  padding: 95px 0 60px;
+  background: #fbd9ff;
+
+  .row {
+    justify-content: space-between;
+  }
+
+  .item {
+    width: 100%;
+    max-width: 200px;
+
+    &__title {
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 1.5;
+    }
+
+    &__description {
+      font-size: 20px;
+      line-height: 1.2;
+    }
+  }
+}
+
+.search-block {
+  margin-bottom: -35px;
+  padding: 30px 48px;
+  background: #24325b;
+  position: relative;
+  z-index: 1;
+
+  &__form {
+    position: relative;
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 16px;
+    }
+  }
+}
