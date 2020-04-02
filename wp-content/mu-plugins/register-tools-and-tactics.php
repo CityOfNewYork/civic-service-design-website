@@ -5,7 +5,7 @@
  * Description: Configuration and registration for the Tools and Tactics custom post type.
  * Author: NYC Opportunity
  */
-
+/*
 add_action('init', function () {
   $labels = array(
     'name' => __('Tools and Tactics'),
@@ -34,3 +34,4 @@ add_action('init', function () {
     'capability_type' => 'post'
   ));
 }, 0);
+*/

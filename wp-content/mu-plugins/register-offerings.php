@@ -5,7 +5,7 @@
  * Description: Configuration and registration for the Offerings custom post type.
  * Author: NYC Opportunity
  */
-
+/*
 add_action('init', function () {
   $labels = array(
     'name' => __('Offerings'),
@@ -32,3 +32,4 @@ add_action('init', function () {
     'capability_type' => 'post'
   ));
 }, 0);
+*/
