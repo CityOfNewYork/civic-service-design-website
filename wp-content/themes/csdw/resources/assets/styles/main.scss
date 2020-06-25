@@ -12,22 +12,26 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 // @import "~some-node-module";
+@import "../../../node_modules/codyhouse-framework/main/assets/css/base";
 
 /** Import theme styles */
 @import "common/global";
+@import "common/print";
+@import "common/_header_animation";
 @import "components/comments";
 @import "components/forms";
 @import "components/wp-classes";
+@import "components/breadcrumbs";
 @import "components/page_header";
-@import "components/sections/section_global";
-@import "components/sections/search";
-@import "components/sections/phases";
-@import "components/sections/tactics";
-@import "components/sections/tools";
-@import "components/sections/goals";
+@import "components/banner";
+@import "components/sections/*";
+@import "components/sections/_playlists";
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";
 @import "layouts/pages";
 @import "layouts/posts";
+@import "layouts/phase-single";
+@import "layouts/pages/*";
+@import "layouts/pages/search";
 @import "layouts/tinymce";

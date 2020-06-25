@@ -136,3 +136,89 @@ function display_sidebar()
     isset($display) || $display = apply_filters('sage/display_sidebar', false);
     return $display;
 }
+
+function theme_excerpt( $post, $lenght = 80, $more = '' )
+{
+    $_post = get_post( $post );
+    if( !empty( trim($_post->post_excerpt) )  ) {
+        return wp_strip_all_tags( $_post->post_excerpt );
+    } else {
+        $post_content = wp_strip_all_tags( $_post->post_content, true );
+        if( strlen($post_content) < $lenght ) {
+            return $post_content;
+        }
+        $key = strpos( $post_content, ' ', $lenght );
+        return mb_strimwidth( $post_content, 0, $key ).$more;
+    }
+}
+
+function available_post_types_for_breadcrumb() {
+    return $available_post_types = [
+        'phases',
+        'tactics',
+        'goals',
+        'tools',
+        'playlists'
+    ];
+}
+
+function theme_breadcrumb() {
+    if ( function_exists('yoast_breadcrumb') ) {
+        $available_post_types = available_post_types_for_breadcrumb();
+
+        if( is_singular($available_post_types) ) {
+            return yoast_breadcrumb( '<div id="breadcrumbs">','</p>', false );
+        }
+    }
+    return false;
+};
+
+function post_categories_list( $post_id ) {
+    $categories_list = wp_strip_all_tags( get_the_category_list( esc_html__( ', ', 'CSDW' ), '', $post_id ) );
+    if ( $categories_list ) {
+        return $categories_list;
+    }
+    return false;
+}
+
+function get_previous_url_for_breadcrumbs() {
+    $referer = $_SERVER['HTTP_REFERER'];
+    return false;
+}
+
+
+function off_site_attrs( $bool ) {
+    $return = false;
+
+    if( $bool ) {
+        return "target='_blank' rel='noopener noreferrer'";
+    }
+
+    return $return;
+}
+
+function theme_load_more_button() {
+    if ( $GLOBALS['wp_query']->max_num_pages > 1 ) {
+        ob_start();
+        ?>
+        <div class="btn-wrapper btn-loadmore">
+            <button class="btnLoadmore btn btn-secondary"><span>Load more</span></button>
+        </div>
+        <?php
+        return ob_get_clean();
+    }
+    return false;
+}
+
+function post_type_singular_name($post_type) {
+    if ($post_type == 'post') {
+        return "News";
+    }
+
+    $postType = get_post_type_object($post_type);
+    if ($postType) {
+        return esc_html($postType->labels->singular_name);
+    }
+
+    return false;
+}

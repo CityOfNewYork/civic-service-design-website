@@ -11,10 +11,23 @@ use Roots\Sage\Template\BladeProvider;
  * Theme assets
  */
 add_action('wp_enqueue_scripts', function () {
+    global $wp_query;
+
     wp_enqueue_style('nyc-patterns', 'https://cdn.jsdelivr.net/gh/cityofnewyork/access-nyc-patterns@v0.1.0/dist/styles/site-default.css', false, null);
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
 
+
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
+    $translation_array = array( 'templateUrl' => get_stylesheet_directory_uri() );
+//after wp_enqueue_script
+    wp_localize_script( 'sage/main.js', 'path', $translation_array );
+    wp_localize_script( 'sage/main.js', 'loadmore_params', array(
+        'ajaxurl' => admin_url( 'admin-ajax.php' ),
+        'posts' => json_encode( $wp_query->query_vars ),
+        'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
+        'max_page' => $wp_query->max_num_pages
+    ) );
+    //wp_enqueue_script('sage/tutorial.js', get_template_directory_uri(). '/assets/libs/tutorial.js', ['jquery'], null, true);
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
@@ -152,7 +165,7 @@ add_action('init', function () {
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
-        'menu_position' => 16,
+        'menu_position' => 12,
         'menu_icon' => 'dashicons-networking',
         'show_in_admin_bar' => true,
         'show_in_nav_menus' => true,
@@ -178,7 +191,7 @@ add_action('init', function () {
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
-        'menu_position' => 17,
+        'menu_position' => 13,
         'menu_icon' => 'dashicons-list-view',
         'show_in_admin_bar' => true,
         'show_in_nav_menus' => true,
@@ -204,8 +217,112 @@ add_action('init', function () {
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
-        'menu_position' => 18,
+        'menu_position' => 14,
         'menu_icon' => 'dashicons-hammer',
+        'show_in_admin_bar' => true,
+        'show_in_nav_menus' => true,
+        'can_export' => true,
+        'has_archive' => true,
+        'exclude_from_search' => false,
+        'publicly_queryable' => true,
+        'capability_type' => 'post'
+    ));
+
+    $labels = array(
+        'name' => __('Goals'),
+        'singular_name' => __('Goal')
+    );
+
+    register_post_type('goals', array(
+        'label' => __('Goal'),
+        'description' => __('Goal Description'),
+        'labels' => $labels,
+        'show_in_rest' => true,
+        'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
+        'hierarchical' => false,
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 15,
+        'menu_icon' => 'dashicons-pressthis',
+        'show_in_admin_bar' => true,
+        'show_in_nav_menus' => true,
+        'can_export' => true,
+        'has_archive' => true,
+        'exclude_from_search' => false,
+        'publicly_queryable' => true,
+        'capability_type' => 'post'
+    ));
+
+    $labels = array(
+        'name' => __('Playlists'),
+        'singular_name' => __('Playlist')
+    );
+
+    register_post_type('playlists', array(
+        'label' => __('Playlist'),
+        'description' => __('Playlist Description'),
+        'labels' => $labels,
+        'show_in_rest' => true,
+        'supports' => ['title'],
+        'hierarchical' => false,
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 16,
+        'menu_icon' => 'dashicons-controls-play',
+        'show_in_admin_bar' => true,
+        'show_in_nav_menus' => true,
+        'can_export' => true,
+        'has_archive' => true,
+        'exclude_from_search' => false,
+        'publicly_queryable' => true,
+        'capability_type' => 'post'
+    ));
+
+    $labels = array(
+        'name' => __('Projects'),
+        'singular_name' => __('Project')
+    );
+
+    register_post_type('projects', array(
+        'label' => __('Project'),
+        'description' => __('Project Description'),
+        'labels' => $labels,
+        'show_in_rest' => true,
+        'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
+        'hierarchical' => false,
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 17,
+        'menu_icon' => 'dashicons-images-alt2',
+        'show_in_admin_bar' => true,
+        'show_in_nav_menus' => true,
+        'can_export' => true,
+        'has_archive' => true,
+        'exclude_from_search' => false,
+        'publicly_queryable' => true,
+        'capability_type' => 'post'
+    ));
+
+    $labels = array(
+        'name' => __('Offerings'),
+        'singular_name' => __('Offering')
+    );
+
+    register_post_type('offerings', array(
+        'label' => __('Offering'),
+        'description' => __('Offering Description'),
+        'labels' => $labels,
+        'show_in_rest' => true,
+        'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
+        'hierarchical' => false,
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 18,
+        'menu_icon' => 'dashicons-universal-access-alt',
         'show_in_admin_bar' => true,
         'show_in_nav_menus' => true,
         'can_export' => true,
@@ -220,8 +337,19 @@ add_action('init', function () {
  * Setup Image Sizes
  */
 if ( function_exists( 'add_image_size' ) ) {
-    add_image_size( 'Phase Listing', 149, 135, true );
-    add_image_size( 'Tools Listing', 210, 178, true );
+    add_image_size( 'Phase Listing',             149, 135, true );
+    add_image_size( 'Phase Thumbnail',           46, 42, true );
+    add_image_size( 'Tools Listing',             210, 178, true );
+    add_image_size( 'Posts Listing',             340, 205, true );
+    add_image_size( 'Posts Listing Full Type',   768, 339, true );
+    add_image_size( 'Resources Listing',         354, 229, true );
+    add_image_size( 'Tools Sidebar Listing',     409, 295, true );
+    add_image_size( 'Homepage OpenCall Listing', 555, 555, true );
+    add_image_size( 'Team Listing',              350, 350, true );
+    add_image_size( 'Project Listing',           506, 311, true );
+    add_image_size( 'How We Work Small',         409, 409, true );
+    add_image_size( 'How We Work Large',         700, 409, true );
+    add_image_size( 'Search Results',            284, 284, true );
 }
 
 /**
@@ -236,4 +364,52 @@ if ( function_exists( 'acf_add_options_page' ) ) {
         'icon_url' => 'dashicons-admin-generic',
     ));
 
+    acf_add_options_sub_page(array(
+        'title'      => 'Phases Settings',
+        'parent'     => 'edit.php?post_type=phases',
+        'capability' => 'edit_posts'
+    ));
+
+    acf_add_options_sub_page(array(
+        'title'      => 'Goals Settings',
+        'parent'     => 'edit.php?post_type=goals',
+        'capability' => 'edit_posts'
+    ));
+
+    acf_add_options_sub_page(array(
+        'title'      => 'Tactics Settings',
+        'parent'     => 'edit.php?post_type=tactics',
+        'capability' => 'edit_posts'
+    ));
+
+    acf_add_options_sub_page(array(
+        'title'      => 'Tools Settings',
+        'parent'     => 'edit.php?post_type=tools',
+        'capability' => 'edit_posts'
+    ));
+
+    acf_add_options_sub_page(array(
+        'title'      => 'Playlists Settings',
+        'parent'     => 'edit.php?post_type=playlists',
+        'capability' => 'edit_posts'
+    ));
+
+    acf_add_options_sub_page(array(
+        'title'      => 'Projects Settings',
+        'parent'     => 'edit.php?post_type=projects',
+        'capability' => 'edit_posts'
+    ));
+
+    acf_add_options_sub_page(array(
+        'title'      => 'Offerings Settings',
+        'parent'     => 'edit.php?post_type=offerings',
+        'capability' => 'edit_posts'
+    ));
+
 }
+
+add_filter('get_search_form', function () {
+    $form = '';
+    echo template('partials.site-search-form');
+    return $form;
+});

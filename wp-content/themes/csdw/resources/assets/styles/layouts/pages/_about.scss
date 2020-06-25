@@ -1,0 +1,42 @@
+.about-header {
+  background: #fff;
+  padding: 129px 0 220px;
+
+  &__content {
+    max-width: 660px;
+    margin: auto;
+  }
+}
+
+.template-about {
+  .post-thumbnail {
+    margin-top: -67px;
+    position: relative;
+    padding-bottom: 100px;
+  }
+}
+
+.about-content-section {
+  padding-bottom: 90px;
+}
+
+@media (max-width: 767.98px) {
+  .about-header {
+    padding-top: 63px;
+    padding-bottom: 115px;
+
+    &__title {
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .template-about .post-thumbnail {
+    padding-bottom: 50px;
+  }
+
+  .about-content-section {
+    padding-bottom: 76px;
+  }
+}

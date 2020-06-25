@@ -3,6 +3,7 @@ module.exports = {
   'extends': 'eslint:recommended',
   'globals': {
     'wp': true,
+    'loadmore_params': true
   },
   'env': {
     'node': true,

@@ -1,0 +1,177 @@
+.section-team {
+  padding: 90px 0 70px;
+
+  .section-header {
+    margin-bottom: 119px;
+  }
+
+  .section-title {
+    font-size: 78px;
+  }
+}
+
+.person {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 -15px 161px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__thumbnail {
+    width: calc(37.5% - 30px);
+    max-width: 350px;
+    margin: 0 15px;
+    padding-top: 25px;
+
+    img {
+      border-radius: 100%;
+    }
+  }
+
+  &__info {
+    width: calc(62.5% - 30px);
+    margin: 0 15px;
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 1.42;
+  }
+
+  &__position {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+  }
+
+  &__social-networks {
+    margin-top: 26px;
+    display: flex;
+  }
+
+  &__social-network-item {
+    margin-right: 20px;
+    font-size: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    svg {
+      path {
+        @include transition;
+      }
+    }
+
+    &:hover {
+      svg {
+        path {
+          fill: #284cca;
+        }
+      }
+    }
+
+    a {
+      display: block;
+    }
+  }
+
+  .button-wrapper {
+    display: none;
+    margin-top: 35px;
+
+    .btn {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section-team {
+    .section-title {
+      font-size: 68px;
+      line-height: 68px;
+    }
+
+    .section-header {
+      margin-bottom: 50px;
+    }
+  }
+
+  .person {
+    margin-bottom: 95px;
+
+    &__name {
+      font-size: 38px;
+      line-height: 1.1;
+    }
+  }
+}
+
+@media (min-width: 576.98px) {
+  .person__description {
+    display: block !important;
+  }
+}
+
+@media (max-width: 576.98px) {
+  .person {
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+
+    &__thumbnail,
+    &__info {
+      width: 100%;
+      max-width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &__thumbnail {
+      margin-bottom: 38px;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__name,
+    &__position {
+      text-align: center;
+    }
+
+    &__name {
+      order: 1;
+      margin-bottom: 13px;
+    }
+
+    &__position {
+      order: 2;
+    }
+
+    &__description {
+      order: 4;
+      display: none;
+      margin-top: 35px;
+    }
+
+    &__social-networks {
+      order: 3;
+      justify-content: center;
+      margin-top: 0;
+    }
+
+    .button-wrapper {
+      order: 5;
+      display: block;
+    }
+  }
+}

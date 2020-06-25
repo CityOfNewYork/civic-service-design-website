@@ -16,7 +16,7 @@
   backdrop-filter: blur(20px);
   border: 4px solid #24325b;
   text-align: center;
-  padding: 90px 15px 117px;
+  padding: 90px 45px 117px;
   margin: 0 20px 45px;
   color: $text-color;
 
@@ -34,5 +34,38 @@
     font-size: 48px;
     line-height: 1.1;
     color: $text-color;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .tactics-section {
+    .row {
+      margin: 0 -15px;
+    }
+
+    .section-header {
+      margin-bottom: 85px;
+    }
+  }
+
+  .tactic-item {
+    width: calc(50% - 30px);
+    margin: 0 15px 50px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .tactic-item {
+    padding: 95px 15px 130px;
+
+    &__title {
+      font-size: 38px;
+    }
+  }
+}
+
+@media (max-width: 576.98px) {
+  .tactic-item {
+    width: 100%;
   }
 }

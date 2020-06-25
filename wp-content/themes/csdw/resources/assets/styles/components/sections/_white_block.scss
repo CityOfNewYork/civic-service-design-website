@@ -1,0 +1,180 @@
+.section-white_block {
+  padding: 118px 0 70px;
+}
+
+.white_block {
+  width: calc(100% - 18px);
+  position: relative;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    border: 5px solid #24325b;
+    width: 100%;
+    height: 100%;
+    top: 18px;
+    right: -18px;
+    background: #fff;
+  }
+
+  &__wrapper {
+    border: 5px solid #24325b;
+    position: relative;
+    padding: 56px 0 93px;
+    background: #fff;
+
+    &--faq {
+      padding-bottom: 85px;
+    }
+
+    &--sidebar {
+      padding: 48px 40px 68px;
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    width: 163px;
+    height: 163px;
+    top: -93px;
+    left: -82px;
+
+    img,
+    svg {
+      border-radius: 100%;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 78px;
+    line-height: 1;
+    padding: 0 40px 42px 61px;
+    margin-bottom: 37px;
+    position: relative;
+    color: #24325b;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: calc(100% - 134px);
+      margin: 0 67px;
+      height: 2px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $navy;
+    }
+
+    &--faq {
+      padding-top: 2px;
+      padding-left: 68px;
+      padding-bottom: 0;
+      margin-bottom: 59px;
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &__content {
+    padding: 0 67px;
+  }
+}
+
+.faq-item {
+  padding-top: 43px;
+  border-top: 2px solid $navy;
+  margin-bottom: 52px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__question {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1.5;
+    color: $navy;
+    margin-bottom: 25px;
+  }
+
+  &__answer {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 1299.98px) {
+  .white_block {
+    &__circle {
+      left: 3px;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section-white_block {
+    padding-top: 62px;
+  }
+
+  .white_block {
+    &__wrapper {
+      padding: 76px 20px 55px;
+
+      &--faq {
+        padding-top: 17px;
+        padding-bottom: 40px;
+      }
+
+      &--sidebar {
+        padding-top: 44px;
+        padding-bottom: 64px;
+      }
+    }
+
+    &__title {
+      font-size: 38px;
+      line-height: 1.1;
+      padding: 0 0 22px;
+      margin-bottom: 22px;
+
+      &--faq {
+        padding: 0;
+        margin-bottom: 21px;
+      }
+
+      &::after {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+
+    &__content {
+      padding: 0;
+    }
+
+    &__circle {
+      width: 121px;
+      height: 121px;
+      top: -60px;
+    }
+  }
+
+  .faq-item {
+    padding-top: 22px;
+    margin-bottom: 29px;
+
+    &__question {
+      font-size: 17px;
+      margin-bottom: 28px;
+    }
+
+    &__answer {
+      line-height: 1.55;
+      padding-right: 2px;
+    }
+  }
+}

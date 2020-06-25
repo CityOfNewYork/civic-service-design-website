@@ -1,0 +1,40 @@
+.related-section {
+  padding-top: 115px;
+  padding-bottom: 130px;
+  background: #fff;
+
+  .row {
+    margin: 0 -20px;
+  }
+
+  .section-header {
+    margin-bottom: 95px;
+  }
+
+  .section-title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .related-section {
+    padding-top: 45px;
+    padding-bottom: 30px;
+
+    .row {
+      margin: 0 -15px;
+    }
+
+    .section-header {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .related-section {
+    .section-title {
+      font-size: 38px;
+    }
+  }
+}

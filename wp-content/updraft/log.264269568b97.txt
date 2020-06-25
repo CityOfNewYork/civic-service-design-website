@@ -1,0 +1,468 @@
+0000.000 (0) Opened log file at time: Thu, 02 Apr 2020 14:53:07 +0000 on http://csdw.loc
+0000.002 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.23 WP: 5.4 PHP: 7.3.12-1+ubuntu16.04.1+deb.sury.org+1 (apache2handler, Linux singree24 4.4.0-176-generic #206-Ubuntu SMP Fri Feb 28 05:02:04 UTC 2020 x86_64) MySQL: 5.7.29-0ubuntu0.16.04.1 WPLANG: en_US Server: Apache/2.4.18 (Ubuntu) safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 5.1M | 2M) multisite: N openssl: OpenSSL 1.1.1d  10 Sep 2019 mcrypt: N LANG: C ZipArchive::addFile: Y
+0000.003 (0) Free space on disk containing Updraft's temporary directory: 10692.7 MB
+0000.004 (0) Tasks: Backup files: 1 (schedule: unset) Backup DB: 0 (schedule: unset)
+0000.006 (0) Semaphore (f, wp_options) being initialised
+0000.008 (0) Requesting semaphore lock (f) (apparently not via scheduler)
+0000.012 (0) Set semaphore last lock (f) time to 2020-04-02 14:53:07
+0000.013 (0) Semaphore lock (f) complete
+0000.017 (0) Backup run: resumption=0, nonce=264269568b97, file_nonce=264269568b97 begun at=1585839187 (0s ago), job type=backup
+0000.020 (0) Scheduling a resumption (1) after 300 seconds (1585839487) in case this run gets aborted
+0000.022 (0) Checking if we have a zip executable available
+0000.023 (0) Testing: /usr/bin/zip
+0000.027 (0) Output: zip warning: binziptest/test.zip not found or empty
+0000.029 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.030 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.031 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=131) (out=107) (deflated 18%)
+0000.032 (0) Output: total bytes=131, compressed=107 -> 18% savings
+0000.036 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=138) (out=113) (deflated 18%)
+0000.038 (0) Output: total bytes=269, compressed=220 -> 18% savings
+0000.039 (0) Working binary zip found: /usr/bin/zip
+0000.042 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.043 (0) Creation of backups of directories: beginning
+0000.045 (0) No backup of plugins: excluded by user's options
+0000.047 (0) Beginning creation of dump of themes (split every: 400 MB)
+0000.050 (0) /home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/resources/assets/images/temp/Illustration_Example.png: unreadable file
+0000.052 (0) [Warning] themes/csdw/resources/assets/images/temp/Illustration_Example.png: unreadable file - could not be backed up
+0000.292 (0) Total entities for the zip file: 5352 directories, 28993 files (0 skipped as non-modified), 216.8 MB
+0000.297 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0000.301 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0000.304 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 300 files added (on-disk size: 0 KB)
+0000.308 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 400 files added (on-disk size: 0 KB)
+0000.311 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 500 files added (on-disk size: 0 KB)
+0000.312 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.5 MB, 28993 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0000.578 (0) backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: size is now: 2.70 MB
+0000.582 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/vendor/squizlabs/php_codesniffer/scripts/phpcbf add_as=themes/csdw/vendor/bin/phpcbf
+0000.582 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/vendor/squizlabs/php_codesniffer/scripts/phpcs add_as=themes/csdw/vendor/bin/phpcs
+0000.582 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 600 files added (on-disk size: 2741.3 KB)
+0000.586 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 700 files added (on-disk size: 2741.3 KB)
+0000.589 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 800 files added (on-disk size: 2741.3 KB)
+0000.593 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 900 files added (on-disk size: 2741.3 KB)
+0000.596 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 1000 files added (on-disk size: 2741.3 KB)
+0000.598 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.6 MB, 28993 files batched, 501 (1002) added so far); re-opening (prior size: 2741.3 KB)
+0000.779 (0) backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: size is now: 3.20 MB
+0000.787 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 1100 files added (on-disk size: 3292.5 KB)
+0000.790 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 1200 files added (on-disk size: 3292.5 KB)
+0000.795 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 1300 files added (on-disk size: 3292.5 KB)
+0000.800 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 1400 files added (on-disk size: 3292.5 KB)
+0000.805 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 1500 files added (on-disk size: 3292.5 KB)
+0000.806 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.7 MB, 28993 files batched, 501 (1503) added so far); re-opening (prior size: 3292.5 KB)
+0001.000 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 1600 files added (on-disk size: 3820.4 KB)
+0001.004 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 1700 files added (on-disk size: 3820.4 KB)
+0001.007 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 1800 files added (on-disk size: 3820.4 KB)
+0001.010 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 1900 files added (on-disk size: 3820.4 KB)
+0001.013 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 2000 files added (on-disk size: 3820.4 KB)
+0001.015 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.4 MB, 28993 files batched, 501 (2004) added so far); re-opening (prior size: 3820.4 KB)
+0001.144 (0) backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: size is now: 4.60 MB
+0001.150 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 2100 files added (on-disk size: 4733.2 KB)
+0001.153 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 2200 files added (on-disk size: 4733.2 KB)
+0001.157 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 2300 files added (on-disk size: 4733.2 KB)
+0001.159 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/mime/cli.js add_as=themes/csdw/node_modules/browsersync-webpack-plugin/node_modules/webpack-dev-middleware/node_modules/.bin/mime
+0001.160 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 2400 files added (on-disk size: 4733.2 KB)
+0001.164 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 2500 files added (on-disk size: 4733.2 KB)
+0001.164 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3 MB, 28993 files batched, 501 (2505) added so far); re-opening (prior size: 4733.2 KB)
+0001.350 (0) backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: size is now: 5.70 MB
+0001.369 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 2600 files added (on-disk size: 5840.7 KB)
+0001.373 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 2700 files added (on-disk size: 5840.7 KB)
+0001.376 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 2800 files added (on-disk size: 5840.7 KB)
+0001.380 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 2900 files added (on-disk size: 5840.7 KB)
+0001.382 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 3000 files added (on-disk size: 5840.7 KB)
+0001.384 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.6 MB, 28993 files batched, 501 (3006) added so far); re-opening (prior size: 5840.7 KB)
+0001.455 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 3100 files added (on-disk size: 6200.6 KB)
+0001.458 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 3200 files added (on-disk size: 6200.6 KB)
+0001.460 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/svgo/bin/svgo add_as=themes/csdw/node_modules/imagemin-svgo/node_modules/.bin/svgo
+0001.461 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/mkdirp/bin/cmd.js add_as=themes/csdw/node_modules/node-sass/node_modules/.bin/mkdirp
+0001.461 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/js-yaml/bin/js-yaml.js add_as=themes/csdw/node_modules/stylelint/node_modules/cosmiconfig/node_modules/.bin/js-yaml
+0001.461 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 3300 files added (on-disk size: 6200.6 KB)
+0001.463 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/rc/cli.js add_as=themes/csdw/node_modules/.bin/rc
+0001.464 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/escodegen/bin/escodegen.js add_as=themes/csdw/node_modules/.bin/escodegen
+0001.464 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/escodegen/bin/esgenerate.js add_as=themes/csdw/node_modules/.bin/esgenerate
+0001.465 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 3400 files added (on-disk size: 6200.6 KB)
+0001.468 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/eslint/bin/eslint.js add_as=themes/csdw/node_modules/.bin/eslint
+0001.468 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/webpack/bin/webpack.js add_as=themes/csdw/node_modules/browsersync-webpack-plugin/node_modules/webpack-dev-middleware/node_modules/.bin/webpack
+0001.468 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 3500 files added (on-disk size: 6200.6 KB)
+0001.470 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.4 MB, 28993 files batched, 501 (3507) added so far); re-opening (prior size: 6200.6 KB)
+0001.649 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 3600 files added (on-disk size: 7064 KB)
+0001.652 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 3700 files added (on-disk size: 7064 KB)
+0001.655 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/uglify-js/bin/uglifyjs add_as=themes/csdw/node_modules/.bin/uglifyjs
+0001.656 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 3800 files added (on-disk size: 7064 KB)
+0001.658 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/webpack/node_modules/acorn/bin/acorn add_as=themes/csdw/node_modules/webpack/node_modules/.bin/acorn
+0001.659 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 3900 files added (on-disk size: 7064 KB)
+0001.662 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 4000 files added (on-disk size: 7064 KB)
+0001.664 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5.6 MB, 28993 files batched, 501 (4008) added so far); re-opening (prior size: 7064 KB)
+0001.956 (0) backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: size is now: 8.40 MB
+0001.962 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 4100 files added (on-disk size: 8638.8 KB)
+0001.967 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 4200 files added (on-disk size: 8638.8 KB)
+0001.970 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 4300 files added (on-disk size: 8638.8 KB)
+0001.974 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 4400 files added (on-disk size: 8638.8 KB)
+0001.978 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 4500 files added (on-disk size: 8638.8 KB)
+0001.981 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.1 MB, 28993 files batched, 501 (4509) added so far); re-opening (prior size: 8638.8 KB)
+0002.226 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 4600 files added (on-disk size: 9725.2 KB)
+0002.228 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/cssesc/bin/cssesc add_as=themes/csdw/node_modules/.bin/cssesc
+0002.230 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 4700 files added (on-disk size: 9725.2 KB)
+0002.235 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 4800 files added (on-disk size: 9725.2 KB)
+0002.238 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 4900 files added (on-disk size: 9725.2 KB)
+0002.241 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 5000 files added (on-disk size: 9725.2 KB)
+0002.243 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.7 MB, 28993 files batched, 501 (5010) added so far); re-opening (prior size: 9725.2 KB)
+0002.493 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/buble-loader/node_modules/webpack/bin/webpack.js add_as=themes/csdw/node_modules/buble-loader/node_modules/terser-webpack-plugin/node_modules/.bin/webpack
+0002.495 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 5100 files added (on-disk size: 10982.2 KB)
+0002.499 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 5200 files added (on-disk size: 10982.2 KB)
+0002.502 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 5300 files added (on-disk size: 10982.2 KB)
+0002.505 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/buble-loader/node_modules/webpack/node_modules/json5/lib/cli.js add_as=themes/csdw/node_modules/.bin/json5
+0002.506 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 5400 files added (on-disk size: 10982.2 KB)
+0002.509 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 5500 files added (on-disk size: 10982.2 KB)
+0002.511 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3 MB, 28993 files batched, 501 (5511) added so far); re-opening (prior size: 10982.2 KB)
+0002.790 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/errno/cli.js add_as=themes/csdw/node_modules/.bin/errno
+0002.791 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/buble/bin/buble add_as=themes/csdw/node_modules/.bin/buble
+0002.791 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 5600 files added (on-disk size: 11947.8 KB)
+0002.794 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/terser/bin/terser add_as=themes/csdw/node_modules/.bin/terser
+0002.795 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 5700 files added (on-disk size: 11947.8 KB)
+0002.799 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/gifsicle/cli.js add_as=themes/csdw/node_modules/.bin/gifsicle
+0002.799 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 5800 files added (on-disk size: 11947.8 KB)
+0002.803 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 5900 files added (on-disk size: 11947.8 KB)
+0002.806 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/send/node_modules/mime/cli.js add_as=themes/csdw/node_modules/send/node_modules/.bin/mime
+0002.806 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 6000 files added (on-disk size: 11947.8 KB)
+0002.808 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.2 MB, 28993 files batched, 501 (6012) added so far); re-opening (prior size: 11947.8 KB)
+0003.044 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 6100 files added (on-disk size: 12803.6 KB)
+0003.047 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/dom-compare-temp/bin/domcompare add_as=themes/csdw/node_modules/bs-html-injector/node_modules/.bin/domcompare
+0003.047 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 6200 files added (on-disk size: 12803.6 KB)
+0003.050 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 6300 files added (on-disk size: 12803.6 KB)
+0003.053 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 6400 files added (on-disk size: 12803.6 KB)
+0003.057 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 6500 files added (on-disk size: 12803.6 KB)
+0003.059 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.9 MB, 28993 files batched, 501 (6513) added so far); re-opening (prior size: 12803.6 KB)
+0003.261 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 6600 files added (on-disk size: 13500.7 KB)
+0003.264 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 6700 files added (on-disk size: 13500.7 KB)
+0003.268 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 6800 files added (on-disk size: 13500.7 KB)
+0003.270 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/color-support/bin.js add_as=themes/csdw/node_modules/fancy-log/node_modules/.bin/color-support
+0003.271 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 6900 files added (on-disk size: 13500.7 KB)
+0003.274 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 7000 files added (on-disk size: 13500.7 KB)
+0003.275 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.6 MB, 28993 files batched, 501 (7014) added so far); re-opening (prior size: 13500.7 KB)
+0003.505 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 7100 files added (on-disk size: 14394.3 KB)
+0003.508 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/which/bin/which add_as=themes/csdw/node_modules/node-sass/node_modules/cross-spawn/node_modules/.bin/which
+0003.508 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 7200 files added (on-disk size: 14394.3 KB)
+0003.510 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/jsesc/bin/jsesc add_as=themes/csdw/node_modules/.bin/jsesc
+0003.511 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 7300 files added (on-disk size: 14394.3 KB)
+0003.514 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 7400 files added (on-disk size: 14394.3 KB)
+0003.516 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/pngquant-bin/cli.js add_as=themes/csdw/node_modules/.bin/pngquant
+0003.517 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 7500 files added (on-disk size: 14394.3 KB)
+0003.519 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4.6 MB, 28993 files batched, 501 (7515) added so far); re-opening (prior size: 14394.3 KB)
+0003.842 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 7600 files added (on-disk size: 16217.3 KB)
+0003.846 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 7700 files added (on-disk size: 16217.3 KB)
+0003.848 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/atob/bin/atob.js add_as=themes/csdw/node_modules/.bin/atob
+0003.849 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 7800 files added (on-disk size: 16217.3 KB)
+0003.853 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 7900 files added (on-disk size: 16217.3 KB)
+0003.856 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 8000 files added (on-disk size: 16217.3 KB)
+0003.858 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.5 MB, 28993 files batched, 501 (8016) added so far); re-opening (prior size: 16217.3 KB)
+0004.051 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 8100 files added (on-disk size: 16852.6 KB)
+0004.055 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 8200 files added (on-disk size: 16852.6 KB)
+0004.058 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 8300 files added (on-disk size: 16852.6 KB)
+0004.062 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 8400 files added (on-disk size: 16852.6 KB)
+0004.065 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 8500 files added (on-disk size: 16852.6 KB)
+0004.067 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.5 MB, 28993 files batched, 501 (8517) added so far); re-opening (prior size: 16852.6 KB)
+0004.204 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 8600 files added (on-disk size: 17183.6 KB)
+0004.207 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/loader-utils/node_modules/json5/lib/cli.js add_as=themes/csdw/node_modules/loader-utils/node_modules/.bin/json5
+0004.207 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 8700 files added (on-disk size: 17183.6 KB)
+0004.210 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 8800 files added (on-disk size: 17183.6 KB)
+0004.213 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 8900 files added (on-disk size: 17183.6 KB)
+0004.217 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/acorn/bin/acorn add_as=themes/csdw/node_modules/.bin/acorn
+0004.217 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 9000 files added (on-disk size: 17183.6 KB)
+0004.219 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.5 MB, 28993 files batched, 501 (9018) added so far); re-opening (prior size: 17183.6 KB)
+0004.479 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/postcss-svgo/node_modules/svgo/bin/svgo add_as=themes/csdw/node_modules/.bin/svgo
+0004.480 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 9100 files added (on-disk size: 18349.8 KB)
+0004.483 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 9200 files added (on-disk size: 18349.8 KB)
+0004.486 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 9300 files added (on-disk size: 18349.8 KB)
+0004.489 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 9400 files added (on-disk size: 18349.8 KB)
+0004.493 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 9500 files added (on-disk size: 18349.8 KB)
+0004.495 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4.1 MB, 28993 files batched, 501 (9519) added so far); re-opening (prior size: 18349.8 KB)
+0004.736 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/ansi-html/bin/ansi-html add_as=themes/csdw/node_modules/browsersync-webpack-plugin/node_modules/webpack-hot-middleware/node_modules/.bin/ansi-html
+0004.736 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 9600 files added (on-disk size: 19681.5 KB)
+0004.740 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 9700 files added (on-disk size: 19681.5 KB)
+0004.743 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 9800 files added (on-disk size: 19681.5 KB)
+0004.746 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 9900 files added (on-disk size: 19681.5 KB)
+0004.749 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 10000 files added (on-disk size: 19681.5 KB)
+0004.751 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.8 MB, 28993 files batched, 501 (10020) added so far); re-opening (prior size: 19681.5 KB)
+0004.948 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 10100 files added (on-disk size: 20404.1 KB)
+0004.952 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 10200 files added (on-disk size: 20404.1 KB)
+0004.955 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 10300 files added (on-disk size: 20404.1 KB)
+0004.958 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 10400 files added (on-disk size: 20404.1 KB)
+0004.961 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 10500 files added (on-disk size: 20404.1 KB)
+0004.963 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 MB, 28993 files batched, 501 (10521) added so far); re-opening (prior size: 20404.1 KB)
+0005.145 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 10600 files added (on-disk size: 20779.4 KB)
+0005.149 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 10700 files added (on-disk size: 20779.4 KB)
+0005.152 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 10800 files added (on-disk size: 20779.4 KB)
+0005.155 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 10900 files added (on-disk size: 20779.4 KB)
+0005.158 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 11000 files added (on-disk size: 20779.4 KB)
+0005.160 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.1 MB, 28993 files batched, 501 (11022) added so far); re-opening (prior size: 20779.4 KB)
+0005.335 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 11100 files added (on-disk size: 20961.3 KB)
+0005.339 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 11200 files added (on-disk size: 20961.3 KB)
+0005.342 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 11300 files added (on-disk size: 20961.3 KB)
+0005.345 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 11400 files added (on-disk size: 20961.3 KB)
+0005.349 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 11500 files added (on-disk size: 20961.3 KB)
+0005.351 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.2 MB, 28993 files batched, 501 (11523) added so far); re-opening (prior size: 20961.3 KB)
+0005.554 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 11600 files added (on-disk size: 21411.3 KB)
+0005.557 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/sshpk/bin/sshpk-conv add_as=themes/csdw/node_modules/.bin/sshpk-conv
+0005.557 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/sshpk/bin/sshpk-verify add_as=themes/csdw/node_modules/.bin/sshpk-verify
+0005.557 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/sshpk/bin/sshpk-sign add_as=themes/csdw/node_modules/.bin/sshpk-sign
+0005.558 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 11700 files added (on-disk size: 21411.3 KB)
+0005.561 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 11800 files added (on-disk size: 21411.3 KB)
+0005.564 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 11900 files added (on-disk size: 21411.3 KB)
+0005.568 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 12000 files added (on-disk size: 21411.3 KB)
+0005.570 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4.1 MB, 28993 files batched, 501 (12024) added so far); re-opening (prior size: 21411.3 KB)
+0005.856 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 12100 files added (on-disk size: 22693.2 KB)
+0005.859 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 12200 files added (on-disk size: 22693.2 KB)
+0005.862 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 12300 files added (on-disk size: 22693.2 KB)
+0005.865 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 12400 files added (on-disk size: 22693.2 KB)
+0005.869 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 12500 files added (on-disk size: 22693.2 KB)
+0005.871 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (7.7 MB, 28993 files batched, 501 (12525) added so far); re-opening (prior size: 22693.2 KB)
+0006.298 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 12600 files added (on-disk size: 25132.7 KB)
+0006.300 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/jsdom/node_modules/acorn/bin/acorn add_as=themes/csdw/node_modules/jsdom/node_modules/.bin/acorn
+0006.300 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/executable/cli.js add_as=themes/csdw/node_modules/.bin/executable
+0006.301 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 12700 files added (on-disk size: 25132.7 KB)
+0006.305 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 12800 files added (on-disk size: 25132.7 KB)
+0006.308 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 12900 files added (on-disk size: 25132.7 KB)
+0006.312 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 13000 files added (on-disk size: 25132.7 KB)
+0006.314 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2 MB, 28993 files batched, 501 (13026) added so far); re-opening (prior size: 25132.7 KB)
+0006.553 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 13100 files added (on-disk size: 25794.8 KB)
+0006.557 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 13200 files added (on-disk size: 25794.8 KB)
+0006.560 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 13300 files added (on-disk size: 25794.8 KB)
+0006.564 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 13400 files added (on-disk size: 25794.8 KB)
+0006.567 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 13500 files added (on-disk size: 25794.8 KB)
+0006.569 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.2 MB, 28993 files batched, 501 (13527) added so far); re-opening (prior size: 25794.8 KB)
+0006.763 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 13600 files added (on-disk size: 25998.8 KB)
+0006.767 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 13700 files added (on-disk size: 25998.8 KB)
+0006.770 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 13800 files added (on-disk size: 25998.8 KB)
+0006.774 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 13900 files added (on-disk size: 25998.8 KB)
+0006.777 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 14000 files added (on-disk size: 25998.8 KB)
+0006.779 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.3 MB, 28993 files batched, 501 (14028) added so far); re-opening (prior size: 25998.8 KB)
+0007.009 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 14100 files added (on-disk size: 26443.3 KB)
+0007.012 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 14200 files added (on-disk size: 26443.3 KB)
+0007.016 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 14300 files added (on-disk size: 26443.3 KB)
+0007.019 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 14400 files added (on-disk size: 26443.3 KB)
+0007.022 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 14500 files added (on-disk size: 26443.3 KB)
+0007.024 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.8 MB, 28993 files batched, 501 (14529) added so far); re-opening (prior size: 26443.3 KB)
+0007.259 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 14600 files added (on-disk size: 27221 KB)
+0007.262 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 14700 files added (on-disk size: 27221 KB)
+0007.264 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/dev-ip/lib/dev-ip.js add_as=themes/csdw/node_modules/browser-sync/node_modules/.bin/dev-ip
+0007.266 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 14800 files added (on-disk size: 27221 KB)
+0007.268 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/bin-version-check/cli.js add_as=themes/csdw/node_modules/bin-wrapper/node_modules/.bin/bin-version-check
+0007.268 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/bin-version-check/node_modules/semver/bin/semver add_as=themes/csdw/node_modules/.bin/semver
+0007.269 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 14900 files added (on-disk size: 27221 KB)
+0007.272 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 15000 files added (on-disk size: 27221 KB)
+0007.275 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.9 MB, 28993 files batched, 501 (15030) added so far); re-opening (prior size: 27221 KB)
+0007.536 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 15100 files added (on-disk size: 28240.6 KB)
+0007.538 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/lpad-align/cli.js add_as=themes/csdw/node_modules/.bin/lpad-align
+0007.540 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 15200 files added (on-disk size: 28240.6 KB)
+0007.543 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 15300 files added (on-disk size: 28240.6 KB)
+0007.546 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 15400 files added (on-disk size: 28240.6 KB)
+0007.549 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 15500 files added (on-disk size: 28240.6 KB)
+0007.551 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (6.7 MB, 28993 files batched, 501 (15531) added so far); re-opening (prior size: 28240.6 KB)
+0007.954 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/find-versions/cli.js add_as=themes/csdw/node_modules/.bin/find-versions
+0007.955 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 15600 files added (on-disk size: 29726.2 KB)
+0007.959 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 15700 files added (on-disk size: 29726.2 KB)
+0007.961 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/autoprefixer/bin/autoprefixer add_as=themes/csdw/node_modules/.bin/autoprefixer
+0007.962 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 15800 files added (on-disk size: 29726.2 KB)
+0007.965 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/autoprefixer/node_modules/browserslist/cli.js add_as=themes/csdw/node_modules/.bin/browserslist
+0007.966 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 15900 files added (on-disk size: 29726.2 KB)
+0007.969 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 16000 files added (on-disk size: 29726.2 KB)
+0007.971 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4 MB, 28993 files batched, 501 (16032) added so far); re-opening (prior size: 29726.2 KB)
+0008.261 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 16100 files added (on-disk size: 31045.6 KB)
+0008.264 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 16200 files added (on-disk size: 31045.6 KB)
+0008.268 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 16300 files added (on-disk size: 31045.6 KB)
+0008.271 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/sha.js/bin.js add_as=themes/csdw/node_modules/create-hash/node_modules/.bin/sha.js
+0008.271 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/window-size/cli.js add_as=themes/csdw/node_modules/browser-sync/node_modules/yargs/node_modules/.bin/window-size
+0008.271 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 16400 files added (on-disk size: 31045.6 KB)
+0008.274 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/regjsparser/bin/parser add_as=themes/csdw/node_modules/regexpu-core/node_modules/.bin/regjsparser
+0008.274 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 16500 files added (on-disk size: 31045.6 KB)
+0008.276 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.3 MB, 28993 files batched, 501 (16533) added so far); re-opening (prior size: 31045.6 KB)
+0008.560 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 16600 files added (on-disk size: 32204.8 KB)
+0008.563 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 16700 files added (on-disk size: 32204.8 KB)
+0008.566 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 16800 files added (on-disk size: 32204.8 KB)
+0008.569 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 16900 files added (on-disk size: 32204.8 KB)
+0008.571 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/node-gyp/bin/node-gyp.js add_as=themes/csdw/node_modules/node-sass/node_modules/.bin/node-gyp
+0008.573 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 17000 files added (on-disk size: 32204.8 KB)
+0008.575 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.8 MB, 28993 files batched, 501 (17034) added so far); re-opening (prior size: 32204.8 KB)
+0008.888 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/specificity/bin/specificity add_as=themes/csdw/node_modules/stylelint/node_modules/.bin/specificity
+0008.889 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 17100 files added (on-disk size: 33459.3 KB)
+0008.893 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 17200 files added (on-disk size: 33459.3 KB)
+0008.896 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 17300 files added (on-disk size: 33459.3 KB)
+0008.900 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 17400 files added (on-disk size: 33459.3 KB)
+0008.903 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 17500 files added (on-disk size: 33459.3 KB)
+0008.905 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4.8 MB, 28993 files batched, 501 (17535) added so far); re-opening (prior size: 33459.3 KB)
+0009.180 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 17600 files added (on-disk size: 34847.5 KB)
+0009.182 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/postcss-merge-rules/node_modules/browserslist/cli.js add_as=themes/csdw/node_modules/postcss-merge-rules/node_modules/.bin/browserslist
+0009.184 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 17700 files added (on-disk size: 34847.5 KB)
+0009.186 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 17800 files added (on-disk size: 34847.5 KB)
+0009.190 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 17900 files added (on-disk size: 34847.5 KB)
+0009.192 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/optipng-bin/cli.js add_as=themes/csdw/node_modules/.bin/optipng
+0009.193 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 18000 files added (on-disk size: 34847.5 KB)
+0009.195 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4.6 MB, 28993 files batched, 501 (18036) added so far); re-opening (prior size: 34847.5 KB)
+0009.527 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 18100 files added (on-disk size: 36290 KB)
+0009.530 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 18200 files added (on-disk size: 36290 KB)
+0009.533 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 18300 files added (on-disk size: 36290 KB)
+0009.537 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 18400 files added (on-disk size: 36290 KB)
+0009.540 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 18500 files added (on-disk size: 36290 KB)
+0009.543 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.4 MB, 28993 files batched, 501 (18537) added so far); re-opening (prior size: 36290 KB)
+0009.817 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 18600 files added (on-disk size: 37180.3 KB)
+0009.820 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/gonzales-pe/bin/gonzales.js add_as=themes/csdw/node_modules/.bin/gonzales
+0009.821 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 18700 files added (on-disk size: 37180.3 KB)
+0009.824 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 18800 files added (on-disk size: 37180.3 KB)
+0009.828 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 18900 files added (on-disk size: 37180.3 KB)
+0009.831 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 19000 files added (on-disk size: 37180.3 KB)
+0009.833 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5.4 MB, 28993 files batched, 501 (19038) added so far); re-opening (prior size: 37180.3 KB)
+0010.209 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 19100 files added (on-disk size: 38858.8 KB)
+0010.212 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/webpack-dev-middleware/node_modules/mime/cli.js add_as=themes/csdw/node_modules/webpack-dev-middleware/node_modules/.bin/mime
+0010.213 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 19200 files added (on-disk size: 38858.8 KB)
+0010.216 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 19300 files added (on-disk size: 38858.8 KB)
+0010.220 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 19400 files added (on-disk size: 38858.8 KB)
+0010.222 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/espree/node_modules/acorn/bin/acorn add_as=themes/csdw/node_modules/espree/node_modules/.bin/acorn
+0010.223 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 19500 files added (on-disk size: 38858.8 KB)
+0010.225 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5.1 MB, 28993 files batched, 501 (19539) added so far); re-opening (prior size: 38858.8 KB)
+0010.593 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 19600 files added (on-disk size: 40334 KB)
+0010.597 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 19700 files added (on-disk size: 40334 KB)
+0010.600 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 19800 files added (on-disk size: 40334 KB)
+0010.604 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 19900 files added (on-disk size: 40334 KB)
+0010.606 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 20000 files added (on-disk size: 40334 KB)
+0010.609 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4.1 MB, 28993 files batched, 501 (20040) added so far); re-opening (prior size: 40334 KB)
+0010.928 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 20100 files added (on-disk size: 41601.4 KB)
+0010.932 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 20200 files added (on-disk size: 41601.4 KB)
+0010.935 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 20300 files added (on-disk size: 41601.4 KB)
+0010.938 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 20400 files added (on-disk size: 41601.4 KB)
+0010.941 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 20500 files added (on-disk size: 41601.4 KB)
+0010.944 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.8 MB, 28993 files batched, 501 (20541) added so far); re-opening (prior size: 41601.4 KB)
+0011.213 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 20600 files added (on-disk size: 42244 KB)
+0011.217 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 20700 files added (on-disk size: 42244 KB)
+0011.220 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 20800 files added (on-disk size: 42244 KB)
+0011.223 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 20900 files added (on-disk size: 42244 KB)
+0011.226 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 21000 files added (on-disk size: 42244 KB)
+0011.229 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.3 MB, 28993 files batched, 501 (21042) added so far); re-opening (prior size: 42244 KB)
+0011.467 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 21100 files added (on-disk size: 42466.9 KB)
+0011.471 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 21200 files added (on-disk size: 42466.9 KB)
+0011.474 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 21300 files added (on-disk size: 42466.9 KB)
+0011.477 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 21400 files added (on-disk size: 42466.9 KB)
+0011.481 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 21500 files added (on-disk size: 42466.9 KB)
+0011.483 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.7 MB, 28993 files batched, 501 (21543) added so far); re-opening (prior size: 42466.9 KB)
+0011.784 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 21600 files added (on-disk size: 43123.7 KB)
+0011.788 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 21700 files added (on-disk size: 43123.7 KB)
+0011.791 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 21800 files added (on-disk size: 43123.7 KB)
+0011.794 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 21900 files added (on-disk size: 43123.7 KB)
+0011.797 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 22000 files added (on-disk size: 43123.7 KB)
+0011.800 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.7 MB, 28993 files batched, 501 (22044) added so far); re-opening (prior size: 43123.7 KB)
+0012.058 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 22100 files added (on-disk size: 43475.7 KB)
+0012.063 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 22200 files added (on-disk size: 43475.7 KB)
+0012.066 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 22300 files added (on-disk size: 43475.7 KB)
+0012.070 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 22400 files added (on-disk size: 43475.7 KB)
+0012.073 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 22500 files added (on-disk size: 43475.7 KB)
+0012.075 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5.3 MB, 28993 files batched, 501 (22545) added so far); re-opening (prior size: 43475.7 KB)
+0012.470 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/sass-graph/bin/sassgraph add_as=themes/csdw/node_modules/node-sass/node_modules/.bin/sassgraph
+0012.470 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 22600 files added (on-disk size: 44980.5 KB)
+0012.473 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 22700 files added (on-disk size: 44980.5 KB)
+0012.477 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 22800 files added (on-disk size: 44980.5 KB)
+0012.480 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 22900 files added (on-disk size: 44980.5 KB)
+0012.484 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 23000 files added (on-disk size: 44980.5 KB)
+0012.486 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (7 MB, 28993 files batched, 501 (23046) added so far); re-opening (prior size: 44980.5 KB)
+0012.901 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 23100 files added (on-disk size: 46755.4 KB)
+0012.905 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 23200 files added (on-disk size: 46755.4 KB)
+0012.908 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 23300 files added (on-disk size: 46755.4 KB)
+0012.911 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 23400 files added (on-disk size: 46755.4 KB)
+0012.914 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 23500 files added (on-disk size: 46755.4 KB)
+0012.916 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.6 MB, 28993 files batched, 501 (23547) added so far); re-opening (prior size: 46755.4 KB)
+0013.266 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 23600 files added (on-disk size: 47952.3 KB)
+0013.269 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 23700 files added (on-disk size: 47952.3 KB)
+0013.271 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/localtunnel/bin/client add_as=themes/csdw/node_modules/browser-sync/node_modules/.bin/lt
+0013.271 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/strip-indent/cli.js add_as=themes/csdw/node_modules/redent/node_modules/.bin/strip-indent
+0013.273 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 23800 files added (on-disk size: 47952.3 KB)
+0013.276 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 23900 files added (on-disk size: 47952.3 KB)
+0013.278 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/acorn-dynamic-import/node_modules/acorn/bin/acorn add_as=themes/csdw/node_modules/acorn-dynamic-import/node_modules/.bin/acorn
+0013.279 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 24000 files added (on-disk size: 47952.3 KB)
+0013.281 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4.8 MB, 28993 files batched, 501 (24048) added so far); re-opening (prior size: 47952.3 KB)
+0013.658 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 24100 files added (on-disk size: 49241.1 KB)
+0013.662 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 24200 files added (on-disk size: 49241.1 KB)
+0013.665 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 24300 files added (on-disk size: 49241.1 KB)
+0013.669 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 24400 files added (on-disk size: 49241.1 KB)
+0013.672 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 25 MB added on this batch (25.8 MB, 28993 files batched, 452 (24500) added so far); re-opening (prior size: 49241.1 KB)
+0014.807 (0) A useful amount of data was added after this amount of zip processing: 2.1 s (normalised: 2 s, rate: 12852.1 KB/s)
+0014.810 (0) Performance is good - will increase the amount of data we attempt to batch (time=2.0587990283966, normalised_time=1.9918976228588, max_time=14.807943820953, data points known=1, old_max_bytes=26214400, new_max_bytes=116928106)
+0014.812 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 24500 files added (on-disk size: 55632.2 KB)
+0014.815 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 24600 files added (on-disk size: 55632.2 KB)
+0014.818 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 24700 files added (on-disk size: 55632.2 KB)
+0014.821 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 24800 files added (on-disk size: 55632.2 KB)
+0014.825 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 24900 files added (on-disk size: 55632.2 KB)
+0014.828 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 25000 files added (on-disk size: 55632.2 KB)
+0014.830 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (11.4 MB, 28993 files batched, 501 (25001) added so far); re-opening (prior size: 55632.2 KB)
+0015.389 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 25100 files added (on-disk size: 58185.2 KB)
+0015.393 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 25200 files added (on-disk size: 58185.2 KB)
+0015.396 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 25300 files added (on-disk size: 58185.2 KB)
+0015.400 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 25400 files added (on-disk size: 58185.2 KB)
+0015.403 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 25500 files added (on-disk size: 58185.2 KB)
+0015.404 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.1 MB, 28993 files batched, 501 (25502) added so far); re-opening (prior size: 58185.2 KB)
+0015.654 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 25600 files added (on-disk size: 58689.6 KB)
+0015.656 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/stylelint/node_modules/autoprefixer/bin/autoprefixer-info add_as=themes/csdw/node_modules/stylelint/node_modules/.bin/autoprefixer-info
+0015.658 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 25700 files added (on-disk size: 58689.6 KB)
+0015.661 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 25800 files added (on-disk size: 58689.6 KB)
+0015.665 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 25900 files added (on-disk size: 58689.6 KB)
+0015.668 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 26000 files added (on-disk size: 58689.6 KB)
+0015.670 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.7 MB, 28993 files batched, 501 (26003) added so far); re-opening (prior size: 58689.6 KB)
+0016.023 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 26100 files added (on-disk size: 59887.2 KB)
+0016.026 (0) File skipped due to unexpected name mismatch (locale: C): file=/home/andrey/www/csdw.loc/public_html/civic-service-design-website/wp-content/themes/csdw/node_modules/acorn-globals/node_modules/acorn/bin/acorn add_as=themes/csdw/node_modules/acorn-globals/node_modules/.bin/acorn
+0016.026 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 26200 files added (on-disk size: 59887.2 KB)
+0016.030 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 26300 files added (on-disk size: 59887.2 KB)
+0016.033 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 26400 files added (on-disk size: 59887.2 KB)
+0016.037 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 26500 files added (on-disk size: 59887.2 KB)
+0016.038 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.7 MB, 28993 files batched, 501 (26504) added so far); re-opening (prior size: 59887.2 KB)
+0016.391 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 26600 files added (on-disk size: 61115.7 KB)
+0016.394 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 26700 files added (on-disk size: 61115.7 KB)
+0016.398 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 26800 files added (on-disk size: 61115.7 KB)
+0016.401 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 26900 files added (on-disk size: 61115.7 KB)
+0016.405 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 27000 files added (on-disk size: 61115.7 KB)
+0016.407 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5.7 MB, 28993 files batched, 501 (27005) added so far); re-opening (prior size: 61115.7 KB)
+0016.852 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 27100 files added (on-disk size: 62718 KB)
+0016.856 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 27200 files added (on-disk size: 62718 KB)
+0016.860 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 27300 files added (on-disk size: 62718 KB)
+0016.864 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 27400 files added (on-disk size: 62718 KB)
+0016.867 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 27500 files added (on-disk size: 62718 KB)
+0016.868 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.7 MB, 28993 files batched, 501 (27506) added so far); re-opening (prior size: 62718 KB)
+0017.254 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 27600 files added (on-disk size: 63858.2 KB)
+0017.257 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 27700 files added (on-disk size: 63858.2 KB)
+0017.261 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 27800 files added (on-disk size: 63858.2 KB)
+0017.264 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 27900 files added (on-disk size: 63858.2 KB)
+0017.267 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 28000 files added (on-disk size: 63858.2 KB)
+0017.268 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.9 MB, 28993 files batched, 501 (28007) added so far); re-opening (prior size: 63858.2 KB)
+0017.655 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 28100 files added (on-disk size: 64774.5 KB)
+0017.659 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 28200 files added (on-disk size: 64774.5 KB)
+0017.663 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 28300 files added (on-disk size: 64774.5 KB)
+0017.667 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 28400 files added (on-disk size: 64774.5 KB)
+0017.671 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 28500 files added (on-disk size: 64774.5 KB)
+0017.672 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (10.4 MB, 28993 files batched, 501 (28508) added so far); re-opening (prior size: 64774.5 KB)
+0018.207 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 28600 files added (on-disk size: 66603.7 KB)
+0018.211 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 28700 files added (on-disk size: 66603.7 KB)
+0018.215 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 28800 files added (on-disk size: 66603.7 KB)
+0018.218 (0) Zip: backup_2020-04-02-1453_Title_264269568b97-themes.zip.tmp: 28900 files added (on-disk size: 66603.7 KB)
+0019.199 (0) Created themes zip (0) - 68346.5 KB in 19.2 s (3568.8 KB/s) (sha1: da69453b3eba49505471f08f0eefa109b0afb90d, sha256: fd08554df16c0435ca3d8db11aed01c8da98fbe5e8e92654d08ef5d2358d2cec)
+0019.200 (0) No backup of uploads: excluded by user's options
+0019.202 (0) No backup of others: excluded by user's options
+0019.206 (0) Saving backup status to database (elements: 2)
+0019.208 (0) No database backup (wp) - not part of this run
+0019.211 (0) backup_2020-04-02-1453_Title_264269568b97-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0019.211 (0) Saving backup history. Total backup size: 66.7 MB
+0019.214 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0019.217 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0019.218 (0) No remote despatch: user chose no remote backup service
+0019.219 (0) Recording as successfully uploaded: backup_2020-04-02-1453_Title_264269568b97-themes.zip
+0019.223 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0019.224 (0) Number of backup sets in history: 2; groups (db): 1
+0019.225 (0) Examining (for databases) backup set with group_id=0, nonce=264269568b97, datestamp=1585839187 (Apr 02 2020 14:53:07)
+0019.226 (0) Examining (for databases) backup set with group_id=0, nonce=f0b4d004c4da, datestamp=1585837502 (Apr 02 2020 14:25:02)
+0019.226 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0019.227 (0) Number of backup sets in history: 2; groups (files): 1
+0019.228 (0) Examining (for files) backup set with nonce=264269568b97, datestamp=1585839187 (Apr 02 2020 14:53:07)
+0019.228 (0) This backup set is the backup set just made, so will not be deleted.
+0019.229 (0) This backup set remains non-empty (f=1/d=0); will retain in history
+0019.230 (0) Examining (for files) backup set with nonce=f0b4d004c4da, datestamp=1585837502 (Apr 02 2020 14:25:02)
+0019.230 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0019.231 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0019.233 (0) Resume backup (264269568b97, 0): finish run
+0019.235 (0) Decremented the semaphore (f) by 1
+0019.237 (0) Semaphore (f) unlocked
+0019.238 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0019.241 (0) No email will/can be sent - the user has not configured an email address.
+0019.242 (0) The backup apparently succeeded (with warnings) and is now complete

@@ -9,6 +9,7 @@
 
 .phase-item {
   width: calc(33.3333% - 40px);
+  min-width: 342px;
   background: #24325b;
   backdrop-filter: blur(20px);
   border-radius: 50%;
@@ -32,8 +33,13 @@
     margin-bottom: 30px;
     color: #fff;
 
-    &:visited {
+    &:visited,
+    &:focus {
       color: #fff;
+
+      span {
+        color: #fff;
+      }
     }
   }
 
@@ -49,6 +55,49 @@
 
     a {
       color: #24325b;
+
+      span {
+        color: #24325b;
+      }
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .phases-section {
+    padding-top: 42px;
+    padding-bottom: 10px;
+
+    .row {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .phases-section {
+    .row {
+      flex-direction: column;
+    }
+  }
+
+  .phase-item {
+    margin-left: auto;
+    margin-right: auto;
+
+    &__title {
+      font-size: 28px;
+    }
+  }
+}
+
+@media (max-width: 419.98px) {
+  .phase-item {
+    min-width: 290px;
+    padding: 30px 15px 50px;
+
+    &__title {
+      margin-bottom: 20px;
     }
   }
 }

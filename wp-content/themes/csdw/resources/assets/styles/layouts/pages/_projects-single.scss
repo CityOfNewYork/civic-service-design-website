@@ -1,0 +1,415 @@
+.project-single-header {
+  padding-top: 59px;
+  padding-bottom: 73px;
+  margin-bottom: -220px;
+
+  .container {
+    position: relative;
+  }
+
+  &__thumbnail {
+    max-width: 87%;
+    margin-left: auto;
+  }
+
+  &__content-wrapper {
+    max-width: 49%;
+    padding: 36px 60px 39px 52px;
+    background: #284cca;
+    position: absolute;
+    bottom: -73px;
+    left: 15px;
+  }
+
+  &__dates {
+    color: #fff;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    padding-left: 5px;
+  }
+
+  &__title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 62px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+  }
+
+  .project-item-icons {
+    margin-top: 59px;
+    justify-content: flex-start;
+
+    .icon-item {
+      padding-left: 4px;
+      width: 89px;
+      margin-left: 19px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.project-single-content {
+  padding-top: 262px;
+}
+
+.section_first_question {
+  padding-top: 101px;
+  padding-bottom: 99px;
+
+  &__content {
+    font-weight: bold;
+    font-size: 62px;
+    line-height: 1.1;
+    text-align: center;
+  }
+}
+
+.project-main-wrapper {
+  padding-top: 77px;
+  padding-bottom: 87px;
+
+  .row {
+    margin: 0 -15px;
+    justify-content: space-between;
+  }
+}
+
+.project-main-content {
+  width: 59%;
+  padding: 25px 15px 0;
+  box-sizing: border-box;
+}
+
+.main_content {
+  &__item {
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+}
+
+.project-main-sidebar {
+  width: 34.2%;
+  padding: 0 15px;
+}
+
+.numbers_item {
+  text-align: center;
+  margin-bottom: 41px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__number {
+    font-weight: bold;
+    font-size: 150px;
+    line-height: 1;
+  }
+
+  &__description {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+
+.section-what-we-made {
+  padding-bottom: 49px;
+
+  .row {
+    margin: 0 -15px;
+  }
+}
+
+.what-we-made-item {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 66px;
+
+  &__thumbnail {
+    margin-bottom: 50px;
+  }
+
+  &__content {
+    text-align: center;
+  }
+}
+
+.section-how_we_worked {
+  padding-bottom: 50px;
+
+  .section-header {
+    margin-bottom: 85px;
+  }
+
+  .section-description {
+    margin: 30px auto 0;
+    max-width: 750px;
+    line-height: 1.5;
+  }
+
+  .row {
+    margin: 0 -15px;
+  }
+}
+
+.how_we_worked_item {
+  padding: 0 15px;
+  box-sizing: border-box;
+  margin-bottom: 32px;
+
+  &--small {
+    width: 37.55%;
+  }
+
+  &--large {
+    width: 62.45%;
+  }
+
+  &__thumbnail {
+    margin-bottom: 14px;
+  }
+
+  &__description {
+    line-height: 1.3;
+    font-style: italic;
+  }
+}
+
+.section-project_partners_section {
+  padding-top: 60px;
+}
+
+.project_partners_section {
+  &__text {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  &__author {
+    text-align: center;
+    font-size: 26px;
+    line-height: 68px;
+    margin-top: 22px;
+  }
+}
+
+.single.single-projects {
+  article section:last-child {
+    padding-bottom: 178px;
+  }
+
+  section.section.related-section {
+    padding-top: 120px;
+    padding-bottom: 131px;
+
+    .section-header {
+      margin-bottom: 97px;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .project-single-header {
+    &__content-wrapper {
+      padding: 19px 15px 30px;
+    }
+
+    &__dates {
+      font-size: 17px;
+      padding-left: 0;
+      margin-bottom: 6px;
+    }
+
+    &__title {
+      font-size: 54px;
+      margin-bottom: 10px;
+    }
+
+    .project-item-icons {
+      justify-content: center;
+      margin-top: 43px;
+
+      .icon-item {
+        padding-left: 0;
+        width: 80px;
+        margin-left: 16px;
+      }
+    }
+  }
+
+  .project-main-sidebar {
+    width: 41%;
+  }
+
+  .numbers_item {
+    &__number {
+      font-size: 125px;
+    }
+
+    &__description {
+      font-size: 17px;
+      line-height: 1.5;
+    }
+  }
+
+  .project_partners_section__text {
+    br {
+      display: none;
+    }
+  }
+
+  .single.single-projects {
+    article section:last-child {
+      padding-bottom: 80px;
+    }
+
+    section.section {
+      &.related-section {
+        padding-top: 46px;
+        padding-bottom: 32px;
+
+        .section-header {
+          margin-bottom: 35px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .project-single-header {
+    padding-top: 9px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__thumbnail {
+      max-width: 100%;
+    }
+
+    &__content-wrapper {
+      padding-bottom: 49px;
+      max-width: 100%;
+      position: relative;
+      bottom: auto;
+      left: auto;
+    }
+
+    &__content {
+      padding-right: 30px;
+    }
+  }
+
+  .project-single-content {
+    padding-top: 0;
+  }
+
+  .section_first_question {
+    padding-top: 75px;
+    padding-bottom: 30px;
+
+    &__content {
+      font-size: 38px;
+      line-height: 1.15;
+    }
+  }
+
+  .project-main-wrapper {
+    padding-top: 62px;
+    padding-bottom: 84px;
+  }
+
+  .project-main-content,
+  .project-main-sidebar {
+    width: 100%;
+  }
+
+  .project-main-content {
+    padding-top: 0;
+    padding-bottom: 43px;
+  }
+
+  .main_content {
+    &__title {
+      font-size: 17px;
+    }
+  }
+
+  .numbers_item {
+    &__number {
+      margin-bottom: 5px;
+    }
+  }
+
+  .section-what-we-made {
+    padding-bottom: 0;
+
+    .section-title {
+      line-height: 1.2;
+    }
+  }
+
+  .what-we-made-item {
+    width: 100%;
+
+    &__thumbnail {
+      margin-bottom: 30px;
+    }
+  }
+
+  .section-how_we_worked {
+    padding-top: 40px;
+
+    .section-header {
+      margin-bottom: 30px;
+    }
+
+    .section-title {
+      line-height: 1.2;
+    }
+
+    .section-description {
+      margin-top: 23px;
+    }
+  }
+
+  .how_we_worked_item {
+    &__description {
+      font-size: 17px;
+    }
+  }
+
+  .section-project_partners_section {
+    display: none;
+  }
+}
+
+@media (max-width: 567.98px) {
+  .how_we_worked_item {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+}

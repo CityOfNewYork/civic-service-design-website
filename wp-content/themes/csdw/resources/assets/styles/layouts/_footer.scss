@@ -2,6 +2,10 @@
   background-color: #24325b;
   padding: 50px;
 
+  &__mobile {
+    display: none;
+  }
+
   &__row {
     display: flex;
     justify-content: space-between;
@@ -13,17 +17,23 @@
     &--middle {
       justify-content: flex-start;
       padding-bottom: 18px;
-      border-bottom: 2px solid #4157aa;
       align-items: center;
     }
 
     &--bottom {
       padding-top: 13px;
+      border-top: 2px solid #4157aa;
     }
   }
 
   &-logo {
     padding-top: 5px;
+
+    img,
+    svg {
+      width: 151px;
+      height: 78px;
+    }
   }
 
   &-menu {
@@ -92,6 +102,11 @@
   .social-media {
     display: flex;
 
+    img,
+    svg {
+      width: 48px;
+    }
+
     &-item {
       margin: 0 11px;
 
@@ -102,8 +117,124 @@
   }
 }
 
-.page-template-template-tools-and-tactics {
+@media (max-width: 1199.98px) {
+  .site-footer-menu .widget-wrapper {
+    margin: 0 15px;
+  }
+}
+
+@media (max-width: 991.98px) {
   .site-footer {
-    margin-top: 160px;
+    display: flex;
+    flex-direction: column;
+    padding: 58px 15px;
+
+    &__mobile {
+      display: block;
+      order: 1;
+      text-align: center;
+      margin-bottom: 30px;
+
+      .brand {
+        display: block;
+        margin-bottom: 15px;
+
+        img,
+        svg {
+          width: 276px;
+        }
+      }
+
+      .address {
+        color: #fff;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 21px;
+
+        br {
+          display: none;
+        }
+      }
+    }
+
+    &__row {
+      &--middle {
+        order: 2;
+        justify-content: center;
+        margin-bottom: 50px;
+      }
+
+      &--top {
+        order: 3;
+      }
+
+      &--bottom {
+        padding-top: 23px;
+        order: 4;
+        justify-content: center;
+
+        .content-info {
+          display: none;
+        }
+      }
+    }
+
+    &-logo {
+      display: none;
+    }
+
+    &-menu {
+      justify-content: space-between;
+      width: 100%;
+
+      .widget-wrapper {
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .social-media {
+      img,
+      svg {
+        width: 62px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .site-footer {
+    &-menu {
+      flex-wrap: wrap;
+      margin: 0;
+
+      .widget-wrapper {
+        width: 50%;
+        margin: 0 0 30px;
+      }
+    }
+
+    &__row {
+      &--middle {
+        order: 2;
+        justify-content: space-between;
+
+        .footer-middle-item {
+          &--text {
+            min-width: 158px;
+            margin-right: 10px;
+          }
+
+          &--image {
+            max-width: 88px;
+          }
+        }
+      }
+    }
   }
 }

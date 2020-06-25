@@ -1,0 +1,157 @@
+.posts-full-section {
+  padding-top: 83px;
+  padding-bottom: 62px;
+
+  .section-title {
+    font-size: 48px;
+  }
+
+  .section-header--left {
+    margin-bottom: 72px;
+  }
+}
+
+.post-full-item {
+  background: #fff;
+  border: 4px solid #24325b;
+  box-sizing: border-box;
+  backdrop-filter: blur(20px);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: $navy;
+  margin-bottom: 100px;
+
+  &__content {
+    width: 364px;
+    padding: 24px 20px 17px 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__date {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 7px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    line-height: 1.25;
+    margin-bottom: 15px;
+  }
+
+  &__cat {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  &__thumbnail {
+    display: block;
+
+    img {
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .posts-full-section {
+    padding-bottom: 50px;
+  }
+
+  .post-full-item {
+    &__title {
+      font-size: 18px;
+    }
+
+    &__description {
+      font-size: 17px;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .posts-full-section {
+    padding-top: 45px;
+
+    .row {
+      margin: 0 -15px;
+    }
+
+    .section-title {
+      font-size: 38px;
+    }
+
+    .section-header--left {
+      margin-bottom: 35px;
+    }
+  }
+
+  .post-full-item {
+    flex-direction: column;
+    margin-bottom: 52px;
+    width: calc(50% - 30px);
+    margin-left: 15px;
+    margin-right: 15px;
+
+    &__content {
+      order: 2;
+      width: 100%;
+      padding: 15px 55px 17px 17px;
+    }
+
+    &__date {
+      margin-bottom: 0;
+    }
+
+    &__title {
+      margin-bottom: 15px;
+    }
+
+    &__thumbnail {
+      order: 1;
+      width: 100%;
+    }
+
+    .post-full-item__description {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 576.98px) {
+  .posts-full-section {
+    .row {
+      margin: 0;
+    }
+  }
+
+  .post-full-item {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+
+    .post-item__content {
+      height: auto;
+      padding: 15px 60px 15px 17px;
+    }
+
+    &__title {
+      font-size: 18px;
+      margin-bottom: 13px;
+    }
+  }
+}

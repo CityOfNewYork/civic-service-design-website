@@ -1,0 +1,197 @@
+.section-apprentices {
+  padding-top: 88px;
+
+  .section-header {
+    margin-bottom: 146px;
+  }
+
+  .section-title {
+    font-size: 78px;
+    margin-bottom: 27px;
+  }
+
+  .section-description {
+    max-width: 570px;
+    margin: auto;
+  }
+
+  .row {
+    margin: 0 -15px;
+  }
+}
+
+.apprentice {
+  width: calc(50% - 30px);
+  margin: 0 15px 100px;
+  display: flex;
+  flex-direction: row;
+
+  &__thumbnail {
+    width: calc(50% - 15px);
+    margin-right: 15px;
+
+    img {
+      max-width: 233px;
+      width: 100%;
+    }
+  }
+
+  &__info {
+    width: calc(50% - 15px);
+    margin-left: 15px;
+    padding-top: 10px;
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 1.15;
+  }
+
+  &__position {
+    font-weight: bold;
+    line-height: 1.5;
+  }
+
+  &__social-networks {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__social-network-item {
+    font-size: 0;
+    max-width: 39px;
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    svg {
+      path {
+        @include transition;
+      }
+    }
+
+    &:hover {
+      svg {
+        path {
+          fill: #284cca;
+        }
+      }
+    }
+
+    a {
+      display: block;
+    }
+  }
+}
+
+.past_apprentices_wrapper {
+  max-width: 554px;
+  margin: auto;
+  padding-top: 69px;
+}
+
+.past_apprentices_title {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 1.15;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.past_apprentices {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+@media (max-width: 991.98px) {
+  .apprentice {
+    width: calc(100% - 30px);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section-apprentices {
+    padding-top: 78px;
+    padding-bottom: 50px;
+
+    .section-title {
+      font-size: 65px;
+      line-height: 68px;
+      margin-bottom: 37px;
+    }
+
+    .section-header {
+      margin-bottom: 75px;
+    }
+
+    .section-description {
+      max-width: 272px;
+      margin: auto;
+    }
+  }
+
+  .apprentice {
+    &__name {
+      font-size: 38px;
+      line-height: 1.1;
+    }
+  }
+
+  .past_apprentices {
+    text-align: center;
+    max-width: 272px;
+    margin: auto;
+    font-size: 17px;
+
+    &_wrapper {
+      padding-top: 13px;
+    }
+
+    &_title {
+      font-size: 28px;
+      margin-bottom: 28px;
+    }
+  }
+}
+
+@media (max-width: 576.98px) {
+  .apprentice {
+    flex-direction: column;
+
+    &__thumbnail,
+    &__info {
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    &__thumbnail {
+      margin-bottom: 30px;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    &__info {
+      text-align: center;
+    }
+
+    &__name {
+      margin-bottom: 16px;
+    }
+
+    &__social-networks {
+      margin-top: 20px;
+      justify-content: center;
+    }
+
+    &__social-network-item {
+      max-width: 48px;
+    }
+  }
+}

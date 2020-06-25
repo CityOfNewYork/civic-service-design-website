@@ -1,5 +1,5 @@
 @if( $goals_section['goals'] )
-  <section class="goals-section section section-pink-30t">
+  <section class="goals-section section section-pink-30t chameleonic" data-anchor="goals_section">
     <div class="container">
 
       <div class="section-header section-header--left">
@@ -14,12 +14,8 @@
       </div>
 
       <div class="row">
-        @foreach( $goals_section['goals'] as $goal )
-          <a href="{{ $goal['url'] }}" class="goal-item hover-state">
-            <span class="goal-item__tag">Goal</span>
-            <span class="goal-item__title">{{ $goal['title'] }}</span>
-            <span class="goal-item__description">{{ $goal['description'] }}</span>
-          </a>
+        @foreach( $goals_section['goals'] as $item )
+          @include('partials.loop.goals-item', ['item' => $item])
         @endforeach
       </div>
 

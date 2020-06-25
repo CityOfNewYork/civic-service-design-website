@@ -89,3 +89,36 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+add_filter( 'nav_menu_item_args', function ( $args, $item, $depth ) {
+    $args->after = '';
+    if ( $args->menu->slug == 'header-menu' ) {
+        if ( in_array( 'menu-item-has-children', $item->classes ) ) {
+            $args->after = "<span class='toogle-sub-menu'><img class='img' src='" . \App\asset_path('images/header/down.svg') . "' alt='Arrow Down' title='Arrow Down' aria-hidden='true'></span>";
+        }
+    }
+    return $args;
+}, 99, 4 );
+
+add_filter( 'wpseo_breadcrumb_links', function ( $links ) {
+    $available_post_types = available_post_types_for_breadcrumb();
+
+    if( is_singular($available_post_types) ) {
+       /* $new_links = array_map(function ($item) {
+            if( !array_key_exists( 'ptarchive', $item ) ) {
+                return $item;
+            }
+        }, $links );*/
+        $breadcrumbs_first_page = get_field( 'breadcrumbs_first_page_' . get_post_type(), 'options' );
+        if( $breadcrumbs_first_page ) {
+            $breadcrumb[] = [
+                'url' => $breadcrumbs_first_page['url'],
+                'text' => $breadcrumbs_first_page['title']
+            ];
+            array_splice( $links, 0, 0, $breadcrumb );
+        }
+    }
+
+    return ( isset( $new_links ) ) ? $new_links : $links;
+});
+

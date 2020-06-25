@@ -18,6 +18,38 @@ class TemplateToolsAndTactics extends Controller
             [$this, 'pagination_items_acf'] );
     }
 
+    public function quickLinks() {
+
+        $posts = get_field( 'quick_links' );
+
+        $quick_links = [];
+        if( $posts ) {
+            foreach ( $posts as $item ) {
+                $quick_links[] = [
+                    'title' => $item->post_title,
+                    'link'  => get_the_permalink( $item->ID ),
+                    'post_type' => $item->post_type
+                ];
+            }
+        }
+
+        return ( $quick_links ) ? $quick_links : null;
+
+    }
+
+    public function sectionAnchors()
+    {
+        $section_anchors = get_field( 'section_anchors' );
+        if ( $section_anchors ) {
+            $section_anchors = array_map( function ( $anchor ) {
+                $anchor['anchor_to'] = '#'.strtolower(str_replace(' ', '_', $anchor['anchor_to']));
+                return $anchor;
+            }, $section_anchors );
+        }
+
+        return $section_anchors;
+    }
+
     public function phasesSection()
     {
         $phases_section = get_field( 'phases_section' );

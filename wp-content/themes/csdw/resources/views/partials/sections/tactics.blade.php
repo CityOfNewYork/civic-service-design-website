@@ -1,5 +1,5 @@
 @if( $tactics_section['tactics'] )
-  <section class="tactics-section section section-pink-30t">
+  <section class="tactics-section section section-pink-30t chameleonic" data-anchor="tactics_section">
     <div class="container">
 
       <div class="section-header section-header--left">
@@ -13,7 +13,7 @@
             </div>
           @endif
 
-          @if( $tactics_section['button']['button_text'] )
+          @if( !empty( $tactics_section['button'] ) && $tactics_section['button']['button_text'] )
             <div class="button-wrapper">
               <a href="{{ get_post_type_archive_link( 'tactics' ) }}" class="btn btn-red hover-state">
                 <span>{{ $tactics_section['button']['button_text'] }}</span>
