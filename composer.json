@@ -1,4 +1,20 @@
 {
+  "name": "service-design",
+  "version": "0.0.1",
+  "description": "The Service Design Studio makes public services more effective and accessible for all New Yorkers",
+  "homepage": "https://nyc.gov/servicdesign",
+  "authors": [
+    {
+      "name": "We Are Immediate",
+      "email": "info@immediate.nyc",
+      "homepage": "https://weareimmediate.com"
+    },
+    {
+      "name": "NYC Opportunity",
+      "email": "products@nycopportunity.nyc.gov",
+      "homepage": "http://nyc.gov/opportunity"
+    }
+  ],
   "repositories": [
     {
       "type": "composer",
@@ -6,16 +22,12 @@
     }
   ],
   "require": {
-    "wpackagist-plugin/google-authenticator": "^0.52.0",
-    "wpackagist-plugin/limit-login-attempts-reloaded": "^2.9",
-    "wpackagist-plugin/wp-security-questions": "^1.0",
-    "wpackagist-plugin/wps-hide-login": "1.5.2.1"
+    "nyco/wp-config": "^1.0"
   },
   "require-dev": {
     "filp/whoops": "^2.3",
     "whoops/soap": "^1.0",
     "squizlabs/php_codesniffer": "^3.3",
-    "rarst/wps": "^1.2",
     "wpackagist-plugin/wp-crontrol": "^1.7",
     "wpackagist-plugin/query-monitor": "^3.3",
     "wpackagist-plugin/redis-cache": "^1.4"
