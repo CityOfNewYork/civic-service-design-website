@@ -5,6 +5,14 @@
 # Composer #
 ############
 /vendor/*
+!/vendor/autoload.php
+
+# Add packages that need to be shipped with the source here with !
+!/vendor/composer
+!/vendor/illuminate
+!/vendor/mustangostang
+!/vendor/nesbot
+!/vendor/symfony
 
 # WordPress #
 ############
