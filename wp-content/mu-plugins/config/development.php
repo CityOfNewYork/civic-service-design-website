@@ -37,18 +37,48 @@ function debug($str, $return = true) {
  * @author NYC Opportunity
  */
 
-// require_once ABSPATH . 'wp-admin/includes/plugin.php';
+require_once ABSPATH . 'wp-admin/includes/plugin.php';
 
 /**
- * Disable plugins required for security but slow down logging into the
- * site for development purposes.
+ * Disable Limit Login Attempts plugin
  * @author NYC Opportunity
  */
 
-// deactivate_plugins([
-//   'google-authenticator/google-authenticator.php',
-//   'limit-login-attempts-reloaded/limit-login-attempts-reloaded.php'
-// ]);
+deactivate_plugins([
+  'limit-login-attempts-reloaded/limit-login-attempts-reloaded.php'
+]);
+
+/**
+ * Reset Defender 2fa settings
+ * @author NYC Opportunity
+ */
+
+update_option('wd_2auth_settings', '');
+
+/**
+ * Enable the Redis Caching Plugin if we have WP_REDIS_HOST defined in
+ * the wp-config.php. Caching will optimize the speed of the site, especially
+ * transient caches.
+ * @author NYC Opportunity
+ */
+
+if (null !== WP_REDIS_HOST) {
+  activate_plugin('redis-cache/redis-cache.php');
+}
+
+/**
+ * Enable Query Monitor for advanced Wordpress Query debug and other tooling.
+ * @author NYC Opportunity
+ */
+
+activate_plugin('query-monitor/query-monitor.php');
+
+/**
+ * Activate WP Auto Login for seamless local login
+ * @author NYC Opportunity
+ */
+
+activate_plugin('wp-auto-login/wp-auto-login.php');
 
 /**
  * Allow local development requests
@@ -59,5 +89,6 @@ header('Access-Control-Allow-Origin: *');
 
 add_filter('allowed_http_origins', function($origins) {
   $origins[] = 'http://localhost:7000'; // Patterns
+
   return $origins;
 });
