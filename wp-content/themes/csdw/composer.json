@@ -46,6 +46,15 @@
     "test": ["phpcs"],
     "post-create-project-cmd": [
       "Roots\\Sage\\Installer\\ComposerScript::postCreateProject"
+    ],
+    "development": [
+      "composer dump-autoload"
+    ],
+    "production": [
+      "composer dump-autoload --no-dev --optimize"
+    ],
+    "deps": [
+      "composer show --tree"
     ]
   }
 }

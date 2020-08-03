@@ -51,10 +51,23 @@
 /wp-content/mysql.sql
 /wp-content/wpengine/*
 
-# Theme #
-#########
-# /wp-content/themes/access/assets/js/*.development.js
-# /wp-content/themes/access/assets/**/*.map
+# Sage Theme #
+##############
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+/wp-content/themes/csdw/.cache-loader
+/wp-content/themes/csdw/resources/assets/config-local.json
+/wp-content/themes/csdw/vendor/*
+!/wp-content/themes/csdw/vendor/autoload.php
+!/wp-content/themes/csdw/vendor/brain
+!/wp-content/themes/csdw/vendor/composer
+!/wp-content/themes/csdw/vendor/doctrine
+!/wp-content/themes/csdw/vendor/illuminate
+!/wp-content/themes/csdw/vendor/nesbot
+!/wp-content/themes/csdw/vendor/psr
+!/wp-content/themes/csdw/vendor/roots
+!/wp-content/themes/csdw/vendor/soberwp
+!/wp-content/themes/csdw/vendor/symfony
 
 # Packages #
 ############
@@ -96,9 +109,11 @@ sitemap.xml.gz
 ########
 .sass-cache
 
-# npm #
-#######
+# JS Package Managers #
+#######################
 node_modules
+npm-debug.log
+yarn-error.log
 
 # Large/disallowed filetypes #
 # See https://wpengine.com/git/#toc_4
