@@ -76,12 +76,19 @@ array_map(function ($file) use ($sage_error) {
  * locate_template()
  * ├── STYLESHEETPATH         -> /srv/www/example.com/current/web/app/themes/sage/resources/views
  * └── TEMPLATEPATH           -> /srv/www/example.com/current/web/app/themes/sage/resources
+ * @author roots
+ *
+ * Addition of is_admin() only changes theme directory if theme templates are being viewed
+ * @author NYC Opportunity
  */
-array_map(
-    'add_filter',
-    ['theme_file_path', 'theme_file_uri', 'parent_theme_file_path', 'parent_theme_file_uri'],
-    array_fill(0, 4, 'dirname')
-);
+
+if (!is_admin()) {
+  array_map('add_filter',
+    ['theme_file_path', 'theme_file_uri'],
+    array_fill(0, 2, 'dirname')
+  );
+}
+
 Container::getInstance()
     ->bindIf('config', function () {
         return new Config([

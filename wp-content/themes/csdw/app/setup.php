@@ -81,10 +81,12 @@ add_action('after_setup_theme', function () {
     add_theme_support('customize-selective-refresh-widgets');
 
     /**
-     * Use main stylesheet for visual editor
-     * @see resources/assets/styles/layouts/_tinymce.scss
+     * Add Editor Stylesheet using Gutenberg Support.
+     * @source resources/editor-style.css
+     * @author NYC Opportunity
      */
-    add_editor_style(asset_path('styles/main.css'));
+    add_theme_support('editor-styles');
+    add_editor_style('editor-style.css');
 }, 20);
 
 /**
@@ -290,7 +292,7 @@ add_action('init', function () {
         'description' => __('Project Description'),
         'labels' => $labels,
         'show_in_rest' => true,
-        'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
+        'supports' => ['title', 'thumbnail', 'excerpt'],
         'hierarchical' => false,
         'public' => true,
         'show_ui' => true,
