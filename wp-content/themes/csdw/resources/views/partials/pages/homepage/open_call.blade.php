@@ -1,5 +1,5 @@
 @if($open_call)
-  <div class="open_call-section section section-pink-30t chameleonic {{ $banner ? 'hasBanner' : '' }}" data-anchor="tools_section">
+  <div class="open_call-section section section-pink-30t chameleonic {{ $banner ? 'hasBanner' : '' }}" data-anchor="tools_section" id="tools_section">
     <div class="container">
 
       <div class="open_call-wrapper">

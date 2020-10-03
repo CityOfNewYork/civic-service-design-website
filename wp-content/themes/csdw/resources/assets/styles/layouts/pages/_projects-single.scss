@@ -43,13 +43,7 @@
     justify-content: flex-start;
 
     .icon-item {
-      padding-left: 4px;
       width: 89px;
-      margin-left: 19px;
-
-      &:first-child {
-        margin-left: 0;
-      }
     }
   }
 }
@@ -251,7 +245,6 @@
       .icon-item {
         padding-left: 0;
         width: 80px;
-        margin-left: 16px;
       }
     }
   }

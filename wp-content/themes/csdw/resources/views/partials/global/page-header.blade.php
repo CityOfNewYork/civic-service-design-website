@@ -7,7 +7,9 @@
 <header class="search-header chameleonic">
   <div class="container">
     <h1 class="search-header__title">
-      <span>Showing results for</span>
+      @if (!is_404())
+        <span>Showing results for</span>
+      @endif
       <span class="search-header__title--search_query"></span>
     </h1>
   </div>

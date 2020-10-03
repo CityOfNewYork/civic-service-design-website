@@ -1,3 +1,6 @@
+@if(empty($item))
+  @php $item = get_post(get_the_ID()) @endphp
+@endif
 <div class="phase-item item">
   <div class="phase-item__tag">Phase</div>
   <a href="{{ get_post_permalink( $item->ID ) }}" class="phase-item__title">

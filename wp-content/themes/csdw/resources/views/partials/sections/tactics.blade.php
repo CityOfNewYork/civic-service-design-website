@@ -1,5 +1,5 @@
 @if( $tactics_section['tactics'] )
-  <section class="tactics-section section section-pink-30t chameleonic" data-anchor="tactics_section">
+  <section class="tactics-section section section-pink-30t chameleonic" id="tactics_section" data-anchor="tactics_section">
     <div class="container">
 
       <div class="section-header section-header--left">

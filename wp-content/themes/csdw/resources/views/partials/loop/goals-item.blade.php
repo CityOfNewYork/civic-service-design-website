@@ -1,3 +1,6 @@
+@if(empty($item))
+  @php $item = get_post(get_the_ID()) @endphp
+@endif
 <a href="{{ get_the_permalink( $item ) }}" class="item goal-item hover-state">
   <span class="goal-item__tag">Goal</span>
   <span class="goal-item__title">{{ $item->post_title }}</span>

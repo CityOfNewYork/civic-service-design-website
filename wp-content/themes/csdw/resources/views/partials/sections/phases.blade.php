@@ -1,5 +1,5 @@
 @if( $phases_section['phases'] )
-  <section class="phases-section section section-pink-30t chameleonic" data-anchor="phases_section">
+  <section class="phases-section section section-pink-30t chameleonic" id="phases_section" data-anchor="phases_section">
     <div class="container">
 
       <div class="section-header section-header--left">

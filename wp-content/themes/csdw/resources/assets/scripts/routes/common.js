@@ -67,7 +67,6 @@ export default {
             if( $(this).css('backgroundColor') === 'rgba(0, 0, 0, 0)' || $(this).css('display') === 'none' ) {
               return;
             }
-            console.log($(this));
             siteHeader.css('backgroundColor', $(this).css('backgroundColor'))
           }
         });
@@ -176,7 +175,7 @@ export default {
 
       });
 
-      $( 'a[href^=#]' ).click( function(e) {
+      $( '.search-section .item a' ).click( function(e) {
         e.preventDefault();
         var anchor =  $( this ).attr( 'href' ).replace('#', '');
         var dest = $( 'section[data-anchor="'+anchor+'"]' );
@@ -187,6 +186,9 @@ export default {
 
       $( '.searchButton.open' ).on('click', function () {
         $('.search-form-header').addClass('active');
+        setTimeout(function() {
+          $('.search-form-header .search-field').focus();
+        }, 300);
       });
       $( '.searchButton.close' ).on('click', function () {
         $('.search-form-header').removeClass('active');
@@ -194,11 +196,13 @@ export default {
 
       $( '.menu-toggle' ).on( 'click', function(){
         var toggleMenu = $( '.site-header-nav' );
+        $('.search-form-header').addClass('active');
         $( this ).toggleClass('open');
         toggleMenu.slideToggle();
         if ($( this ).attr( 'aria-expanded') === 'true') {
           $(this).attr( 'aria-expanded', 'false');
           toggleMenu.attr( 'aria-expanded', 'false');
+          $('.search-form-header').removeClass('active');
         } else {
           $(this).attr( 'aria-expanded', 'true');
           toggleMenu.attr( 'aria-expanded', 'true');
