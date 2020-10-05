@@ -190,6 +190,8 @@
   &__thumbnail {
     min-width: 157px;
     max-width: 157px;
+    border-radius: 50%;
+    overflow: hidden;
 
     img {
       width: 100%;

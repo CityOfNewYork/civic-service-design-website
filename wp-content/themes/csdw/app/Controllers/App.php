@@ -75,7 +75,7 @@ class App extends Controller
             return sprintf(__('Search Results for %s', 'sage'), get_search_query());
         }
         if (is_404()) {
-            return __('Not Found', 'sage');
+            return sprintf(__('Sorry! We can’t find the page you’re looking for. Click the “<button type="button" class="icon-search" title="Search button"><img src="%s" class="search_icon" alt="Search Icon" title="Search Icon">Search</button>” above to find what you’re looking for.', 'sage'), \App\asset_path('images/buttons/Search_Icon.svg'));
         }
         return get_the_title();
     }

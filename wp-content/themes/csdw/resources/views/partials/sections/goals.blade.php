@@ -1,5 +1,5 @@
 @if( $goals_section['goals'] )
-  <section class="goals-section section section-pink-30t chameleonic" data-anchor="goals_section">
+  <section class="goals-section section section-pink-30t chameleonic" id="goals_section" data-anchor="goals_section">
     <div class="container">
 
       <div class="section-header section-header--left">

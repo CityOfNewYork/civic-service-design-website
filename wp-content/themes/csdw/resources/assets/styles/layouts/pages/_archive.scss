@@ -98,14 +98,13 @@
 
 .project-item-icons {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-end;
   flex-wrap: wrap;
 
   .icon-item {
     width: 86px;
-    margin-left: 22px;
-    margin-bottom: 5px;
+    margin: 0 11px 10px;
   }
 }
 
@@ -194,11 +193,7 @@
 
     .icon-item {
       width: 75px;
-      margin-left: 20px;
-
-      &:first-child {
-        margin-left: 0;
-      }
+      margin: 0 10px 10px;
     }
   }
 }
