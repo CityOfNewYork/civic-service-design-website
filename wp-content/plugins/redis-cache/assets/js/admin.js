@@ -354,7 +354,7 @@
                 time: function ( entry ) {
                     return [ entry[0], entry[1] * 0.5 ]
                 },
-                ratio: function ( entry ) {
+                bytes: function ( entry ) {
                     return [ entry[0], entry[1] * 0.3 ]
                 },
                 calls: function ( entry ) {
@@ -449,9 +449,12 @@
             function ( event ) {
                 event.preventDefault();
 
+                var $parent = $( this ).parent();
+
                 $.post( ajaxurl, {
-                    notice: $( this ).parent().attr( 'data-dismissible' ),
+                    notice: $parent.data( 'dismissible' ),
                     action: 'roc_dismiss_notice',
+                    _ajax_nonce: $parent.data( 'nonce' ),
                 } );
             }
         );

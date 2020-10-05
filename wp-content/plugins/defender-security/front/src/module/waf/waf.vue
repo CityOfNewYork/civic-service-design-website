@@ -1,11 +1,11 @@
 <template>
-    <div id="waf" class="sui-wrap" :class="maybeHighContrast">
+    <div id="waf" class="sui-wrap" :class="maybeHighContrast()">
         <div class="sui-header">
             <h1 class="sui-header-title">
                 {{__("Web Application Firewall")}}
             </h1>
             <doc-link
-                    link="https://premium.wpmudev.org/docs/wpmu-dev-plugins/defender/"></doc-link>
+                    link="https://premium.wpmudev.org/docs/wpmu-dev-plugins/defender/#web-application-firewall-waf"></doc-link>
         </div>
         <div class="sui-box" v-if="on_us===true && status===true">
             <div class="sui-box-header">

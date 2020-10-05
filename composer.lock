@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "04ab38c25d4f2e129ab581834346572c",
+    "content-hash": "1bb88aa94e75b85fa238e12ce1a21fa8",
     "packages": [
         {
             "name": "composer/installers",
@@ -901,26 +901,6 @@
                 "standards"
             ],
             "time": "2020-07-06T13:23:11+00:00"
-        },
-        {
-            "name": "wpackagist-plugin/redis-cache",
-            "version": "2.0.8",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/redis-cache/",
-                "reference": "tags/2.0.8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/redis-cache.2.0.8.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/redis-cache/"
         }
     ],
     "packages-dev": [
@@ -1342,15 +1322,15 @@
         },
         {
             "name": "wpackagist-plugin/query-monitor",
-            "version": "3.6.1",
+            "version": "3.6.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/query-monitor/",
-                "reference": "tags/3.6.1"
+                "reference": "tags/3.6.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/query-monitor.3.6.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/query-monitor.3.6.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1359,6 +1339,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/query-monitor/"
+        },
+        {
+            "name": "wpackagist-plugin/redis-cache",
+            "version": "2.0.15",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/redis-cache/",
+                "reference": "tags/2.0.15"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/redis-cache.2.0.15.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/redis-cache/"
         },
         {
             "name": "wpackagist-plugin/wp-auto-login",

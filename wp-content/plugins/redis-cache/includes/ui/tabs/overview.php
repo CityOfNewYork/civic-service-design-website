@@ -7,8 +7,6 @@
 
 defined( '\\ABSPATH' ) || exit;
 
-$roc = redis_object_cache();
-
 $redis_client = $roc->get_redis_client_name();
 $redis_prefix = $roc->get_redis_prefix();
 $redis_maxttl = $roc->get_redis_maxttl();
@@ -29,24 +27,6 @@ $diagnostics = $roc->get_diagnostics();
             <th><?php esc_html_e( 'Client:', 'redis-cache' ); ?></th>
             <td>
                 <code><?php echo esc_html( $redis_client ); ?></code>
-
-                <?php if ( stripos( (string) $redis_client, 'predis' ) === 0 ) : ?>
-                    <p class="description is-notice">
-                        <?php if ( version_compare( phpversion(), '7.2', '<' ) ) : ?>
-                            <?php _e( 'The Predis library is no longer maintained.', 'redis-cache' ); ?>
-                        <?php else : ?>
-                            <?php _e( 'The Predis library is not reliable on PHP 7.2 and newer.', 'redis-cache' ); ?>
-                        <?php endif; ?>
-
-                        <?php
-                            printf(
-                                // translators: %s = Link to the help article
-                                __( 'Learn more about <a href="%s" target="_blank">migrating to Credis or PhpRedis</a> to avoid compatiblity issues in the future.', 'redis-cache' ),
-                                'https://github.com/rhubarbgroup/redis-cache/wiki/Predis'
-                            );
-                        ?>
-                    </p>
-                <?php endif; ?>
             </td>
         </tr>
     <?php endif; ?>
@@ -56,13 +36,14 @@ $diagnostics = $roc->get_diagnostics();
         <td>
             <code>
                 <?php if ( ! $roc->object_cache_dropin_exists() ) : ?>
-                    <?php esc_html_e( 'Missing', 'redis-cache' ); ?>
+                    <?php esc_html_e( 'Not installed', 'redis-cache' ); ?>
                 <?php elseif ( $roc->object_cache_dropin_outdated() ) : ?>
                     <?php esc_html_e( 'Outdated', 'redis-cache' ); ?>
                 <?php else : ?>
-                    <?php $roc->validate_object_cache_dropin()
-                        ? esc_html_e( 'Valid', 'redis-cache' )
-                        : esc_html_e( 'Invalid', 'redis-cache' );
+                    <?php
+                        $roc->validate_object_cache_dropin()
+                            ? esc_html_e( 'Valid', 'redis-cache' )
+                            : esc_html_e( 'Invalid', 'redis-cache' );
                     ?>
                 <?php endif; ?>
             </code>
@@ -179,7 +160,7 @@ $diagnostics = $roc->get_diagnostics();
         <tr>
             <th><?php esc_html_e( 'Password:', 'redis-cache' ); ?></th>
             <td>
-                <code><?php echo str_repeat( '&#8226;', 8 ); ?></code>
+                <code>••••••••</code>
             </td>
         </tr>
     <?php endif; ?>
@@ -254,13 +235,19 @@ $diagnostics = $roc->get_diagnostics();
 <p class="submit">
 
     <?php if ( $roc->get_redis_status() ) : ?>
-        <a href="<?php echo esc_attr( redis_object_cache()->action_link( 'flush-cache' ) ); ?>" class="button button-primary button-large"><?php esc_html_e( 'Flush Cache', 'redis-cache' ); ?></a> &nbsp;
+        <a href="<?php echo esc_attr( $roc->action_link( 'flush-cache' ) ); ?>" class="button button-primary button-large">
+            <?php esc_html_e( 'Flush Cache', 'redis-cache' ); ?>
+        </a> &nbsp;
     <?php endif; ?>
 
     <?php if ( $roc->validate_object_cache_dropin() ) : ?>
-        <a href="<?php echo esc_attr( redis_object_cache()->action_link( 'disable-cache' ) ); ?>" class="button button-secondary button-large"><?php esc_html_e( 'Disable Object Cache', 'redis-cache' ); ?></a>
+        <a href="<?php echo esc_attr( $roc->action_link( 'disable-cache' ) ); ?>" class="button button-secondary button-large">
+            <?php esc_html_e( 'Disable Object Cache', 'redis-cache' ); ?>
+        </a>
     <?php else : ?>
-        <a href="<?php echo esc_attr( redis_object_cache()->action_link( 'enable-cache' ) ); ?>" class="button button-primary button-large"><?php esc_html_e( 'Enable Object Cache', 'redis-cache' ); ?></a>
+        <a href="<?php echo esc_attr( $roc->action_link( 'enable-cache' ) ); ?>" class="button button-primary button-large">
+            <?php esc_html_e( 'Enable Object Cache', 'redis-cache' ); ?>
+        </a>
     <?php endif; ?>
 
 </p>

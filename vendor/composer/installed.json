@@ -1357,16 +1357,16 @@
     },
     {
         "name": "wpackagist-plugin/query-monitor",
-        "version": "3.6.1",
-        "version_normalized": "3.6.1.0",
+        "version": "3.6.4",
+        "version_normalized": "3.6.4.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/query-monitor/",
-            "reference": "tags/3.6.1"
+            "reference": "tags/3.6.4"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/query-monitor.3.6.1.zip",
+            "url": "https://downloads.wordpress.org/plugin/query-monitor.3.6.4.zip",
             "reference": null,
             "shasum": null
         },
@@ -1379,16 +1379,16 @@
     },
     {
         "name": "wpackagist-plugin/redis-cache",
-        "version": "2.0.8",
-        "version_normalized": "2.0.8.0",
+        "version": "2.0.15",
+        "version_normalized": "2.0.15.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/redis-cache/",
-            "reference": "tags/2.0.8"
+            "reference": "tags/2.0.15"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/redis-cache.2.0.8.zip",
+            "url": "https://downloads.wordpress.org/plugin/redis-cache.2.0.15.zip",
             "reference": null,
             "shasum": null
         },

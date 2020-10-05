@@ -1,13 +1,13 @@
 === Defender Security - Malware Scanner, Login Security & Firewall ===
 Plugin Name: Defender Security - Malware Scanner, Login Security & Firewall
-Version: 2.3
+Version: 2.3.2
 Author: WPMU DEV
 Author URI: http://premium.wpmudev.org/
 Contributors: WPMUDEV, WebFactory
 Tags: security plugin, security, firewall, malware, malware scanner, antivirus, ip blocking, login security, brute force attacks, two-factor authentication, activity log, audit logs, block hackers, 2fa, hack
 Requires at least: 5.0
-Tested up to: 5.4.1
-Stable tag: 2.3
+Tested up to: 5.5
+Stable tag: 2.3.2
 License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 Security plugin with malware scanner, IP blocking, audit logs, activity logs, firewall, login security & more.
@@ -40,6 +40,12 @@ Defender starts with a list of one-click hardening techniques that will instantl
 * Prevent information disclosure – why tell them what you have
 * Prevent PHP execution – because it’s daaaangerous
 
+### Learn The Ropes With These Hands-On Defender Tutorials
+
+* [How to Get the Most Out of Defender Security](https://premium.wpmudev.org/blog/how-to-get-the-most-out-of-defender-security/)
+* [How to Stop Hackers in Their Tracks with Defender](https://premium.wpmudev.org/blog/stop-hackers-with-defender-wordpress-security-plugin/)
+* [Find Out if You’re Hacked: How to Find and Delete Suspicious Code with Defender](https://premium.wpmudev.org/blog/delete-suspicious-code-defender/)
+* [How to Create a Powerful and Secure Customized Firewall with Defender](https://premium.wpmudev.org/blog/defender-ip-address-lockout-firewall/)
 
 ### WordPress Security Scans
 Run free malware scans that check WordPress for suspicious code and malware. The Defender scan tool compares your WordPress install with the master copy in WP directory, reports changes and lets you restore the original file with a click.
@@ -156,6 +162,30 @@ WPMU DEV's expert support will restore and clean up your site after it’s been 
 
 
 == Changelog ==
+
+= 2.3.2 =
+- New: Add a separate Tutorials sub-menu and X-icon to remove it from the Dashboard
+- Improvement: Change mention of blacklist and whitelist to blocklist and allowlist on Defender pages
+- Improvement: Change Documentation links for Firewall and Malware Scanning
+- Improvement: Config Improvements
+- Fix: Display custom login forms if the Defender Masking URL is enabled
+- Fix: Receive email from Defender security tweaks daily
+- Fix: Activate 'Mask Login Area' through the Defender dashboard
+- Fix: Correct display of the Audit log for a new registered user - except for a Subscriber role - in MU
+- Fix: Masked login alters ajaxurl in MU in sites table page
+- Fix: Remove 'ambient-light-sensor', 'picture-in-picture', 'speaker' and 'vr' directives from Feature-Policy header
+- Fix: Compatibility with HUB
+- Other minor enhancements and fixes
+
+= 2.3.1 =
+- New: Feature to save presets configurations of the Defender's settings, and make them available to download and apply to your other sites.
+- New: Add tutorials section in the Defender dashboard.
+- Improvement: Allow to bulk delete suspicious files
+- Improvement: Improve the logic of how "Include sub-domains" option should be shown on the Strict Transport Security header
+- Fix: Prevent wp-signup.php to access when Mask Login is enabled.
+- Fix: 2FA login does not redirect correctly after login via the my-account page of Woocommerce
+- Remove: Change default database prefix, as this can be bypass.
+- Other minor enhancements and fixes
 
 = 2.3 =
 - Improvement: Change the description for X-Content-Type-Options security header
