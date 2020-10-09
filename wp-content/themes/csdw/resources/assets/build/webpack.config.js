@@ -65,7 +65,7 @@ let webpackConfig = {
           fallback: 'style',
           use: [
             { loader: 'cache' },
-            { loader: 'css', options: { sourceMap: config.enabled.sourceMaps } },
+            { loader: 'css', options: { url: false, sourceMap: config.enabled.sourceMaps } },
             {
               loader: 'postcss', options: {
                 config: { path: __dirname, ctx: config },
@@ -82,7 +82,7 @@ let webpackConfig = {
           fallback: 'style',
           use: [
             { loader: 'cache' },
-            { loader: 'css', options: { sourceMap: config.enabled.sourceMaps } },
+            { loader: 'css', options: { url: false, sourceMap: config.enabled.sourceMaps } },
             {
               loader: 'postcss', options: {
                 config: { path: __dirname, ctx: config },
@@ -134,7 +134,11 @@ let webpackConfig = {
     jquery: 'jQuery',
   },
   plugins: [
-    new CleanPlugin([config.paths.dist], {
+    new CleanPlugin([
+      `${config.paths.dist}/images`,
+      `${config.paths.dist}/scripts`,
+      `${config.paths.dist}/styles`
+    ], {
       root: config.paths.root,
       verbose: false,
     }),
