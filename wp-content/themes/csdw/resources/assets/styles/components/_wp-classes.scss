@@ -3,6 +3,51 @@
  * @see http://codex.wordpress.org/CSS#WordPress_Generated_Classes
  */
 
+.wp-content {
+  // Body elements
+  p,
+  ul,
+  ol,
+  li,
+  th,
+  td {
+    font-size: 1.35rem;
+    line-height: 1.5;
+    margin-bottom: $spacer;
+  }
+
+  // Lists
+  ul,
+  ol {
+    padding-top: $spacer / 2;
+    margin-left: $spacer * 2;
+    margin-right: $spacer * 2;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Source Serif Pro", serif;
+    margin-top: $spacer * 2;
+    margin-bottom: $spacer;
+  }
+
+  *:first-child {
+    margin-top: 0;
+  }
+}
+
 /** Media alignment */
 .alignnone {
   margin-left: 0;
@@ -13,13 +58,13 @@
 
 .aligncenter {
   display: block;
-  margin: ($spacer / 2) auto;
+  margin-left: auto;
+  margin-right: auto;
   height: auto;
 }
 
 .alignleft,
 .alignright {
-  margin-bottom: ($spacer / 2);
   height: auto;
 }
 
@@ -36,10 +81,22 @@
 }
 
 /** Captions */
+.wp-caption,
+.wp-block-image {
+  margin-bottom: $spacer * 2;
+}
 
-// TODO: .wp-caption {}
-// TODO: .wp-caption img {}
-// TODO: .wp-caption-text {}
+.wp-caption img,
+.wp-block-image img {
+  height: auto;
+}
+
+.wp-caption-text,
+.wp-block-image figcaption {
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: italic;
+  margin-top: 0;
+}
 
 /** Text meant only for screen readers */
 .screen-reader-text {
