@@ -1,3 +1,4 @@
+// TODO: convert hex references in all styles to colors stored in tokens map
 @import "common/variables";
 @import "common/fonts";
 @import "_mixins/transition";
@@ -5,14 +6,8 @@
 /** Import everything from autoload */
 @import "./autoload/**/*";
 
-/**
- * Import npm dependencies
- *
- * Prefix your imports with `~` to grab from node_modules/
- * @see https://github.com/webpack-contrib/sass-loader#imports
- */
-// @import "~some-node-module";
-@import "../../../node_modules/codyhouse-framework/main/assets/css/base";
+/** Import node modules using '~' */
+@import "~codyhouse-framework/main/assets/css/base";
 
 /** Import theme styles */
 @import "common/global";
@@ -35,3 +30,7 @@
 @import "layouts/pages/*";
 @import "layouts/pages/search";
 @import "layouts/tinymce";
+
+/** Import pre-compiled NYCO Pattern utilities */
+@import "~@nycopportunity/patterns/dist/styles/utilities.css";
+@import "common/utilities"; // custom site utilities

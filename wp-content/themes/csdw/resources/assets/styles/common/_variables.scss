@@ -1,5 +1,14 @@
+/** NYCO Patterns assets paths */
+// $cdn: "~@nycopportunity/patterns/dist/";
+// $path-to-fonts: "fonts";
+// $path-to-svg: "svg";
+
+// TODO: convert hex references in all styles to colors stored in tokens map
+// @import "~@nycopportunity/patterns/src/config/tokens";
+
 /** Colors */
-$text-color: #2e334f;
+$navy-30s: #2e334f;
+$text-color: $navy-30s;
 $navy: #24325b;
 $body-background: #fff;
 
@@ -9,3 +18,6 @@ $spacer: 2rem;
 /** Font Settings */
 $default-font: "Source Sans Pro", sans-serif;
 $default-font-size: 20px;
+
+/** Utilities importance setting (matches NYCO Patterns) **/
+$important-utilities: !important;
