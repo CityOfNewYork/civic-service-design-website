@@ -1,6 +1,6 @@
 <article @php post_class('with-breadcrumbs') @endphp>
 
-  @include('partials.global.post-header', [ 'header_settings' => $header_settings ])
+  @include('partials.global.post-custom-header', [ 'header_settings' => $header_settings ])
 
   @include('partials.sections.tactics', [ 'tactics_section' => $tactics_section ])
 

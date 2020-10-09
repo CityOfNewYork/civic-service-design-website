@@ -1,6 +1,6 @@
 <article @php post_class('with-breadcrumbs') @endphp>
 
-  @include('partials.global.post-header')
+  @include('partials.global.post-custom-header')
 
   @if( $blocks || $sidebar_items )
     <div class="main-content chameleonic">
