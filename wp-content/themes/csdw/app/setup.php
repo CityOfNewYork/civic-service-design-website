@@ -13,21 +13,20 @@ use Roots\Sage\Template\BladeProvider;
 add_action('wp_enqueue_scripts', function () {
     global $wp_query;
 
-    wp_enqueue_style('nyc-patterns', 'https://cdn.jsdelivr.net/gh/cityofnewyork/access-nyc-patterns@v0.1.0/dist/styles/site-default.css', false, null);
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
 
-
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
+
     $translation_array = array( 'templateUrl' => get_stylesheet_directory_uri() );
-//after wp_enqueue_script
+
     wp_localize_script( 'sage/main.js', 'path', $translation_array );
+
     wp_localize_script( 'sage/main.js', 'loadmore_params', array(
         'ajaxurl' => admin_url( 'admin-ajax.php' ),
         'posts' => json_encode( $wp_query->query_vars ),
         'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
         'max_page' => $wp_query->max_num_pages
     ) );
-    //wp_enqueue_script('sage/tutorial.js', get_template_directory_uri(). '/assets/libs/tutorial.js', ['jquery'], null, true);
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
@@ -415,3 +414,41 @@ add_filter('get_search_form', function () {
     echo template('partials.site-search-form');
     return $form;
 });
+
+/**
+ * Add base permalink structure for post if there is a page for posts setting
+ * in the WordPress admin.
+ *
+ * @author NYC Opportunity
+ */
+
+$page_for_posts = get_option('page_for_posts');
+
+if ($page_for_posts) {
+  $rewrite_base = get_transient('page_for_posts_slug');
+
+  // Store in transient as to not need to query for string every time
+  if (empty($rewrite_base)) {
+    $WP_Post = get_post($page_for_posts);
+    $rewrite_base = $WP_Post->post_name;
+
+    set_transient('page_for_posts_slug', $rewrite_base);
+  }
+
+  // Add pre_post_link filter for returning permalinks
+  add_filter('pre_post_link', function($permalink) use ($rewrite_base) {
+    return '/' . $rewrite_base . $permalink;
+  });
+
+  // Hook into the default post type's arguments for setting the rewrite base
+  add_filter('register_post_type_args', function($args, $name) use ($rewrite_base) {
+    if ('post' === $name) {
+      $args['rewrite'] = array(
+        'slug' => $rewrite_base,
+        'with_front' => true
+      );
+    }
+
+    return $args;
+  }, 10, 2);
+}
