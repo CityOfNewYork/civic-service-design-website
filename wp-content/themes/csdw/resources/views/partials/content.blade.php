@@ -1,9 +1,9 @@
 <article @php post_class() @endphp>
-  <header>
-    <h2 class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h2>
-    @include('partials/entry-meta')
-  </header>
-  <div class="entry-summary">
-    @php the_excerpt() @endphp
+  @include('partials.global.post-header')
+
+  <div class="main-content chameleonic wp-content bg-base-white text-navy-30s font-serif pt-0">
+    <div class="container">
+      @php the_content() @endphp
+    </div>
   </div>
 </article>

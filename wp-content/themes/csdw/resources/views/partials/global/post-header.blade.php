@@ -1,23 +1,13 @@
-<header class="post-header chameleonic" style="{{ $header_settings['header_color'] }}">
+<header class="post-header chameleonic bg-base-white text-navy-30s">
   <div class="container">
-    <div class="row">
-      <div class="post-header__meta">
-        <div class="post-header__tag">{{ get_post_type_object(get_post_type())->labels->singular_name }}</div>
-        <h1 class="post-header__title entry-title">{!! get_the_title() !!}</h1>
-        <div class="post-header__content entry-content">
-          @php the_content() @endphp
-        </div>
+    <div class="grid">
+      <div class="col-9 mx-auto">
+        <h1 class="post-header__title text-left text-navy-30s mb-2">{!! get_the_title() !!}</h1>
 
-        @include('partials.blocks.post_buttons', [ 'header_buttons' => $header_settings['header_buttons'] ] )
+        @if ($header_settings['header_subtitle']) <h2 class="font-serif font-normal mb-5">{{ $header_settings['header_subtitle'] }}</h2> @endif
 
-      </div>
-
-      <div class="post-header__thumbnail">
-        {{ the_post_thumbnail('full', ['class' => 'img']) }}
+        @include('partials/entry-meta')
       </div>
     </div>
-
-
-
   </div>
 </header>

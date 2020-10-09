@@ -159,6 +159,7 @@ class ComposerStaticInit4344f34a96da2287878a533788108cd4
         'App\\Controllers\\ArchiveProjects' => __DIR__ . '/../..' . '/app/Controllers/ArchiveProjects.php',
         'App\\Controllers\\FrontPage' => __DIR__ . '/../..' . '/app/Controllers/FrontPage.php',
         'App\\Controllers\\Home' => __DIR__ . '/../..' . '/app/Controllers/Home.php',
+        'App\\Controllers\\Single' => __DIR__ . '/../..' . '/app/Controllers/Single.php',
         'App\\Controllers\\SingleGoals' => __DIR__ . '/../..' . '/app/Controllers/SingleGoals.php',
         'App\\Controllers\\SingleOfferings' => __DIR__ . '/../..' . '/app/Controllers/SingleOfferings.php',
         'App\\Controllers\\SinglePhases' => __DIR__ . '/../..' . '/app/Controllers/SinglePhases.php',

@@ -11,7 +11,8 @@ trait PostsHeaderTrait {
     {
         $return = [
             'header_color' => null,
-            'header_buttons' => null
+            'header_buttons' => null,
+            'header_subtitle' => null
         ];
         $header_color = get_field( 'header_color_' . get_post_type(), 'options' );
         if( $header_color ) {
@@ -24,6 +25,11 @@ trait PostsHeaderTrait {
             foreach ( $header_buttons as &$button ) {
                 $return['header_buttons'][] = array_map('strtolower', $button);
             }
+        }
+
+        $header_subtitle = get_field('header_subtitle');
+        if ($header_subtitle) {
+          $return['header_subtitle'] = $header_subtitle;
         }
 
         return $return;

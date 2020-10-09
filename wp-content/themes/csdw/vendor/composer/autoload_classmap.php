@@ -12,6 +12,7 @@ return array(
     'App\\Controllers\\ArchiveProjects' => $baseDir . '/app/Controllers/ArchiveProjects.php',
     'App\\Controllers\\FrontPage' => $baseDir . '/app/Controllers/FrontPage.php',
     'App\\Controllers\\Home' => $baseDir . '/app/Controllers/Home.php',
+    'App\\Controllers\\Single' => $baseDir . '/app/Controllers/Single.php',
     'App\\Controllers\\SingleGoals' => $baseDir . '/app/Controllers/SingleGoals.php',
     'App\\Controllers\\SingleOfferings' => $baseDir . '/app/Controllers/SingleOfferings.php',
     'App\\Controllers\\SinglePhases' => $baseDir . '/app/Controllers/SinglePhases.php',
