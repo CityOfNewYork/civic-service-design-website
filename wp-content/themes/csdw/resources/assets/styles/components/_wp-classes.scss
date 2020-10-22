@@ -11,17 +11,26 @@
   li,
   th,
   td {
-    font-size: 1.35rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     margin-bottom: $spacer;
+
+    @media screen and (min-width: $media-medium) {
+      font-size: 1.35rem;
+    }
   }
 
   // Lists
   ul,
   ol {
     padding-top: $spacer / 2;
-    margin-left: $spacer * 2;
-    margin-right: $spacer * 2;
+    margin-left: $spacer;
+    margin-right: $spacer;
+
+    @media screen and (min-width: $media-medium) {
+      margin-left: $spacer * 2;
+      margin-right: $spacer * 2;
+    }
   }
 
   ul {
@@ -43,7 +52,7 @@
     margin-bottom: $spacer;
   }
 
-  *:first-child {
+  > *:first-child {
     margin-top: 0;
   }
 }
@@ -83,7 +92,12 @@
 /** Captions */
 .wp-caption,
 .wp-block-image {
-  margin-bottom: $spacer * 2;
+  margin-top: $spacer;
+
+  @media screen and (min-width: $media-medium) {
+    margin-top: $spacer * 2;
+    margin-bottom: $spacer * 2;
+  }
 }
 
 .wp-caption img,

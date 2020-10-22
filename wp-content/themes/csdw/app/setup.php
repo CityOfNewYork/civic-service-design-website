@@ -81,11 +81,15 @@ add_action('after_setup_theme', function () {
 
     /**
      * Add Editor Stylesheet using Gutenberg Support.
+     *
      * @source resources/editor-style.css
+     *
      * @author NYC Opportunity
      */
+
     add_theme_support('editor-styles');
-    add_editor_style('editor-style.css');
+
+    add_editor_style('assets/styles/blocks/editor-styles.css');
 }, 20);
 
 /**
@@ -452,3 +456,18 @@ if ($page_for_posts) {
     return $args;
   }, 10, 2);
 }
+
+/**
+ * Add the News Content block Styling
+ *
+ * @author NYC Opportunity
+ */
+
+wp_register_style('news-content',
+  get_template_directory_uri() . '/assets/styles/blocks/group-news-content.css');
+
+register_block_style('core/group', array(
+  'name' => 'news-content',
+  'label' => 'News Content',
+  'style_handle' => 'news-content'
+));
