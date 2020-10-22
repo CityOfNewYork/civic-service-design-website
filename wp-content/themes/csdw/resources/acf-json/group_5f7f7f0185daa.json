@@ -20,6 +20,28 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5f905c20076dc",
+            "label": "Related Posts",
+            "name": "related_posts",
+            "type": "post_object",
+            "instructions": "Select up to 3 related posts for this article.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "post"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "object",
+            "ui": 1
         }
     ],
     "location": [
@@ -39,5 +61,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1602253714
+    "modified": 1603296637
 }
