@@ -221,7 +221,7 @@
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: $media-large) {
   .project-single-header {
     &__content-wrapper {
       padding: 19px 15px 30px;
@@ -288,7 +288,7 @@
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: $media-medium) {
   .project-single-header {
     padding-top: 9px;
     padding-bottom: 0;

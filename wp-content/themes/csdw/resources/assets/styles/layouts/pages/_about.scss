@@ -20,7 +20,7 @@
   padding-bottom: 90px;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: $media-medium) {
   .about-header {
     padding-top: 63px;
     padding-bottom: 115px;

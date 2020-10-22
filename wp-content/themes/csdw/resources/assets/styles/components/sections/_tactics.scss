@@ -37,7 +37,7 @@
   }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: $media-xlarge) {
   .tactic-item {
     &__title {
       font-size: 38px;
@@ -45,7 +45,7 @@
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: $media-large) {
   .tactics-section {
     .row {
       margin: 0 -15px;
@@ -62,7 +62,7 @@
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: $media-medium) {
   .tactic-item {
     padding: 95px 15px 130px;
 

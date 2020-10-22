@@ -37,7 +37,7 @@
   padding-top: 53px;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: $media-large) {
   #breadcrumbs {
     left: auto;
     padding: 9px 12px;

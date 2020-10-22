@@ -223,7 +223,7 @@
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: $media-large) {
   .page-template-homepage {
     .header-animated {
       &__item {

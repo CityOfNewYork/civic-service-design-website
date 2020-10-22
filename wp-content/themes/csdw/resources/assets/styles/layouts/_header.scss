@@ -334,13 +334,13 @@
   }
 }
 
-@media (min-width: 991.98px) {
+@media (min-width: $media-large) {
   .site-header-nav {
     display: flex !important;
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: $media-large) {
   .site-header {
     &-container {
       margin-top: 0;

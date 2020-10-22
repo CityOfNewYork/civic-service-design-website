@@ -148,7 +148,7 @@
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: $media-large) {
   .project-item-full,
   .project-item {
     &__date {
@@ -198,7 +198,7 @@
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: $media-medium) {
   .archive-loop-section {
     padding-bottom: 105px;
 

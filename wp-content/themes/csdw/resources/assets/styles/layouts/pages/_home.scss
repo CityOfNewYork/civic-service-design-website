@@ -71,7 +71,7 @@
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: $media-large) {
   .home-header {
     padding: 62px 0 64px;
   }
@@ -83,7 +83,7 @@
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: $media-medium) {
   .home-header {
     //padding: 62px 0 64px;
 

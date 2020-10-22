@@ -117,13 +117,13 @@
   }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: $media-xlarge) {
   .site-footer-menu .widget-wrapper {
     margin: 0 15px;
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: $media-large) {
   .site-footer {
     display: flex;
     flex-direction: column;
@@ -207,7 +207,7 @@
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: $media-medium) {
   .site-footer {
     &-menu {
       flex-wrap: wrap;

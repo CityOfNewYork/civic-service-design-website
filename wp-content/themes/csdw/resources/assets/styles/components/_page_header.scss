@@ -20,13 +20,13 @@
   z-index: 1;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: $media-large) {
   .page-header {
     padding: 62px 15px 85px;
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: $media-medium) {
   .page-header {
     &__content {
       font-size: 17px;

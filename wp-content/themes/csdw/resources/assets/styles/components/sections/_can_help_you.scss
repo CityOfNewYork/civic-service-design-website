@@ -37,13 +37,13 @@
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: $media-large) {
   .can-help-item {
     width: calc(33.3333% - 30px);
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: $media-medium) {
   .section.section-can-help-you {
     padding-top: 85px;
 
