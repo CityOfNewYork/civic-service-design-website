@@ -2,14 +2,14 @@
 
 namespace App\Controllers;
 
-use App\Traits\PostsHeaderTrait;
-use App\Traits\RelatedSectionTrait;
 use Sober\Controller\Controller;
+use App\Traits\PostsHeaderTrait;
+use App\Traits\RelatedTacticsTrait;
 use App\Traits\PostsSectionTrait;
 
 class SingleTactics extends Controller
 {
-    use PostsSectionTrait, PostsHeaderTrait, RelatedSectionTrait;
+    use PostsSectionTrait, PostsHeaderTrait, RelatedTacticsTrait;
 
     /**
      * @return object|null

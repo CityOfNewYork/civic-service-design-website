@@ -50,7 +50,5 @@
     </div>
   @endif
 
-
-  @include('partials.sections.related', [ 'related_section' => $related_section ])
-
+  @include('partials.sections.related', [ 'related_section' => $related_tactics_section ])
 </article>

@@ -3,9 +3,11 @@
 namespace App\Controllers;
 
 use Sober\Controller\Controller;
+use App\Traits\RelatedPostsTrait;
 
-class TemplateOffering extends Controller
-{
+class TemplateOffering extends Controller {
+    use RelatedPostsTrait;
+
     /**
      * @return array|null
      */
@@ -48,15 +50,5 @@ class TemplateOffering extends Controller
         $numbers_section = get_field( 'numbers_section' );
 
         return ( $numbers_section['items'] ) ? $numbers_section : null;
-    }
-
-    /**
-     * @return array|null
-     */
-    public function relatedSection(): ?array
-    {
-        $related_posts = get_field( 'related_posts_section' );
-
-        return ( $related_posts ) ? $related_posts : null;
     }
 }

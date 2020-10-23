@@ -11,5 +11,15 @@
         </div>
       @endif
     </div>
+
+    @if ($related_section)
+      <div class="container">
+        <div class="section pb-4 tablet:pb-0">
+          <hr class="border-solid border-b-2 border-grey-50t">
+        </div>
+      </div>
+    @endif
+
+    @include('partials.sections.related', [ 'related_section' => $related_section ])
   </div>
 </article>

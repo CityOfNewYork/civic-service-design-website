@@ -2,14 +2,13 @@
 
 namespace App\Controllers;
 
-use App\Traits\PostsHeaderTrait;
-use App\Traits\RelatedSectionTrait;
 use Sober\Controller\Controller;
+use App\Traits\PostsHeaderTrait;
 use App\Traits\PostsSectionTrait;
+use App\Traits\RelatedPostsTrait;
 
-class SingleProjects extends Controller
-{
-    use RelatedSectionTrait;
+class SingleProjects extends Controller {
+    use RelatedPostsTrait;
 
     /**
      * @return array|null
@@ -90,15 +89,5 @@ class SingleProjects extends Controller
         $project_partners_section = get_field( 'project_partners_section' );
 
         return ( $project_partners_section['text'] ) ? $project_partners_section : null;
-    }
-
-    /**
-     * @return array|null
-     */
-    public function relatedSection(): ?array
-    {
-        $related_posts = get_field( 'related_posts_section' );
-
-        return ( $related_posts ) ? $related_posts : null;
     }
 }
