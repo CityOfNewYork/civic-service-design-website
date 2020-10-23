@@ -343,7 +343,8 @@ add_action('init', function () {
  */
 if ( function_exists( 'add_image_size' ) ) {
     add_image_size( 'Phase Listing',             149, 135, true );
-    add_image_size( 'Phase Thumbnail',           46, 42, true );
+    // add_image_size( 'Phase Thumbnail',           46, 42, true );
+    add_image_size( 'Phase Thumbnail',           92, 84, true ); // retina
     add_image_size( 'Tools Listing',             210, 178, true );
     add_image_size( 'Posts Listing',             340, 205, true );
     add_image_size( 'Posts Listing Full Type',   768, 339, true );

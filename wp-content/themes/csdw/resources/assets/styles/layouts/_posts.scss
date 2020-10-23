@@ -72,6 +72,11 @@
     justify-content: center;
     margin-right: 22px;
 
+    > img {
+      max-width: 46px;
+      height: auto;
+    }
+
     @include transition();
   }
 
