@@ -184,6 +184,7 @@ main.main {
 
 .btn {
   border-radius: 0;
+  cursor: pointer;
 
   &-red {
     background: #fc5d52;
@@ -243,6 +244,7 @@ main.main {
   width: 100%;
   padding: 0;
   background: transparent;
+  text-align: center;
 
   .btn {
     font-size: 15px;
