@@ -137,7 +137,15 @@
   margin-bottom: 66px;
 
   &__thumbnail {
+    display: flex;
+    align-items: center;
+    height: 50vh;
     margin-bottom: 50px;
+
+    img {
+      max-height: 50vh;
+      width: auto;
+    }
   }
 
   &__content {

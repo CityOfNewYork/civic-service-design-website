@@ -14,7 +14,11 @@
           <div class="what-we-made-item">
 
             <div class="what-we-made-item__thumbnail">
-              {!! wp_get_attachment_image( $item['image'], 'full', false, ['alt' => wp_strip_all_tags($item['content']), 'title' => wp_strip_all_tags($item['content'])] ) !!}
+              {!! wp_get_attachment_image( $item['image'], 'full', false, [
+                  'alt' => wp_strip_all_tags($item['content']),
+                  'title' => wp_strip_all_tags($item['content']),
+                  'class' => 'img'
+                ] ) !!}
             </div>
 
             <div class="what-we-made-item__content html-content">
