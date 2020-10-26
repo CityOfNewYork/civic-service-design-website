@@ -465,8 +465,10 @@ if ($page_for_posts) {
  * @author NYC Opportunity
  */
 
-wp_register_style('news-content',
-  get_template_directory_uri() . '/assets/styles/blocks/group-news-content.css');
+add_action('admin_enqueue_scripts', function() {
+  wp_register_style('news-content',
+    get_template_directory_uri() . '/assets/styles/blocks/group-news-content.css');
+});
 
 register_block_style('core/group', array(
   'name' => 'news-content',
