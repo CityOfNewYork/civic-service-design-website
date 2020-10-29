@@ -87,7 +87,7 @@ array_map('add_filter',
     'parent_theme_file_path',
     'parent_theme_file_uri'
   ],
-  array_fill(0, 2, 'dirname')
+  array_fill(0, 4, 'dirname')
 );
 
 Container::getInstance()
