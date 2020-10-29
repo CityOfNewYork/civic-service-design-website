@@ -53,6 +53,14 @@ class App extends Controller
             }
             return $query;
         });
+
+        /**
+         * Enqueue Global Integrations
+         *
+         * @author NYC Opportunity
+         */
+
+        \App\enqueue_inline('global-site-tag');
     }
 
     public function siteName()

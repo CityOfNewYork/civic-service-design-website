@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1bb88aa94e75b85fa238e12ce1a21fa8",
+    "content-hash": "9c02abefd6341eaf6b4378527ba2d3bb",
     "packages": [
         {
             "name": "composer/installers",
@@ -491,6 +491,60 @@
                 "time"
             ],
             "time": "2020-07-28T06:04:54+00:00"
+        },
+        {
+            "name": "nyco/wp-assets",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/CityOfNewYork/nyco-wp-assets.git",
+                "reference": "a1d00d68ff180bd04f1fce2310e821d45fde8d4b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/CityOfNewYork/nyco-wp-assets/zipball/a1d00d68ff180bd04f1fce2310e821d45fde8d4b",
+                "reference": "a1d00d68ff180bd04f1fce2310e821d45fde8d4b",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.9",
+                "mustangostang/spyc": "^0.6"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "type": "wordpress-muplugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "NYC Opportunity",
+                    "email": "products@nycopportunity.nyc.gov",
+                    "homepage": "https://nyc.gov/opportunity"
+                }
+            ],
+            "description": "A developer plugin with helpers for managing assets in WordPress.",
+            "homepage": "https://github.com/cityofnewyork/nyco-wp-assets",
+            "keywords": [
+                "assets",
+                "configuration",
+                "css",
+                "enqueue",
+                "inline",
+                "integrations",
+                "javascript",
+                "nycopportunity",
+                "query-monitor",
+                "querymonitor",
+                "register",
+                "scripts",
+                "styles",
+                "theme",
+                "wordpress"
+            ],
+            "time": "2020-10-29T18:52:54+00:00"
         },
         {
             "name": "nyco/wp-config",

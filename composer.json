@@ -1,5 +1,5 @@
 {
-  "name": "service-design",
+  "name": "nyco/service-design",
   "version": "0.0.1",
   "description": "The Service Design Studio makes public services more effective and accessible for all New Yorkers",
   "homepage": "https://nyc.gov/servicdesign",
@@ -22,7 +22,8 @@
     }
   ],
   "require": {
-    "nyco/wp-config": "^1.0"
+    "nyco/wp-config": "^1.0",
+    "nyco/wp-assets": "^1.2"
   },
   "require-dev": {
     "filp/whoops": "^2.3",
