@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9c02abefd6341eaf6b4378527ba2d3bb",
+    "content-hash": "1418e641759b52f237158e33428947c3",
     "packages": [
         {
             "name": "composer/installers",
@@ -494,16 +494,16 @@
         },
         {
             "name": "nyco/wp-assets",
-            "version": "1.2.0",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CityOfNewYork/nyco-wp-assets.git",
-                "reference": "a1d00d68ff180bd04f1fce2310e821d45fde8d4b"
+                "reference": "3e6a7bab714e6cd1911d20da02d452e05e951227"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CityOfNewYork/nyco-wp-assets/zipball/a1d00d68ff180bd04f1fce2310e821d45fde8d4b",
-                "reference": "a1d00d68ff180bd04f1fce2310e821d45fde8d4b",
+                "url": "https://api.github.com/repos/CityOfNewYork/nyco-wp-assets/zipball/3e6a7bab714e6cd1911d20da02d452e05e951227",
+                "reference": "3e6a7bab714e6cd1911d20da02d452e05e951227",
                 "shasum": ""
             },
             "require": {
@@ -516,7 +516,7 @@
             "type": "wordpress-muplugin",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-3.0+"
+                "GPL-3.0-or-later"
             ],
             "authors": [
                 {
@@ -544,20 +544,24 @@
                 "theme",
                 "wordpress"
             ],
-            "time": "2020-10-29T18:52:54+00:00"
+            "support": {
+                "issues": "https://github.com/cityofnewyork/nyco-wp-assets/issues",
+                "source": "https://github.com/CityOfNewYork/nyco-wp-assets/tree/v1.2.2"
+            },
+            "time": "2020-10-30T17:04:52+00:00"
         },
         {
             "name": "nyco/wp-config",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CityOfNewYork/nyco-wp-config.git",
-                "reference": "04d74c5b78030066e1c334943e0a10da2e78e2a9"
+                "reference": "443a2a8f35a2eaf236ce2261db1546598900b73b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CityOfNewYork/nyco-wp-config/zipball/04d74c5b78030066e1c334943e0a10da2e78e2a9",
-                "reference": "04d74c5b78030066e1c334943e0a10da2e78e2a9",
+                "url": "https://api.github.com/repos/CityOfNewYork/nyco-wp-config/zipball/443a2a8f35a2eaf236ce2261db1546598900b73b",
+                "reference": "443a2a8f35a2eaf236ce2261db1546598900b73b",
                 "shasum": ""
             },
             "require": {
@@ -566,7 +570,6 @@
                 "mustangostang/spyc": "^0.6"
             },
             "require-dev": {
-                "codeception/codeception": "^2.3",
                 "squizlabs/php_codesniffer": "3.*"
             },
             "type": "wordpress-muplugin",
@@ -589,7 +592,11 @@
                 "environment",
                 "wordpress"
             ],
-            "time": "2020-04-09T20:44:23+00:00"
+            "support": {
+                "issues": "https://github.com/cityofnewyork/nyco-wp-config/issues",
+                "source": "https://github.com/CityOfNewYork/nyco-wp-config/tree/v1.0.2"
+            },
+            "time": "2020-10-07T02:14:17+00:00"
         },
         {
             "name": "psr/container",
@@ -1384,9 +1391,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/query-monitor.3.6.4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/query-monitor.3.6.4.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1404,9 +1409,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/redis-cache.2.0.15.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/redis-cache.2.0.15.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1424,9 +1427,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-auto-login.1.0.1.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/wp-auto-login.1.0.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1444,9 +1445,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-crontrol.1.8.5.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/wp-crontrol.1.8.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1461,5 +1460,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
 }
