@@ -29,28 +29,28 @@ class App extends Controller
 
         /*
          * Pre Get Posts
-         * */
-        add_action( 'pre_get_posts', function ($query) {
-            if( !is_admin() && $query->is_main_query() ) {
-                if(is_home()) {
-                    if(wp_is_mobile()) {
-                        $query->set( 'posts_per_page', '3' );
+         */
+        add_action('pre_get_posts', function ($query) {
+            if (!is_admin() && $query->is_main_query()) {
+                if (is_home()) {
+                    if (wp_is_mobile()) {
+                        $query->set('posts_per_page', '3');
                     } else {
-                        $query->set( 'posts_per_page', '8' );
+                        $query->set('posts_per_page', '8');
                     }
-                } else if (is_post_type_archive( 'projects' )) {
+                } else if (is_post_type_archive('projects')) {
+                    $query->set('orderby', 'meta_value date');
+                    $query->set('meta_key', 'is_featured');
+                    $query->set('order', 'DESC');
 
-                     $query->set( 'orderby', 'meta_value' );
-                     $query->set( 'meta_key', 'is_featured' );
-                     $query->set( 'order', 'DESC' );
-
-                    if(wp_is_mobile()) {
-                        $query->set( 'posts_per_page', '3' );
+                    if (wp_is_mobile()) {
+                        $query->set('posts_per_page', '3');
                     }
-                } else if (is_post_type_archive( ['tactics', 'tools', 'playlists'] )) {
-                    $query->set( 'posts_per_page', '-1' );
+                } else if (is_post_type_archive(['tactics', 'tools', 'playlists'])) {
+                    $query->set('posts_per_page', '-1');
                 }
             }
+
             return $query;
         });
 
