@@ -35,12 +35,13 @@
   </div>
   <div class="search-item__thumbnail">
     @if(has_post_thumbnail())
-      <img src="{{ get_the_post_thumbnail_url( get_the_ID(), 'Search Results' ) }}"
+      <img src="{{ get_the_post_thumbnail_url( get_the_ID(), 'square_small' ) }}"
            alt="{{ get_the_title() }}"
            title="{{ get_the_title() }}"
-           data-desktop="{{ get_the_post_thumbnail_url( get_the_ID(), 'Search Results') }}"
-           data-mobile="{{ get_the_post_thumbnail_url( get_the_ID(), 'How We Work Large' ) }}"
+           data-desktop="{{ get_the_post_thumbnail_url( get_the_ID(), 'square_small') }}"
+           data-mobile="{{ get_the_post_thumbnail_url( get_the_ID(), 'large' ) }}"
            class="img resize-img-768"
+           loading="lazy"
       >
     @endif
   </div>

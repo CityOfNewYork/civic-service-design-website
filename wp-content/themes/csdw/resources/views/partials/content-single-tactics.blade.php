@@ -37,10 +37,11 @@
                     <div class="resource-item">
                       <a href="{{ $resource_url }}" class="resource-item__image" {{ $resource_attr }}>
                         <img
-                          src="{{ wp_get_attachment_image_url( $resource['image'], 'Resources Listing' ) }}"
+                          src="{{ wp_get_attachment_image_url( $resource['image'], 'medium' ) }}"
                           alt="{{ $resource['title'] }}"
                           title="{{ $resource['title'] }}"
                           class="img img-width"
+                          loading="lazy"
                         >
                         <span class="resource-item__icon">
                         <svg class="{{ $svg }}" role="img">

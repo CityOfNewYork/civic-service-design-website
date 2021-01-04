@@ -15,10 +15,11 @@
           <article class="person">
             <div class="person__thumbnail">
               <img
-                src="{{ wp_get_attachment_image_url( $member['photo'], 'Team Listing' ) }}"
+                src="{{ wp_get_attachment_image_url( $member['photo'], 'square_medium' ) }}"
                 alt="{{ $member['full_name'] }}"
                 title="{{ $member['full_name'] }}"
                 class="img img-width"
+                loading="lazy"
               >
             </div>
 

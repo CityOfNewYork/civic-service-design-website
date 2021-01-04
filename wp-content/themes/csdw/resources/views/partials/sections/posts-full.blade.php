@@ -35,11 +35,12 @@
             @if( has_post_thumbnail( $item->ID ) )
               <span class="post-full-item__thumbnail">
                   <img class="post-full-item__img img img-width resize-img"
-                       src="{{ get_the_post_thumbnail_url( $item->ID, 'Posts Listing Full Type' ) }}"
+                       src="{{ get_the_post_thumbnail_url( $item->ID, 'long_large' ) }}"
                        alt="{{ $item->post_title }}"
                        title="{{ $item->post_title }}"
-                       data-desktop="<?php echo get_the_post_thumbnail_url( $item->ID, 'Posts Listing Full Type'); ?>"
-                       data-mobile="<?php echo get_the_post_thumbnail_url( $item->ID, 'Posts Listing'); ?>"
+                       data-desktop="<?php echo get_the_post_thumbnail_url( $item->ID, 'long_large'); ?>"
+                       data-mobile="<?php echo get_the_post_thumbnail_url( $item->ID, 'medium_large'); ?>"
+                       loading="lazy"
                   >
               </span>
             @endif

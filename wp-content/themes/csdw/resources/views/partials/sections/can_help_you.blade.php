@@ -22,6 +22,7 @@
                   alt="{{ $item['title'] }}"
                   title="{{ $item['title'] }}"
                   class="img img-width style-svg"
+                  loading="lazy"
                 >
               </div>
 

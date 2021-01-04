@@ -6,6 +6,6 @@
   <span class="tool-item__title">{{ $item->post_title }}</span>
   @if( has_post_thumbnail( $item->ID ) )
     <img class="tool-item__img img"
-         src="{{ get_the_post_thumbnail_url( $item->ID, 'Tools Listing' ) }}">
+         src="{{ get_the_post_thumbnail_url( $item->ID, 'medium' ) }}" loading="lazy">
   @endif
 </a>

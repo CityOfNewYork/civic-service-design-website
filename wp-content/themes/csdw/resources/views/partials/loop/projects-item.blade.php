@@ -8,7 +8,7 @@
 
   @if(has_post_thumbnail())
     <div class="project-item__thumbnail">
-      @php the_post_thumbnail( 'Project Listing', array( 'class' => 'img img-width', 'alt' => get_the_title(), 'title' => get_the_title() ) ) @endphp
+      @php the_post_thumbnail( 'medium_large', array( 'class' => 'img img-width', 'alt' => get_the_title(), 'title' => get_the_title() ) ) @endphp
     </div>
   @endif
 

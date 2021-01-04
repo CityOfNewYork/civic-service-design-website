@@ -19,10 +19,11 @@
           @foreach( $apprentices_section['apprentices'] as $apprentice )
             <article class="apprentice">
               <div class="apprentice__thumbnail">
-                <img src="{{ wp_get_attachment_image_url( $apprentice['photo'], 'Team Listing' ) }}"
+                <img src="{{ wp_get_attachment_image_url( $apprentice['photo'], 'square_medium' ) }}"
                      alt="{{ $apprentice['full_name'] }}"
                      title="{{ $apprentice['full_name'] }}"
-                     class="img">
+                     class="img"
+                     loading="lazy">
               </div>
               <div class="apprentice__info">
                 <header class="apprentice__name">

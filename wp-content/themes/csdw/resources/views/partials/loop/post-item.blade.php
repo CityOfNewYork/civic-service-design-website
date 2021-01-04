@@ -4,9 +4,10 @@
 <a href="{{ get_post_permalink( $item->ID ) }}" class="post-item hover-state">
   @if( has_post_thumbnail( $item->ID ) )
     <img class="post-item__img img img-width"
-         src="{{ get_the_post_thumbnail_url( $item->ID, 'Posts Listing' ) }}"
+         src="{{ get_the_post_thumbnail_url( $item->ID, 'medium_large' ) }}"
          alt="{{ $item->post_title }}"
          title="{{ $item->post_title }}"
+         loading="lazy"
     >
   @endif
   <span class="post-item__content">

@@ -1,5 +1,5 @@
 @php
-  $image_size = ( $type == 'small' ) ? 'How We Work Small' : 'How We Work Large';
+  $image_size = ( $type == 'small' ) ? 'square_medium' : 'large';
 @endphp
 <div class="how_we_worked_item how_we_worked_item--{{$type}}">
   <div class="how_we_worked_item__thumbnail">
@@ -7,6 +7,7 @@
          alt="{{ $item['description'] }}"
          title="{{ $item['description'] }}"
          class="img img-width"
+         loading="lazy"
     >
   </div>
   <div class="how_we_worked_item__description">

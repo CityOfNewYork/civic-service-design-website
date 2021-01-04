@@ -7,6 +7,7 @@
           src="{{ wp_get_attachment_image_url( $footer_fields['footer_logo_mobile'], 'full' ) }}"
           alt="NYC Opportunity" title="NYC Opportunity"
           class="img style-svg"
+          loading="lazy"
         >
       </a>
       @if( $footer_fields['bottom_section']['address'] )
@@ -24,6 +25,7 @@
             src="{{ wp_get_attachment_image_url( $footer_fields['footer_logo'] ) }}"
             alt="NYC Opportunity" title="NYC Opportunity"
             class="img style-svg"
+            loading="lazy"
           >
         </a>
       </div>
@@ -48,6 +50,7 @@
               alt="{{ $image['title'] }}"
               title="{{ $image['title'] }}"
               class="img "
+              loading="lazy"
             >
           </div>
         @endforeach

@@ -9,10 +9,11 @@
   <div class="phase-item__image">
     <a href="{{ get_post_permalink( $item->ID ) }}">
       <img
-        src="{{ get_the_post_thumbnail_url( $item->ID, 'Phase Listing' ) }}"
+        src="{{ get_the_post_thumbnail_url( $item->ID, 'thumbnail' ) }}"
         alt="{{ $item->post_title }}"
         title="{{ $item->post_title }}"
         class="img"
+        loading="lazy"
       >
     </a>
   </div>

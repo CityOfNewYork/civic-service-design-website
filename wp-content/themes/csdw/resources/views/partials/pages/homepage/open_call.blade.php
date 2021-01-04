@@ -30,10 +30,11 @@
 
             <div class="open_call-item__thumbnail">
               <img
-                src="{{ wp_get_attachment_image_url( $item['image'], 'Homepage OpenCall Listing' ) }}"
+                src="{{ wp_get_attachment_image_url( $item['image'], 'square_large' ) }}"
                 alt="{{ $item['title'] }}"
                 title="{{ $item['title'] }}"
-                class="img img-width">
+                class="img img-width"
+                loading="lazy">
               {!! $item['icon'] !!}
             </div>
 

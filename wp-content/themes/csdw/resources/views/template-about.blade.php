@@ -19,6 +19,7 @@
               alt="{{ get_the_title() }}"
               title="{{ get_the_title() }}"
               class="img img-width"
+              loading="lazy"
             >
           </div>
         </div>

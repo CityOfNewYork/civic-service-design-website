@@ -28,7 +28,7 @@
                   @foreach( $sidebar_items as $item )
                     <div class="worksheet-item">
                       <div class="worksheet-item__thumbnail">
-                        <img class="img img-width" src="{{ wp_get_attachment_image_url( $item['image'], 'full' ) }}" alt="">
+                        <img class="img img-width" loading="lazy" src="{{ wp_get_attachment_image_url( $item['image'], 'full' ) }}" alt="">
                       </div>
 
                       @if( $item['description'] )

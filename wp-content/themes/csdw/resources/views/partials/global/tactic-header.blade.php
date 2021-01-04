@@ -17,10 +17,11 @@
           <a href="{{ get_post_permalink( $parent_phase ) }}" class="parent-item">
             <span class="parent-item__image">
               <img
-                src="{{ get_the_post_thumbnail_url( $parent_phase, 'Phase Thumbnail' ) }}"
+                src="{{ get_the_post_thumbnail_url( $parent_phase, 'thumbnail' ) }}"
                 alt="{{ $parent_phase->post_title }}"
                 title="{{ $parent_phase->post_title }}"
                 class="img"
+                loading="lazy"
               >
             </span>
             <span class="parent-item__meta">
