@@ -339,25 +339,76 @@ add_action('init', function () {
 }, 0);
 
 /**
- * Setup Image Sizes
+ * Update default image dimensions and add new image options for the theme.
+ *
+ * @author NYC Opportunity
  */
-if ( function_exists( 'add_image_size' ) ) {
-    add_image_size( 'Phase Listing',             149, 135, true );
-    // add_image_size( 'Phase Thumbnail',           46, 42, true );
-    add_image_size( 'Phase Thumbnail',           92, 84, true ); // retina
-    add_image_size( 'Tools Listing',             210, 178, true );
-    add_image_size( 'Posts Listing',             340, 205, true );
-    add_image_size( 'Posts Listing Full Type',   768, 339, true );
-    // add_image_size( 'Resources Listing',         354, 229, true );
-    add_image_size( 'Resources Listing',         708, 589, true ); // retina
-    add_image_size( 'Tools Sidebar Listing',     409, 295, true );
-    add_image_size( 'Homepage OpenCall Listing', 555, 555, true );
-    add_image_size( 'Team Listing',              350, 350, true );
-    add_image_size( 'Project Listing',           506, 311, true );
-    add_image_size( 'How We Work Small',         409, 409, true );
-    add_image_size( 'How We Work Large',         700, 409, true );
-    add_image_size( 'Search Results',            284, 284, true );
-}
+add_action('after_setup_theme', function() {
+  // Remove unused image sizes
+  remove_image_size('2048x2048');
+  remove_image_size('1536x1536');
+
+  // 'Search Results', 'Team Listing', 'How We Work Small', +
+  // 'Homepage OpenCall Listing' changed to 'square'
+  add_image_size('square_small',  568, 568, true); // retina
+  add_image_size('square_medium', 818, 818, true); // retina
+  add_image_size('square_large',  1110, 1110, true); // retina
+
+  // 'Phase Thumbnail' + 'Phase Listing' changed to 'thumbnail'
+  update_option('thumbnail_size_w', 298);
+  update_option('thumbnail_size_h', 270);
+  update_option('thumbnail_crop',   1);
+
+  // 'Tools Listing' + 'Resources Listing' changed to 'medium'
+  update_option('medium_size_w', 708);
+  update_option('medium_size_h', 589);
+  update_option('medium_crop',   1);
+
+  // 'Posts Listing' + 'Tools Sidebar Listing' changed to 'medium'
+  update_option('medium_large_size_w', 818);
+  update_option('medium_large_size_h', 590);
+  update_option('medium_large_crop',   1);
+
+  // 'Project Listing' + 'How We Work Large' changed to 'large'
+  update_option('large_size_w', 1400);
+  update_option('large_size_h', 818);
+  update_option('large_crop',   1);
+
+  // 'Posts Listing Full Type' changed to 'long_large'
+  add_image_size('long_large', 1536, 678, true); // retina
+});
+
+/**
+ * Adds custom image dimensions to the list of available image options.
+ *
+ * @param   Array  $sizes  Default image dimensions in the site
+ *
+ * @return  Array          Combined array of default and custom image dimensions
+ *
+ * @author  NYC Opportunity
+ */
+add_filter('image_size_names_choose', function($sizes) {
+  return array_merge($sizes, array(
+    'square_small' => __('Square Small'),
+    'square_medium' => __('Square Medium'),
+    'square_large' => __('Square Large'),
+    'long_large' => __('Long Large')
+  ));
+});
+
+/**
+ * Update default image quality of uploaded media.
+ *
+ * @param   Number  $arg  Percentage of image quality
+ *
+ * @return  Number        New percentage
+ *
+ * @author  NYC Opportunity
+ */
+add_filter('jpeg_quality', function($arg) {
+  return 100;
+});
+
 
 /**
  * Setup ACF Options Pages
