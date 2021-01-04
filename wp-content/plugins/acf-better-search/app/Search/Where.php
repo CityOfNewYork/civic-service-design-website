@@ -40,7 +40,7 @@
       }
 
       $where = ' AND (' . implode(' OR ', array_filter($list)) . ') ';
-      return $where;
+      return apply_filters('acfbs_sql_where', $where, self::$wpdb);
     }
 
     private static function getACFConditions($words)
@@ -53,7 +53,7 @@
       foreach ($words as $word) {
         $word = addslashes($word);
 
-        if (self::$config['whole_words']) $list[] = 'a.meta_value REGEXP \'[[:<:]]' . $word . '[[:>:]]\'';
+        if (self::$config['whole_words']) $list[] = 'a.meta_value REGEXP \'\\\\b' . $word . '\\\\b\'';
         else $list[] = 'a.meta_value LIKE \'%' . $word . '%\'';
       }
 
@@ -78,7 +78,7 @@
             (self::$config['whole_words']) ? '(%s.%s REGEXP %s)' : '(%s.%s LIKE %s)',
             self::$wpdb->posts,
             $column,
-            (self::$config['whole_words']) ? ('\'[[:<:]]' . $word . '[[:>:]]\'') : ('\'%' . $word . '%\'')
+            (self::$config['whole_words']) ? ('\'\\\\b' . $word . '\\\\b\'') : ('\'%' . $word . '%\'')
           );
         }
 
@@ -100,7 +100,7 @@
         $word   = addslashes($word);
         $list[] = 'd.post_title LIKE \'%' . $word . '%\'';
 
-        if (self::$config['whole_words']) $list[] = 'd.post_title REGEXP \'[[:<:]]' . $word . '[[:>:]]\'';
+        if (self::$config['whole_words']) $list[] = 'd.post_title REGEXP \'\\\\b' . $word . '\\\\b\'';
         else $list[] = 'd.post_title LIKE \'%' . $word . '%\'';
       }
 
