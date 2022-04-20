@@ -29,6 +29,9 @@ class WpAssets {
   /** @var String Namespace for registering REST routes */
   public $namespace = 'assets';
 
+  /** @var String Namespace for Option name in wp_options */
+  public $optionNamespace = 'options_';
+
   /** @var String Will be set to the theme version in the constructor for REST routes namespace */
   public $version;
 
@@ -259,6 +262,12 @@ class WpAssets {
    * @return  Array  The same array with additional inline script contents
    */
   public function addInline($script) {
+    $option = $this->getOptionValue($script['handle']);
+
+    if ($option === false) {
+      return $script;
+    }
+
     if (array_key_exists('dep', $script) && !defined($script['dep'])) {
       return $script;
     }
@@ -268,6 +277,9 @@ class WpAssets {
 
     // Use version argument if no specific version exists
     $v = (array_key_exists('version', $s)) ? $s['version'] : $this->version;
+
+    // Set localize if it doesn't exist
+    $s['localize'] = (array_key_exists('localize', $s)) ? $s['localize'] : array();
 
     /**
      * Enqueue scripts
@@ -341,13 +353,28 @@ class WpAssets {
      * Add attributes to script tag
      */
 
-    if ($s['attrs']) {
+    if (array_key_exists('attrs', $s)) {
       foreach ($s['attrs'] as $attr => $value) {
         self::addAttr($s['handle'], $attr, $value);
       }
     }
 
     return $s;
+  }
+
+  /**
+   * Returns the value for a record in the wp_options table.
+   *
+   * @param $optionName The name of the script handle.
+   *
+   * @return  Boolean The option_value set on the wp_options table as Boolean.
+   *
+   */
+  private function getOptionValue($optionName) {
+    $value = get_option($this->optionNamespace . $optionName, 'ON');
+    $value = filter_var($value, FILTER_VALIDATE_BOOLEAN);
+
+    return $value;
   }
 
   /**
@@ -506,10 +533,10 @@ class WpAssets {
   /**
    * Replaces all instances of a set of constants with constant values in string.
    *
-   * @param   String  $string   The string to localize.
-   * @param   Array  $localize  An array of constants to pass to the string.
+   * @param   String  $string    The string to localize.
+   * @param   Array   $localize  An array of constants to pass to the string.
    *
-   * @return  String            The localized string.
+   * @return  String             The localized string.
    */
   private function localize($string, $localize) {
     foreach ($localize as $value) {
