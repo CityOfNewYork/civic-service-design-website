@@ -23,6 +23,7 @@
 !/vendor/illuminate
 !/vendor/nesbot
 !/vendor/psr
+!/vendor/ramsey
 !/vendor/roots
 !/vendor/soberwp
 !/vendor/symfony
