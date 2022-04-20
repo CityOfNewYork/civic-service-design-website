@@ -125,6 +125,7 @@ class ShortPixelPlugin
       add_action('admin_menu', array($this,'admin_pages'));
       add_action('admin_enqueue_scripts', array($this, 'admin_scripts')); // admin scripts
       add_action('admin_enqueue_scripts', array($this, 'load_admin_scripts'), 90); // loader via route.
+
       // defer notices a little to allow other hooks ( notable adminnotices )
 
       add_action( 'shortpixel-thumbnails-before-regenerate', array( $this->shortPixel, 'thumbnailsBeforeRegenerateHook' ), 10, 1);
@@ -144,19 +145,21 @@ class ShortPixelPlugin
             }
             add_action('wp_handle_replace', array($admin,'handleReplaceHook'));
 
-            if($this->settings()->autoMediaLibrary) {
 
+						// && $this->env()->is_front === false  removed - otherwise it won't work in Gutenberg image upload
+            if($this->settings()->autoMediaLibrary ) {
                 add_filter( 'wp_generate_attachment_metadata', array($admin,'handleImageUploadHook'), 10, 2 );
                 // @todo Document what plugin does mpp
                 add_filter( 'mpp_generate_metadata', array($admin,'handleImageUploadHook'), 10, 2 );
             }
           }
+		      if($this->settings()->frontBootstrap && $this->env()->is_front)
+		      {
+						// We want this only to work when the automedialibrary setting is on.
+		        add_filter( 'wp_generate_attachment_metadata', array($admin,'handleImageUploadHook'), 10, 2 );
+		      }
       }
-      elseif($this->settings()->frontBootstrap && $this->env()->is_front)
-      {
-        // if automedialibrary is off, but we do want to auto-optimize on the front, still load the hook.
-        add_filter( 'wp_generate_attachment_metadata', array($admin,'handleImageUploadHook'), 10, 2 );
-      }
+
 
       // *** AJAX HOOKS  @todo These must be moved from wp-short-pixel in future */
       add_action('wp_ajax_shortpixel_helpscoutOptin', array(\wpSPIO()->settings(), 'ajax_helpscoutOptin'));
@@ -189,7 +192,7 @@ class ShortPixelPlugin
   *
   * Not all those registered must be enqueued however.
   */
-  public function admin_scripts()
+  public function admin_scripts($hook_suffix)
   {
     // FileTree in Settings
     wp_register_style('sp-file-tree', plugins_url('/res/css/sp-file-tree.min.css',SHORTPIXEL_PLUGIN_FILE),array(), SHORTPIXEL_IMAGE_OPTIMISER_VERSION );
@@ -245,9 +248,10 @@ class ShortPixelPlugin
   }
 
   /** This is separated from route to load in head, preventing unstyled content all the time */
-  public function load_admin_scripts()
+  public function load_admin_scripts($hook_suffix)
   {
     global $plugin_page;
+
 
     switch($plugin_page)
     {
@@ -286,7 +290,6 @@ class ShortPixelPlugin
       }
 
       $url = menu_page_url($plugin_page, false);
-
 
       switch($plugin_page)
       {
@@ -374,7 +377,7 @@ class ShortPixelPlugin
       $env = wpSPIO()->env();
 
       if(\WPShortPixelSettings::getOpt('deliverWebp') == 3 && ! $env->is_nginx) {
-          \WpShortPixel::alterHtaccess(); //add the htaccess lines
+          \WpShortPixel::alterHtaccess(true, true); //add the htaccess lines
       }
 
       \WpShortPixelDb::checkCustomTables();
@@ -399,8 +402,9 @@ class ShortPixelPlugin
     $env = wpSPIO()->env();
 
     if (! $env->is_nginx)
-      \WpShortPixel::alterHtaccess(true);
-
+    {
+      \WpShortPixel::alterHtaccess(false, false);
+    }
     // save remove.
     $fs = new Controller\FileSystemController();
     $log = $fs->getFile(SHORTPIXEL_BACKUP_FOLDER . "/shortpixel_log");

@@ -386,7 +386,6 @@
         throw Error( "setState(...): takes an object of state variables to update or a function which returns an object of state variables." );
       }
     }
-  }
 
     this.updater.enqueueSetState(this, partialState, callback, 'setState');
   };
@@ -436,10 +435,6 @@
       if (deprecatedAPIs.hasOwnProperty(fnName)) {
         defineDeprecationWarning(fnName, deprecatedAPIs[fnName]);
       }
-
-      error("Can't call %s on a component that is not yet mounted. " + 'This is a no-op, but it might indicate a bug in your application. ' + 'Instead, assign to `this.state` directly or define a `state = {};` ' + 'class property with the desired state in the %s component.', callerName, componentName);
-
-      didWarnStateUpdateForUnmountedComponent[warningKey] = true;
     }
   }
 
@@ -457,9 +452,6 @@
     this.refs = emptyObject;
     this.updater = updater || ReactNoopUpdateQueue;
   }
-  /**
-   * Base class helpers for the updating state of a component.
-   */
 
   var pureComponentPrototype = PureComponent.prototype = new ComponentDummy();
   pureComponentPrototype.constructor = PureComponent; // Avoid an extra prototype jump for these methods.
@@ -1852,26 +1844,6 @@
       return describeNativeComponentFrame(fn, false);
     }
   }
-  /**
-   * Factory method to create a new React element. This no longer adheres to
-   * the class pattern, so do not use new to call it. Also, instanceof check
-   * will not work. Instead test $$typeof field against Symbol.for('react.element') to check
-   * if something is a React Element.
-   *
-   * @param {*} type
-   * @param {*} props
-   * @param {*} key
-   * @param {string|object} ref
-   * @param {*} owner
-   * @param {*} self A *temporary* helper to detect places where `this` is
-   * different from the `owner` when React.createElement is called, so that we
-   * can warn. We want to get rid of owner and replace string `ref`s with arrow
-   * functions, and as long as `this` and owner are the same, there will be no
-   * change in behavior.
-   * @param {*} source An annotation object (added by a transpiler or otherwise)
-   * indicating filename, line number, and/or other information.
-   * @internal
-   */
 
   function shouldConstruct(Component) {
     var prototype = Component.prototype;
@@ -2231,10 +2203,6 @@
         setCurrentlyValidatingElement$1(null);
       }
     }
-
-    var traverseContext = getPooledTraverseContext(null, null, forEachFunc, forEachContext);
-    traverseAllChildren(children, forEachSingleChild, traverseContext);
-    releaseTraverseContext(traverseContext);
   }
   function createElementWithValidation(type, props, children) {
     var validType = isValidElementType(type); // We warn in this case but don't throw. We expect the element creation to
@@ -2272,18 +2240,6 @@
         error('React.createElement: type is invalid -- expected a string (for ' + 'built-in components) or a class/function (for composite ' + 'components) but got: %s.%s', typeString, info);
       }
     }
-  }
-
-  /**
-   * Copyright (c) 2013-present, Facebook, Inc.
-   *
-   * This source code is licensed under the MIT license found in the
-   * LICENSE file in the root directory of this source tree.
-   */
-
-  var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
-
-  var ReactPropTypesSecret_1 = ReactPropTypesSecret;
 
     var element = createElement.apply(this, arguments); // The result can be nullish if a mock or a custom function is used.
     // TODO: Drop this when these are no longer allowed as the type argument.
@@ -2301,12 +2257,6 @@
       for (var i = 2; i < arguments.length; i++) {
         validateChildKeys(arguments[i], type);
       }
-
-      if (fragment.ref !== null) {
-        error('Invalid attribute `ref` supplied to `React.Fragment`.');
-      }
-
-      setCurrentlyValidatingElement(null);
     }
 
     if (type === exports.Fragment) {
@@ -2355,10 +2305,6 @@
     validatePropTypes(newElement);
     return newElement;
   }
-  var didWarnAboutDeprecatedCreateFactory = false;
-  function createFactoryWithValidation(type) {
-    var validatedFactory = createElementWithValidation.bind(null, type);
-    validatedFactory.type = type;
 
   var enableSchedulerDebugging = false;
   var enableProfiling = true;
@@ -2386,8 +2332,6 @@
       return localDate.now() - initialTime;
     };
   }
-  function cloneElementWithValidation(element, props, children) {
-    var newElement = cloneElement.apply(this, arguments);
 
   if ( // If Scheduler runs in a non-DOM environment, it falls back to a naive
   // implementation using setTimeout.

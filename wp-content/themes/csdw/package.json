@@ -1,6 +1,6 @@
 {
   "name": "sage",
-  "version": "9.0.9",
+  "version": "0.2.0",
   "author": "Roots <team@roots.io>",
   "homepage": "https://roots.io/sage/",
   "private": true,
@@ -31,7 +31,8 @@
     "lint": "npm run -s lint:scripts && npm run -s lint:styles",
     "lint:scripts": "eslint resources/assets/scripts resources/assets/build",
     "lint:styles": "stylelint \"resources/assets/styles/**/*.{css,sass,scss,sss,less}\"",
-    "test": "npm run -s lint"
+    "test": "npm run -s lint",
+    "version": "echo \"No version task required\""
   },
   "engines": {
     "node": ">= 8.0.0"

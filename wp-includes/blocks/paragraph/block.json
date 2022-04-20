@@ -46,8 +46,6 @@
 				"fontSize": true
 			}
 		},
-		"fontSize": true,
-		"lineHeight": true,
 		"__experimentalSelector": "p",
 		"__unstablePasteTextInline": true
 	},

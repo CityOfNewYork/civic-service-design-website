@@ -314,9 +314,6 @@ table.fixed {
 
 .fixed .column-posts {
 	width: 74px;
-	-webkit-hyphens: auto;
-	-ms-hyphens: auto;
-	hyphens: auto;
 }
 
 .fixed .column-role,
@@ -2157,18 +2154,6 @@ div.action-links,
 @media screen and (max-width: 480px) {
 	.tablenav-pages .current-page {
 		margin: 0;
-	}
-
-	.tablenav.bottom .displaying-num {
-		position: relative;
-		top: 0;
-		display: block;
-		text-align: left;
-		padding-bottom: 0.5em;
-	}
-
-	.tablenav.bottom .tablenav-pages.one-page {
-		height: auto;
 	}
 
 	.tablenav.bottom .displaying-num {

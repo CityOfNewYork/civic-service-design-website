@@ -1,6 +1,7 @@
 # NYCO Config File #
 ####################
 /wp-content/mu-plugins/config/config.yml
+/wp-content/mu-plugins/wp-login
 
 # Composer #
 ############
@@ -12,6 +13,18 @@
 !/vendor/illuminate
 !/vendor/mustangostang
 !/vendor/nesbot
+!/vendor/symfony
+
+# Sage Theme Dependencies are listed here
+!/vendor/autoload.php
+!/vendor/brain
+!/vendor/composer
+!/vendor/doctrine
+!/vendor/illuminate
+!/vendor/nesbot
+!/vendor/psr
+!/vendor/roots
+!/vendor/soberwp
 !/vendor/symfony
 
 # WordPress #
@@ -57,17 +70,6 @@
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
 /wp-content/themes/csdw/.cache-loader
 /wp-content/themes/csdw/resources/assets/config-local.json
-/wp-content/themes/csdw/vendor/*
-!/wp-content/themes/csdw/vendor/autoload.php
-!/wp-content/themes/csdw/vendor/brain
-!/wp-content/themes/csdw/vendor/composer
-!/wp-content/themes/csdw/vendor/doctrine
-!/wp-content/themes/csdw/vendor/illuminate
-!/wp-content/themes/csdw/vendor/nesbot
-!/wp-content/themes/csdw/vendor/psr
-!/wp-content/themes/csdw/vendor/roots
-!/wp-content/themes/csdw/vendor/soberwp
-!/wp-content/themes/csdw/vendor/symfony
 
 # Packages #
 ############

@@ -15,10 +15,6 @@
 			"type": "boolean",
 			"default": true
 		},
-		"showLabel": {
-			"type": "boolean",
-			"default": true
-		},
 		"placeholder": {
 			"type": "string",
 			"default": "",

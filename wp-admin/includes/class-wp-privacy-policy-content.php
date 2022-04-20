@@ -566,9 +566,6 @@ final class WP_Privacy_Policy_Content {
 			$strings[] = '<p>' . $suggested_text . __( 'If you request a password reset, your IP address will be included in the reset email.' ) . '</p>';
 		}
 
-		/* translators: Default privacy policy text. */
-		$strings[] = '<p>' . $suggested_text . __( 'If you request a password reset, your IP address will be included in the reset email.' ) . '</p>';
-
 		/* translators: Default privacy policy heading. */
 		$strings[] = '<h2>' . __( 'How long we retain your data' ) . '</h2>';
 

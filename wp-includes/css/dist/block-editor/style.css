@@ -3889,9 +3889,6 @@ figcaption.block-editor-rich-text__editable [data-rich-text-placeholder]::before
   padding: 16px 16px 0;
 }
 
-.block-editor-inserter__panel-header-patterns {
-  padding: 16px 16px 0 8px; }
-
 .block-editor-inserter__panel-content {
   padding: 16px;
 }
@@ -3913,12 +3910,6 @@ figcaption.block-editor-rich-text__editable [data-rich-text-placeholder]::before
 .block-editor-inserter__panel-dropdown select {
   border: none;
 }
-
-.block-editor-inserter__panel-dropdown select.components-select-control__input.components-select-control__input.components-select-control__input {
-  line-height: 1.2; }
-
-.block-editor-inserter__panel-dropdown select {
-  border: none; }
 
 .block-editor-inserter__block-list {
   flex-grow: 1;

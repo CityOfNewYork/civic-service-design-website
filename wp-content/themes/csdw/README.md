@@ -1,7 +1,19 @@
-# [Sage](https://roots.io/sage/)
-[![Packagist](https://img.shields.io/packagist/vpre/roots/sage.svg?style=flat-square)](https://packagist.org/packages/roots/sage)
-[![devDependency Status](https://img.shields.io/david/dev/roots/sage.svg?style=flat-square)](https://david-dm.org/roots/sage#info=devDependencies)
-[![Build Status](https://img.shields.io/travis/roots/sage.svg?style=flat-square)](https://travis-ci.org/roots/sage)
+# Civic Service Design Studio Theme
+
+Below is the original README for the Sage theme provided by Roots.io. Composer dependencies for this theme have been moved to the root of this repository to prevent conflicts with auto-loaded packages for the site. Below is a description of the dependencies for reference.
+
+```json
+"php": ">=7.1"
+"composer/installers": "~1.0"
+"illuminate/support": "5.6.*"
+"soberwp/controller": "~2.1.0"
+"roots/sage-lib": "~9.0.9"
+"roots/sage-installer": "~1.6"
+```
+
+The Root .gitignore file has also been updated to permit the committing of Sage dependencies to the repository.
+
+## [Sage](https://roots.io/sage/)
 
 Sage is a WordPress starter theme with a modern development workflow.
 

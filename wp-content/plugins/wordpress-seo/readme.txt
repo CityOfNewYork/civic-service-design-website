@@ -1,11 +1,11 @@
 === Yoast SEO ===
-Contributors: yoast, joostdevalk, tacoverdo, omarreiss, atimmer, jipmoors
+Contributors: yoast, joostdevalk, omarreiss
 Donate link: https://yoa.st/1up
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 Tags: SEO, XML sitemap, Content analysis, Readability, Schema
-Tested up to: 5.6
-Stable tag: 15.5
+Tested up to: 5.9
+Stable tag: 18.6
 Requires PHP: 5.6.20
 
 Improve your WordPress SEO: Write better content and have a fully optimized WordPress site using the Yoast SEO plugin.
@@ -42,16 +42,17 @@ We know content is king, that's why Yoast SEO is famous for its **state-of-the-a
 
 * **SEO analysis**: an invaluable tool while writing SEO-friendly content with the right (focus) keyphrases in mind.
 * **Readability analysis**: ensures that humans and search engines can read and understand your content.
-* **Full language support** for: English, German, French, Dutch, Spanish, Italian, Russian, Indonesian, Polish, Portuguese, Arabic, Swedish, Hebrew and Hungarian.
+* **Full language support** for: English, German, French, Dutch, Spanish, Italian, Russian, Indonesian, Polish, Portuguese, Arabic, Swedish, Hebrew, Hungarian, Turkish, Czech, Norwegian, Slovak and Greek.
 * **A Google preview**, which shows what your listings will look like in the search results. Even on mobile devices!
-* **Innovative Schema blocks** for the WordPress block editor, so that your FAQ and HowTo content can be shown directly in the search results.
+* **Innovative Schema blocks** for the WordPress block editor, so that your FAQ and HowTo content can be shown directly in the search results. Plus a breadcrumbs block to guide your users.
 * **[Premium] Internal linking blocks** to easily improve the structure of your content. Easily add a **table of contents block**, a **related links block**, a **subpages** block, or **siblings block**! Plus, we’ll keep adding these easy-to-add blocks to improve your site structure.
-* **[Premium]** Social previews to show you how your content will be shown on Twitter and Facebook.
+* **[Premium]** Social previews to show you how your content will be shown on Twitter and Facebook. Plus: Social Appearance Templates to guarantee a consistent look.
 * **[Premium]** The Insights tool that shows you what your text focuses on. This way you can keep your article in line with your keyphrases.
 * **[Premium]** Optimize your content for synonyms and related keyphrases.
 * **[Premium]** Optimize your article for different word forms of your keyphrases, as the singular and plural. But also different verb forms, synonyms, and related keyphrases. This makes for more natural content!
 * **[Premium]** Automatic internal linking suggestions: write your article and get automatic suggested posts to link to!
 * **[Premium]** An orphaned content filter to detect posts that have no links pointing towards them!
+* **[Premium]** SEO workouts to make working on your site as easy as ABC. These SEO workflows will get your site into shape in no time!
 
 #### KEEP YOUR SITE IN PERFECT SHAPE
 
@@ -108,6 +109,7 @@ Yoast SEO integrates seamlessly into a range of themes and plugins. We work part
 * The [Advanced Custom Fields](https://wordpress.org/plugins/advanced-custom-fields/) plugin, when you also activate the [ACF Content Analysis for Yoast SEO](https://wordpress.org/plugins/acf-content-analysis-for-yoast-seo/) plugin.
 * The [Elementor](https://wordpress.org/plugins/elementor/) website builder.
 * [Zapier](https://zapier.com/apps/yoast-seo/integrations), which helps you automate your publishing flow.
+* [Algolia](https://wordpress.org/plugins/wp-search-with-algolia/) integration to improve the quality of your site search.
 
 ### BUG REPORTS
 
@@ -124,7 +126,7 @@ Want more information on search engine optimization and Yoast SEO? Have a look a
 * Also follow Yoast on [Facebook](https://facebook.com/yoast), [Instagram](https://www.instagram.com/yoast/) & [Twitter](https://twitter.com/yoast).
 
 == Installation ==
-Starting with Yoast SEO consists of just two steps: installing and setting up the plugin. Yoast SEO is designed to work with your site’s specific needs, so don’t forget to go through the Yoast SEO configuration wizard as explained in the ‘after activation’ step!
+Starting with Yoast SEO consists of just two steps: installing and setting up the plugin. Yoast SEO is designed to work with your site’s specific needs, so don’t forget to go through the Yoast SEO configuration workout as explained in the ‘after activation’ step!
 
 ### INSTALL YOAST SEO FROM WITHIN WORDPRESS
 
@@ -141,8 +143,8 @@ Starting with Yoast SEO consists of just two steps: installing and setting up th
 
 ### AFTER ACTIVATION
 
-1. You should see (a notice to start) the Yoast SEO configuration wizard;
-1. Go through the configuration wizard and set up the plugin for your site;
+1. You should see (a notice to start) the Yoast SEO configuration workout;
+1. Go through the configuration workout and set up the plugin for your site;
 1. You’re done!
 
 == Frequently Asked Questions ==
@@ -167,7 +169,7 @@ It is straightforward to add your website to Google Search Console.
 10. Paste the code in the Google field and click ‘Save Changes’.
 11. Go back to Google Search Console and click ‘Verify’.
 
-If you want more details steps, please visit [our article on our knowledge base](https://yoa.st/3qu).
+If you want more details steps, please visit [our article on our help center](https://yoa.st/3qu).
 
 = How do I implement Yoast SEO breadcrumbs? =
 
@@ -213,7 +215,7 @@ Yoast SEO is updated every two weeks. If you want to know why, please read [this
 
 = How do I get support? =
 
-As our free plugin is used by millions of people worldwide, we cannot offer you all one on one support. If you have trouble with the Yoast SEO for WordPress plugin, you can get help on the support forums here at [wordpress.org](https://wordpress.org/support/plugin/wordpress-seo/) or by checking out or knowledge base at [kb.yoast.com](https://yoa.st/3r1).
+As our free plugin is used by millions of people worldwide, we cannot offer you all one on one support. If you have trouble with the Yoast SEO for WordPress plugin, you can get help on the support forums here at [wordpress.org](https://wordpress.org/support/plugin/wordpress-seo/) or by checking out our help center at [yoast.com/help/](https://yoa.st/3r1).
 
 The plugins you buy at Yoast are called ‘premium plugins’ (even if Premium isn’t in its name) and include a complete year of free updates and premium support. This means you can contact our support team if you have any questions about that plugin.
 
@@ -221,7 +223,7 @@ The plugins you buy at Yoast are called ‘premium plugins’ (even if Premium i
 
 = I have a different question than listed here =
 
-Your question has most likely been answered on our knowledge base: [kb.yoast.com](https://yoa.st/1va).
+Your question has most likely been answered on our help center: [yoast.com/help/](https://yoa.st/1va).
 
 == Screenshots ==
 
@@ -234,57 +236,53 @@ Your question has most likely been answered on our knowledge base: [kb.yoast.com
 
 == Changelog ==
 
-= 15.5 =
-Release Date: December 15th, 2020
+= 18.6 =
+Release Date: April 19th, 2022
 
-Out now: Yoast SEO 15.5! You can easily check if you are doing a great job in terms of the readability of your text when writing in Hungarian! Yoast SEO helps you produce a powerful piece of content that’s easy to read. It also gives you feedback on what to improve! Read more about what’s new in Yoast SEO 15.5 in [our release post](https://yoa.st/release-15-5)!
-
-Enhancements:
-
-* Improves and expands Hungarian language support:
-    * Improves keyphrase recognition and internal linking by filtering function words such as 'harmadik', 'tiétek', and 'valaki'.
-    * Improves the transition words assessment.
-    * Adds the passive voice assessment.
-    * Adds the consecutive sentences assessment to ensure variety in a text.
-* Removes the Open Graph and Twitter author metadata on pages and other non-post post types.
-* Adds breadcrumb Schema to the homepage.
+Meet Yoast SEO 18.6: a small Yoast SEO update, fixing a number of bugs, including several bugs related to the Wincher integration. With the Wincher integration, you can track the rankings of your articles in the search results. If you haven’t checked that feature out, please do so! Read more about what's new in Yoast SEO 18.6 in [our release post in English](https://yoa.st/release-19-4-22) or [our release post in Spanish](https://yoa.st/release-19-4-22-spanish)!
 
 Bugfixes:
 
-* Fixes a bug where network-wide settings about the Enhanced Slack Sharing feature would not be saved.
-* Fixes a bug where translations on the Search Appearance pages would be missing.
-* Fixes a bug where subsites in a multisite network could have an enabled feature toggle for the `Usage tracking` feature, even though subsites never send tracking data.
-* Fixes a bug where the Yoast SEO dashboard widget would still fetch data even when the dashboard itself was hidden.
-* Fixes a bug where the TinyMCE editor on term edit pages would not load correctly when using WordPress 5.6.
+* Fixes a bug where a version mismatch caused broken styling in WooCommerce select fields when linking products.
+* Fixes a bug where keyphrases could show up multiple times in Wincher table.
+* Fixes a bug where the Wincher connection flow would fail on certain installations.
+* Fixes a bug where the Wincher integration could throw a fatal error on PHP 8.0+.
 
 Other:
 
-* Removes support for the Facebook App ID, as Facebook has indicated this feature is deprecated on their side.
-* Adds a notification that tells the user to install and activate the Yoast SEO Multilingual plugin when the WPML plugin is installed and activated.
+* Adds a disabled Wincher integration toggle to the Network admin/Multisite `Integrations` tab.
 
-= 15.4 =
-Release Date: December 2nd, 2020
-
-It’s here: Yoast SEO 15.4! In this release, you’ll find a seamless, easy-to-use integration of Yoast SEO with Elementor. Building websites and optimizing content for the search engines now in one workflow! Read more about what’s new in Yoast SEO 15.4 in [our release post](https://yoa.st/release-15-4)!
-
-Enhancements:
-
-* Introduces a seamless integration of Yoast SEO content analysis into the Elementor editor.
-* Makes it possible to recognize forms of keyphrases in Arabic when they are preceded by certain multi-letter prefixes, e.g. والقبعة ,فسحرية, or وبالمفتاح.
+= 18.5.1 =
+Release Date: April 5th, 2022
 
 Bugfixes:
 
-* Fixes a bug where `post-sitemap.xml` would cause a fatal error when the filter `post_link` required a `WP_Post` object. Props to [stodorovic](https://github.com/stodorovic).
-* Fixes a bug where the core `default_hidden_columns` filter would be broken. Props to [thomasmb](https://github.com/thomasmb).
-* Fixes a bug where memory could be exhausted on the page overview for users with a large number of pages.
-* Fixes a bug where an `ArgumentCountError` would be thrown on the Search Appearance settings page when using PHP 8.0.
-* Fixes a bug where disabling the tracking network-wide in a multisite environment did not automatically disable tracking on the sites in the network.
-* Fixes a bug where tracking would send partial data.
+* Fixes a bug where a fatal error would occur on the site health page if WordFence was installed and active.
+* Fixes a bug where a fatal error would occur on PHP 5.6.
+
+= 18.5 =
+Release Date: April 5th, 2022
+
+Say hi to Yoast SEO 18.5! You'll find a number of fixes and enhancements. We've also included more improvements to the rebuild of the AIOSEO importer we introduced a few weeks ago. Happy updating! Read more about what's new in Yoast SEO 18.5 in [our release post in English](https://yoa.st/release-5-4-22) or [our release post in Spanish](https://yoa.st/release-5-4-22-spanish)!
+
+Enhancements:
+
+* Adds a preliminary validation of All-in-One SEO data before importing it into Yoast SEO.
+
+Bugfixes:
+
+* Fixes a bug where the URL preview inside the snippet editor would not consistently reflect the permalink in the Block editor.
+* Fixes a bug where the Customize URL would be incorrectly escaped in our health checks. Props to [BronsonQuick](https://github.com/BronsonQuick).
+* Fixes a bug where in certain edge cases a database error would show during clean-up of All-in-One SEO data.
+* Fixes a bug where reusable block content would not be updated in our analysis when changed in the editor.
+* Fixes a bug where an error about incorrect values in the indexables table would be displayed on certain database setups. Props to [junaidbhura](https://github.com/junaidbhura).
+* Fixes a bug where a fatal error would be displayed in the Search Appearance options when using WordPress version 5.8.3 and below with themes without title-tag support.
+* Fixes a bug where sitemap locations would change once the number of entries exceeded that of the first page.
+* Fixes a bug where Yoast modals would close after opening after editing content in Elementor.
 
 Other:
 
-* Provides `YoastSEO->helpers->options->get_title_separator()` as an alternative for the previously removed `get_title_separator` method.
-* Adds a `wpseo_previously_used_keyword_active` filter to deactivate the Previously Used Keyword analysis assessment.
+* Sets the minimum required WordPress version to 5.8.
 
 = Earlier versions =
 For the changelog of earlier versions, please refer to [the changelog on yoast.com](https://yoa.st/yoast-seo-changelog).

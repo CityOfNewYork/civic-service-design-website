@@ -17,17 +17,22 @@ class AdminNoticesController extends \ShortPixel\Controller
     const MSG_COMPAT = 'Error100';  // Plugin Compatility, warn for the ones that disturb functions.
     const MSG_FILEPERMS = 'Error101'; // File Permission check, if Queue is file-based.
     const MSG_UNLISTED_FOUND = 'Error102'; // SPIO found unlisted images, but this setting is not on
+    const MSG_AVIF_ERROR = 'Error103'; // Detected unexpected or wrong AVIF headers when avif is on.
 
     //const MSG_NO_
     const MSG_QUOTA_REACHED = 'QuotaReached100';
     const MSG_UPGRADE_MONTH = 'UpgradeNotice200';  // When processing more than the subscription allows on average..
     const MSG_UPGRADE_BULK = 'UpgradeNotice201'; // when there is no enough for a bulk run.
 
+
     const MSG_NO_APIKEY = 'ApiNotice300'; // API Key not found
     const MSG_NO_APIKEY_REPEAT = 'ApiNotice301';  // First Repeat.
     const MSG_NO_APIKEY_REPEAT_LONG = 'ApiNotice302'; // Last Repeat.
 
     const MSG_INTEGRATION_NGGALLERY = 'IntNotice400';
+
+    private $remote_message_endpoint = 'https://api.shortpixel.com/v2/notices.php';
+    private $remote_readme_endpoint = 'https://plugins.svn.wordpress.org/shortpixel-image-optimiser/trunk/readme.txt';
 
     public function __construct()
     {
@@ -96,8 +101,10 @@ class AdminNoticesController extends \ShortPixel\Controller
     public function displayNotices()
     {
       if (! \wpSPIO()->env()->is_screen_to_use)
-        return; // suppress all when not our screen.
-
+      {
+         if(get_current_screen()->base !== 'dashboard') // ugly exception for dashboard.
+          return; // suppress all when not our screen.
+      }
       $noticeControl = Notices::getInstance();
       $noticeControl->loadIcons(array(
           'normal' => '<img class="short-pixel-notice-icon" src="' . plugins_url('res/img/slider.png', SHORTPIXEL_PLUGIN_FILE) . '">',
@@ -136,17 +143,21 @@ class AdminNoticesController extends \ShortPixel\Controller
     public function check_admin_notices()
     {
       if (! \wpSPIO()->env()->is_screen_to_use)
-        return; // suppress all when not our screen.
-
+      {
+          if(get_current_screen()->base !== 'dashboard') // ugly exception for dashboard.
+            return; // suppress all when not our screen.
+      }
        $this->doFilePermNotice();
        $this->doAPINotices();
        $this->doCompatNotices();
        $this->doUnlistedNotices();
        $this->doQuotaNotices();
-
        $this->doIntegrationNotices();
-
        $this->doHelpOptInNotices();
+       $this->doRemoteNotices();
+
+			 // Check if we are legacy, or if SPIO 5 was ever installed.
+			 $this->checkLegacyNotices();
     }
 
 
@@ -350,6 +361,7 @@ class AdminNoticesController extends \ShortPixel\Controller
     }
 
 
+
     protected function doHelpOptInNotices()
     {
        return; // this is disabled pending review.
@@ -362,6 +374,66 @@ class AdminNoticesController extends \ShortPixel\Controller
             Notices::addNormal($message);
         }
     }
+
+    protected function doRemoteNotices()
+    {
+          $notices = $this->get_remote_notices();
+
+          if ($notices == false)
+            return;
+
+          foreach($notices as $remoteNotice)
+          {
+            if (! isset($remoteNotice->id) && ! isset($remoteNotice->message))
+              return;
+
+            if (! isset($remoteNotice->type))
+              $remoteNotice->type = 'notice';
+
+            $message = esc_html($remoteNotice->message);
+            $id = sanitize_text_field($remoteNotice->id);
+
+            $noticeController = Notices::getInstance();
+            $noticeObj = $noticeController->getNoticeByID($id);
+
+            // not added to system yet
+             if ($noticeObj == false)
+             {
+               switch ($remoteNotice->type)
+               {
+                  case 'warning':
+                     $new_notice = Notices::addWarning($message);
+                  break;
+                  case 'error':
+                     $new_notice = Notices::addError($message);
+                  break;
+                  case 'notice':
+                  default:
+                      $new_notice = Notices::addNormal($message);
+                  break;
+               }
+
+                Notices::makePersistent($new_notice, $id, MONTH_IN_SECONDS);
+             }
+
+
+          }
+    }
+
+		protected function checkLegacyNotices()
+		{
+			 global $wpdb;
+
+			 $table_name = $wpdb->prefix . 'shortpixel_postmeta';
+			if ($wpdb->get_var($wpdb->prepare("SHOW TABLES LIKE %s", $table_name) ) == $table_name)
+			{
+				 $message = $this->getAlreadyUpgradedMessage();
+				   Notices::addError($message);
+			}
+
+
+		}
+
 
     // Callback to check if we are on the correct page.
     public function upgradeBulkCallback($notice)
@@ -529,7 +601,7 @@ class AdminNoticesController extends \ShortPixel\Controller
         wp_enqueue_style('short-pixel-modal.min.css', plugins_url('/res/css/short-pixel-modal.min.css',SHORTPIXEL_PLUGIN_FILE), array(), SHORTPIXEL_IMAGE_OPTIMISER_VERSION);
 
         $message = '<div id="shortPixelProposeUpgradeShade" class="sp-modal-shade" style="display:none;">
-            <div id="shortPixelProposeUpgrade" class="shortpixel-modal shortpixel-hide" style="min-width:610px;margin-left:-305px;">
+            <div id="shortPixelProposeUpgrade" class="shortpixel-modal shortpixel-hide" style="min-width:650px;margin-left:-305px;">
                 <div class="sp-modal-title">
                     <button type="button" class="sp-close-upgrade-button" onclick="ShortPixel.closeProposeUpgrade()">&times;</button>' .
                      __('Upgrade your ShortPixel account', 'shortpixel-image-optimiser') . '
@@ -560,6 +632,15 @@ class AdminNoticesController extends \ShortPixel\Controller
        return $message;
     }
 
+		protected function getAlreadyUpgradedMessage()
+		{
+			 $message = '<p>' . __('It seems you already upgraded to Shortpixel Image Optimizer version 5 and came back to version 4. We do not recommend using version 4 anymore because it might result in data loss. Please consult our support team if you have any issues with the new version.') . '</p>';
+
+			 $message .= '<p>' . sprintf(__('If you are sure about what you\'re doing and you want to get rid of this message, remove the database table %s. All optimizations done with version 5 will be forgotten and they will be processed again with version 4, according to your settings. ', 'shortpixel_image_optimiser'), 'shortpixel_postmeta') . '<a class="shortpixel-help-link" href="https://shortpixel.com/knowledge-base/article/529-downgrading-shortpixel-image-optimizer-version-5-version-4" target="_blank"><span class="dashicons dashicons-editor-help"></span>' . __('Reaad more', 'shortpixel-image-optimiser') . '</a>' . '</p>';
+
+			 return $message;
+		}
+
     protected function monthlyUpgradeNeeded($quotaData) {
         return isset($quotaData['APICallsQuotaNumeric']) && $this->getMonthAvg($quotaData) > $quotaData['APICallsQuotaNumeric'] + ($quotaData['APICallsQuotaOneTimeNumeric'] - $quotaData['APICallsMadeOneTimeNumeric'])/6 + 20;
     }
@@ -587,21 +668,70 @@ class AdminNoticesController extends \ShortPixel\Controller
       if( $message !== false && strlen(trim($message)) > 0) {
     		$wp_list_table = _get_list_table( 'WP_Plugins_List_Table' );
     		printf(
-    			'<tr class="plugin-update-tr active"><td colspan="%s" class="plugin-update colspanchange"><div class="notice inline notice-warning notice-alt">%s</div></td></tr>',
-    			$wp_list_table->get_column_count(),
+    			'<tr class="plugin-update-tr active"><td colspan="%s" class="plugin-update colspanchange"><div class="notice inline notice-error notice-alt"><h4>%s</h4> %s</div></td></tr>',
+    			$wp_list_table->get_column_count(), __('Version', 'shortpixel_image_optimiser') . ' ' . $response->new_version,
     			wpautop( $message )
     		);
     	}
 
     }
 
+
+    private function get_remote_notices()
+    {
+         $transient_name = 'shortpixel_remote_notice';
+         $transient_duration = DAY_IN_SECONDS;
+
+         if (\wpSPIO()->env()->is_debug)
+          $transient_duration = 30;
+
+         $keyModel = new apiKeyModel();
+         $keyModel->loadKey();
+
+         $notices = get_transient($transient_name);
+         $url = $this->remote_message_endpoint;
+         $url = add_query_arg(array(
+            'key' => $keyModel->getKey(),
+            'version' => SHORTPIXEL_IMAGE_OPTIMISER_VERSION,
+            'target' => 3,
+         ), $url);
+
+
+         if ( $notices === false  ) {
+                 $notices_response = wp_safe_remote_request( $url );
+                 $content = false;
+                 if (! is_wp_error( $notices_response ) )
+                 {
+                   $notices = json_decode($notices_response['body']);
+
+                    if (! is_array($notices))
+                      $notices = false;
+
+                    // Save transient anywhere to prevent over-asking when nothing good is there.
+                    set_transient( $transient_name, $notices, $transient_duration );
+                 }
+                 else
+                 {
+                    set_transient( $transient_name, false, $transient_duration );
+                 }
+         }
+
+         return $notices;
+    }
     /**
      *   Stolen from SPAI, Thanks.
     */
     private function get_update_notice($data, $response) {
-            $transient_name = 'shortpixel_update_notice_' . $response->new_version;
+           $transient_name = 'shortpixel_update_notice_' . $response->new_version;
+
+           $transient_duration = DAY_IN_SECONDS;
+
+           if (\wpSPIO()->env()->is_debug)
+             $transient_duration = 30;
+
             $update_notice  = get_transient( $transient_name );
-            $url = 'https://plugins.svn.wordpress.org/shortpixel-image-optimiser/trunk/readme.txt';
+
+            $url = $this->remote_readme_endpoint;
 
             if ( $update_notice === false || strlen( $update_notice ) == 0 ) {
                     $readme_response = wp_safe_remote_request( $url );
@@ -611,10 +741,9 @@ class AdminNoticesController extends \ShortPixel\Controller
                        $content = $readme_response['body'];
                     }
 
-
                     if ( !empty( $readme_response ) ) {
                             $update_notice = $this->parse_update_notice( $content, $response );
-                            set_transient( $transient_name, $update_notice, DAY_IN_SECONDS );
+                            set_transient( $transient_name, $update_notice, $transient_duration );
                     }
             }
 
@@ -632,21 +761,9 @@ class AdminNoticesController extends \ShortPixel\Controller
 	         * @return string
 	         */
 	        private function parse_update_notice( $content, $response ) {
-	                //$version_parts     = explode( '.', $response->new_version );
-              //    var_dump($version_parts);
-              //  echo "<PRE>";  var_dump($content); echo "</PRE>";
-
-	               /* $check_for_notices = [
-	                        $version_parts[ 0 ] . '.' . $version_parts[ 1 ] . '.' . $version_parts[ 2 ] . '.' . $version_parts[ 3 ], // build
-	                        $version_parts[ 0 ] . '.' . $version_parts[ 1 ] . '.' . $version_parts[ 2 ], // patch (micro)
-	                        $version_parts[ 0 ] . '.' . $version_parts[ 1 ] . '.0', // minor
-	                        $version_parts[ 0 ] . '.' . $version_parts[ 1 ], // minor
-	                        $version_parts[ 0 ] . '.0.0', // major
-	                        $version_parts[ 0 ] . '.0', // major
-	                ];  */
                   $new_version = $response->new_version;
 
-	                $update_notice = '';
+	                $update_notice = false;
 
 	               // foreach ( $check_for_notices as $id => $check_version ) {
 	                        if ( version_compare( SHORTPIXEL_IMAGE_OPTIMISER_VERSION, $new_version, '>' ) ) {
@@ -655,7 +772,7 @@ class AdminNoticesController extends \ShortPixel\Controller
 
 	                        $result = $this->parse_readme_content( $content, $new_version, $response );
 
-	                        if ( !empty( $result ) ) {
+	                        if ( !empty( $result ) && strlen($result) > 0 ) {
 	                                $update_notice = $result;
 	                        }
 	             //   }
@@ -686,7 +803,11 @@ class AdminNoticesController extends \ShortPixel\Controller
 
                   if (! isset($matches[1]))
                     return ''; // no update texts.
-                  $lines = str_split(trim($matches[1]));
+
+                    $match = $matches[1];
+                //  $match = str_replace('\n', '', $matches[1]);
+                  $lines = str_split(trim($match));
+
                   $versions = array();
                   $inv = false;
                   foreach($lines as $char)
@@ -709,9 +830,9 @@ class AdminNoticesController extends \ShortPixel\Controller
                      }
                      elseif(! $inv)  // record the message
                      {
-                        $versions[trim($curver)] .= $char;
+                        if (isset($curver))
+                          $versions[trim($curver)] .= $char;
                      }
-
 
                   }
 
@@ -727,7 +848,8 @@ class AdminNoticesController extends \ShortPixel\Controller
 
 	                }
 
-	                return $notice;
+
+	                return trim($notice);
 	        }
 
 	        /*private function replace_readme_constants( $content, $response ) {
@@ -738,7 +860,10 @@ class AdminNoticesController extends \ShortPixel\Controller
 	        } */
 
 	        private function markdown2html( $content ) {
-	                $patterns = [
+
+                  $content = str_replace(array(PHP_EOL, '\n', '\n\r'), '<br>', $content);
+
+                  $patterns = [
 	                        '/\*\*(.+)\*\*/U', // bold
 	                        '/__(.+)__/U', // italic
 	                        '/\[([^\]]*)\]\(([^\)]*)\)/U', // link

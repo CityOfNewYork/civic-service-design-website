@@ -53,22 +53,15 @@ function debug($str, $return = true) {
 require_once ABSPATH . 'wp-admin/includes/plugin.php';
 
 /**
- * Disable Limit Login Attempts plugin
+ * Disable plugins for local development
  *
  * @author NYC Opportunity
  */
 
 deactivate_plugins([
+  'google-authenticator/google-authenticator.php',
   'limit-login-attempts-reloaded/limit-login-attempts-reloaded.php'
 ]);
-
-/**
- * Reset Defender 2fa settings
- *
- * @author NYC Opportunity
- */
-
-update_option('wd_2auth_settings', '');
 
 /**
  * Enable the Redis Caching Plugin if we have WP_REDIS_HOST defined in
@@ -89,14 +82,6 @@ activate_plugin('redis-cache/redis-cache.php');
 activate_plugin('query-monitor/query-monitor.php');
 
 /**
- * Activate WP Auto Login for seamless local login
- *
- * @author NYC Opportunity
- */
-
-activate_plugin('wp-auto-login/wp-auto-login.php');
-
-/**
  * Allow local development requests
  *
  * @author NYC Opportunity
@@ -109,3 +94,13 @@ activate_plugin('wp-auto-login/wp-auto-login.php');
 
 //   return $origins;
 // });
+
+/**
+ * Enable seamless logging in to the WordPress Admin.
+ *
+ * @author NYC Opportunity
+ */
+
+if (file_exists(WPMU_PLUGIN_DIR . '/wp-login/login.php')) {
+  require_once WPMU_PLUGIN_DIR . '/wp-login/login.php';
+}

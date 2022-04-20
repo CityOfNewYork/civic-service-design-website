@@ -249,11 +249,6 @@ html.interface-interface-skeleton__html-container {
   overflow: hidden;
 }
 
-.interface-interface-skeleton__editor {
-  display: flex;
-  flex-direction: column;
-  flex: 0 1 100%; }
-
 .interface-interface-skeleton {
   /* Set left position when auto-fold is not on the body element. */
   right: 0;
@@ -685,142 +680,6 @@ body.is-fullscreen-mode .interface-interface-skeleton {
   margin-left: 8px;
 }
 
-.show-icon-labels.interface-pinned-items .components-button.has-icon,
-.show-icon-labels .edit-post-header .components-button.has-icon,
-.edit-post-header__dropdown .components-button.has-icon {
-  width: auto; }
-  .show-icon-labels.interface-pinned-items .components-button.has-icon svg,
-  .show-icon-labels .edit-post-header .components-button.has-icon svg,
-  .edit-post-header__dropdown .components-button.has-icon svg {
-    display: none; }
-  .show-icon-labels.interface-pinned-items .components-button.has-icon::after,
-  .show-icon-labels .edit-post-header .components-button.has-icon::after,
-  .edit-post-header__dropdown .components-button.has-icon::after {
-    content: attr(aria-label); }
-  .show-icon-labels.interface-pinned-items .components-button.has-icon[aria-disabled="true"],
-  .show-icon-labels .edit-post-header .components-button.has-icon[aria-disabled="true"],
-  .edit-post-header__dropdown .components-button.has-icon[aria-disabled="true"] {
-    background-color: transparent; }
-
-.show-icon-labels.interface-pinned-items .is-tertiary:active,
-.show-icon-labels .edit-post-header .is-tertiary:active,
-.edit-post-header__dropdown .is-tertiary:active {
-  box-shadow: 0 0 0 1.5px #007cba;
-  box-shadow: 0 0 0 1.5px var(--wp-admin-theme-color);
-  background-color: transparent; }
-
-.show-icon-labels.interface-pinned-items .edit-post-header-toolbar__block-toolbar .components-button.has-icon svg,
-.show-icon-labels.interface-pinned-items .edit-post-fullscreen-mode-close.has-icon svg,
-.show-icon-labels.interface-pinned-items .components-button.has-icon.button-toggle svg,
-.show-icon-labels .edit-post-header .edit-post-header-toolbar__block-toolbar .components-button.has-icon svg,
-.show-icon-labels .edit-post-header .edit-post-fullscreen-mode-close.has-icon svg,
-.show-icon-labels .edit-post-header .components-button.has-icon.button-toggle svg,
-.edit-post-header__dropdown .edit-post-header-toolbar__block-toolbar .components-button.has-icon svg,
-.edit-post-header__dropdown .edit-post-fullscreen-mode-close.has-icon svg,
-.edit-post-header__dropdown .components-button.has-icon.button-toggle svg {
-  display: block; }
-
-.show-icon-labels.interface-pinned-items .edit-post-header-toolbar__block-toolbar .components-button.has-icon::after,
-.show-icon-labels.interface-pinned-items .edit-post-fullscreen-mode-close.has-icon::after,
-.show-icon-labels.interface-pinned-items .components-button.has-icon.button-toggle::after,
-.show-icon-labels .edit-post-header .edit-post-header-toolbar__block-toolbar .components-button.has-icon::after,
-.show-icon-labels .edit-post-header .edit-post-fullscreen-mode-close.has-icon::after,
-.show-icon-labels .edit-post-header .components-button.has-icon.button-toggle::after,
-.edit-post-header__dropdown .edit-post-header-toolbar__block-toolbar .components-button.has-icon::after,
-.edit-post-header__dropdown .edit-post-fullscreen-mode-close.has-icon::after,
-.edit-post-header__dropdown .components-button.has-icon.button-toggle::after {
-  content: none; }
-
-.show-icon-labels.interface-pinned-items .edit-post-fullscreen-mode-close.has-icon,
-.show-icon-labels .edit-post-header .edit-post-fullscreen-mode-close.has-icon,
-.edit-post-header__dropdown .edit-post-fullscreen-mode-close.has-icon {
-  width: 60px; }
-
-.show-icon-labels.interface-pinned-items .components-menu-items-choice .components-menu-items__item-icon.components-menu-items__item-icon,
-.show-icon-labels .edit-post-header .components-menu-items-choice .components-menu-items__item-icon.components-menu-items__item-icon,
-.edit-post-header__dropdown .components-menu-items-choice .components-menu-items__item-icon.components-menu-items__item-icon {
-  display: block; }
-
-.show-icon-labels.interface-pinned-items .edit-post-header-toolbar__inserter-toggle.edit-post-header-toolbar__inserter-toggle,
-.show-icon-labels.interface-pinned-items .interface-pinned-items .components-button,
-.show-icon-labels .edit-post-header .edit-post-header-toolbar__inserter-toggle.edit-post-header-toolbar__inserter-toggle,
-.show-icon-labels .edit-post-header .interface-pinned-items .components-button,
-.edit-post-header__dropdown .edit-post-header-toolbar__inserter-toggle.edit-post-header-toolbar__inserter-toggle,
-.edit-post-header__dropdown .interface-pinned-items .components-button {
-  padding-right: 8px;
-  padding-left: 8px; }
-  @media (min-width: 600px) {
-    .show-icon-labels.interface-pinned-items .edit-post-header-toolbar__inserter-toggle.edit-post-header-toolbar__inserter-toggle,
-    .show-icon-labels.interface-pinned-items .interface-pinned-items .components-button,
-    .show-icon-labels .edit-post-header .edit-post-header-toolbar__inserter-toggle.edit-post-header-toolbar__inserter-toggle,
-    .show-icon-labels .edit-post-header .interface-pinned-items .components-button,
-    .edit-post-header__dropdown .edit-post-header-toolbar__inserter-toggle.edit-post-header-toolbar__inserter-toggle,
-    .edit-post-header__dropdown .interface-pinned-items .components-button {
-      padding-right: 12px;
-      padding-left: 12px; } }
-
-.show-icon-labels.interface-pinned-items .components-dropdown-menu__toggle,
-.show-icon-labels .edit-post-header .components-dropdown-menu__toggle,
-.edit-post-header__dropdown .components-dropdown-menu__toggle {
-  margin-right: 8px;
-  padding-right: 8px;
-  padding-left: 8px; }
-  @media (min-width: 600px) {
-    .show-icon-labels.interface-pinned-items .components-dropdown-menu__toggle,
-    .show-icon-labels .edit-post-header .components-dropdown-menu__toggle,
-    .edit-post-header__dropdown .components-dropdown-menu__toggle {
-      margin-right: 12px;
-      padding-right: 12px;
-      padding-left: 12px; } }
-
-.show-icon-labels.interface-pinned-items .edit-post-header-toolbar__inserter-toggle.edit-post-header-toolbar__inserter-toggle::after,
-.show-icon-labels .edit-post-header .edit-post-header-toolbar__inserter-toggle.edit-post-header-toolbar__inserter-toggle::after,
-.edit-post-header__dropdown .edit-post-header-toolbar__inserter-toggle.edit-post-header-toolbar__inserter-toggle::after {
-  content: none; }
-
-.show-icon-labels.interface-pinned-items .editor-post-save-draft.editor-post-save-draft::after,
-.show-icon-labels .edit-post-header .editor-post-save-draft.editor-post-save-draft::after,
-.edit-post-header__dropdown .editor-post-save-draft.editor-post-save-draft::after {
-  content: none; }
-
-@media (min-width: 600px) {
-  .show-icon-labels.interface-pinned-items .editor-post-save-draft.editor-post-save-draft::after,
-  .show-icon-labels .edit-post-header .editor-post-save-draft.editor-post-save-draft::after,
-  .edit-post-header__dropdown .editor-post-save-draft.editor-post-save-draft::after {
-    content: attr(aria-label); } }
-
-.edit-post-header__dropdown .components-menu-item__button.components-menu-item__button,
-.edit-post-header__dropdown .components-button.editor-history__undo,
-.edit-post-header__dropdown .components-button.editor-history__redo,
-.edit-post-header__dropdown .table-of-contents .components-button,
-.edit-post-header__dropdown .components-button.block-editor-block-navigation {
-  margin: 0;
-  padding: 6px 40px 6px 6px;
-  width: 14.625rem;
-  text-align: right;
-  justify-content: flex-start; }
-
-.show-icon-labels.interface-pinned-items {
-  padding: 6px 12px 12px;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-right: -12px;
-  margin-left: -12px;
-  border-bottom: 1px solid #ccc;
-  display: block; }
-  .show-icon-labels.interface-pinned-items > .components-button.has-icon {
-    margin: 0;
-    padding: 6px 8px 6px 6px;
-    width: 14.625rem;
-    justify-content: flex-start; }
-    .show-icon-labels.interface-pinned-items > .components-button.has-icon[aria-expanded="true"] svg {
-      display: block;
-      max-width: 24px; }
-    .show-icon-labels.interface-pinned-items > .components-button.has-icon[aria-expanded="false"] {
-      padding-right: 40px; }
-    .show-icon-labels.interface-pinned-items > .components-button.has-icon svg {
-      margin-left: 8px; }
-
 .edit-post-fullscreen-mode-close.has-icon {
   display: none;
 }
@@ -881,9 +740,6 @@ body.is-fullscreen-mode .interface-interface-skeleton {
      object-fit: cover;
   margin-top: -1px;
 }
-
-.edit-post-fullscreen-mode-close_site-icon {
-  width: 36px; }
 
 .edit-post-header-toolbar {
   display: inline-flex;
@@ -1590,43 +1446,6 @@ body.is-fullscreen-mode .edit-post-layout .components-editor-notices__snackbar {
   overflow-y: auto;
   padding: 8px 6px;
 }
-
-.edit-post-preferences-modal__section {
-  margin: 0 0 2.5rem 0; }
-
-.edit-post-preferences-modal__section-title {
-  font-size: 0.9rem;
-  font-weight: 600; }
-
-.edit-post-preferences-modal__option .components-base-control__field {
-  align-items: center;
-  display: flex;
-  margin: 0; }
-
-.edit-post-preferences-modal__option .components-checkbox-control__label {
-  flex-grow: 1;
-  padding: 0.6rem 10px 0.6rem 0; }
-
-.edit-post-preferences-modal__custom-fields-confirmation-message, .edit-post-preferences-modal__custom-fields-confirmation-button {
-  margin: 0 48px 0.6rem 0; }
-  @media (min-width: 782px) {
-    .edit-post-preferences-modal__custom-fields-confirmation-message, .edit-post-preferences-modal__custom-fields-confirmation-button {
-      margin-right: 38px; } }
-  @media (min-width: 600px) {
-    .edit-post-preferences-modal__custom-fields-confirmation-message, .edit-post-preferences-modal__custom-fields-confirmation-button {
-      max-width: 300px; } }
-
-.edit-post-preferences-modal .components-base-control__help {
-  margin: -8px 42px 8px 0;
-  font-size: 12px;
-  font-style: normal;
-  color: #757575; }
-
-.edit-post-preferences-modal .edit-post-preferences-modal__section-description {
-  margin: -8px 0 8px 0;
-  font-size: 12px;
-  font-style: normal;
-  color: #757575; }
 
 .components-panel__header.edit-post-sidebar__panel-tabs {
   justify-content: flex-start;

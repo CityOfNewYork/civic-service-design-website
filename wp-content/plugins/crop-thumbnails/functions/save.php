@@ -91,7 +91,7 @@ class CptSaveThumbnail {
 				}
 
 				$_error = false;
-				if(empty($resultWpCropImage)) {
+				if(empty($resultWpCropImage) || is_wp_error($resultWpCropImage)) {
 					$_processing_error[$activeImageSize->name][] = sprintf(__("Can't generate filesize '%s'.",'crop-thumbnails'), $activeImageSize->name);
 					$_error = true;
 				} else {
@@ -99,7 +99,7 @@ class CptSaveThumbnail {
 						self::addDebug("delete old image:".$oldFile_toDelete);
 						@unlink($currentFilePathInfo['dirname'].DIRECTORY_SEPARATOR.$oldFile_toDelete);
 					}
-					if(!@copy($resultWpCropImage,$currentFilePath)) {
+					if(!@copy($resultWpCropImage, $currentFilePath)) {
 						$_processing_error[$activeImageSize->name][] = __("Can't copy temporary file to media library.", 'crop-thumbnails');
 						$_error = true;
 					}
@@ -388,6 +388,17 @@ class CptSaveThumbnail {
 		$info = pathinfo($file);
 		$dir = $info['dirname'];
 		$ext = $info['extension'];
+
+		/**
+		 * since WordPress 5.8 the image extension / MIME type may differ from that of the
+		 * original file so we'll use the below hook to check if any defaults are overwritten.
+		 */
+		$outputFormats = apply_filters('image_editor_output_format', [], $file);
+		$fileTypeInformations = wp_check_filetype($file);
+		if(isset($outputFormats[$fileTypeInformations['type']])) {
+			$ext = array_search($outputFormats[$fileTypeInformations['type']], wp_get_mime_types(), true);
+		}
+
 		$name = wp_basename($file, '.'.$ext);
 		if(!empty($imageMetadata['original_image'])) {
 			$name = wp_basename($imageMetadata['original_image'], '.'.$ext);

@@ -1,6 +1,6 @@
 {
   "name": "nyco/service-design",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "The Service Design Studio makes public services more effective and accessible for all New Yorkers",
   "homepage": "https://nyc.gov/servicdesign",
   "authors": [
@@ -21,20 +21,32 @@
       "url": "https://wpackagist.org"
     }
   ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "wp-content/themes/csdw/app/"
+    }
+  },
   "require": {
+    "php": ">=7.1",
+    "composer/installers": "~1.0",
+    "illuminate/support": "5.6.*",
     "nyco/wp-assets": "^1.4",
     "nyco/wp-config": "^1",
+    "roots/sage-installer": "~1.6",
+    "roots/sage-lib": "~9.0.9",
+    "soberwp/controller": "~2.1.0",
     "wpackagist-plugin/aryo-activity-log": "*",
     "wpackagist-plugin/google-authenticator": "*",
     "wpackagist-plugin/limit-login-attempts-reloaded": "*",
     "wpackagist-plugin/loggedin": "*",
-    "wpackagist-plugin/wordpress-importer": "*",
     "wpackagist-plugin/members": "*",
+    "wpackagist-plugin/wordpress-importer": "*",
     "wpackagist-plugin/wps-hide-login": "*",
     "wpackagist-plugin/wpscan": "*"
   },
   "require-dev": {
     "filp/whoops": "*",
+    "nyco/wp-login": "^0.0.1",
     "squizlabs/php_codesniffer": "*",
     "whoops/soap": "*",
     "wpackagist-plugin/query-monitor": "*",
@@ -43,28 +55,30 @@
   },
   "scripts": {
     "development": [
-      "composer dump-autoload"
+      "composer dump-autoload --ignore-platform-req=php"
     ],
     "production": [
-      "composer dump-autoload --no-dev --optimize",
-      "vendor/bin/phpcs --standard=phpcs.xml"
+      "composer dump-autoload --no-dev --optimize --ignore-platform-req=php"
     ],
     "predeploy": [
-      "composer dump-autoload --no-dev --optimize",
-      "vendor/bin/phpcs --standard=phpcs.xml"
+      "@development",
+      "@lint",
+      "@production"
     ],
     "lint": [
-      "vendor/bin/phpcs -s --standard=phpcs.xml"
+      "vendor/bin/phpcs --standard=phpcs.xml"
     ],
     "fix": [
       "vendor/bin/phpcbf --standard=phpcs.xml"
     ],
     "version": [
-      "composer update nothing",
-      "composer dump-autoload --no-dev --optimize"
+      "composer update nothing --ignore-platform-req=php",
+      "@production"
     ],
     "deps": [
       "composer show --tree"
     ]
-  }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
 }

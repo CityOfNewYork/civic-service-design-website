@@ -35,17 +35,23 @@ if (version_compare('4.7.0', get_bloginfo('version'), '>=')) {
 }
 
 /**
- * Ensure dependencies are loaded
+ * All Composer dependencies are auto-loaded from the root vendor/ directory.
+ *
+ * @author NYC Opportunity
  */
-if (!class_exists('Roots\\Sage\\Container')) {
-    if (!file_exists($composer = __DIR__.'/../vendor/autoload.php')) {
-        $sage_error(
-            __('You must run <code>composer install</code> from the Sage directory.', 'sage'),
-            __('Autoloader not found.', 'sage')
-        );
-    }
-    require_once $composer;
-}
+
+// /**
+//  * Ensure dependencies are loaded
+//  */
+// if (!class_exists('Roots\\Sage\\Container')) {
+//     if (!file_exists($composer = __DIR__.'/../vendor/autoload.php')) {
+//         $sage_error(
+//             __('You must run <code>composer install</code> from the Sage directory.', 'sage'),
+//             __('Autoloader not found.', 'sage')
+//         );
+//     }
+//     require_once $composer;
+// }
 
 /**
  * Sage required files

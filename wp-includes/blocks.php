@@ -278,7 +278,6 @@ function register_block_type_from_metadata( $file_or_folder, $args = array() ) {
 		'styles'          => 'styles',
 		'variations'      => 'variations',
 		'example'         => 'example',
-		'apiVersion'      => 'api_version',
 	);
 	$textdomain        = ! empty( $metadata['textdomain'] ) ? $metadata['textdomain'] : null;
 	$i18n_schema       = get_block_metadata_i18n_schema();

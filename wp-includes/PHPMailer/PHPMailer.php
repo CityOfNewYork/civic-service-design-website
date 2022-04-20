@@ -1859,23 +1859,6 @@ class PHPMailer
     }
 
     /**
-     * Check whether a file path is safe, accessible, and readable.
-     *
-     * @param string $path A relative or absolute path to a file
-     *
-     * @return bool
-     */
-    protected static function fileIsAccessible($path)
-    {
-        $readable = file_exists($path);
-        //If not a UNC path (expected to start with \\), check read permission, see #2069
-        if (strpos($path, '\\\\') !== 0) {
-            $readable = $readable && is_readable($path);
-        }
-        return static::isPermittedPath($path) && $readable;
-    }
-
-    /**
      * Send mail using the PHP mail() function.
      *
      * @see http://www.php.net/manual/en/book.mail.php

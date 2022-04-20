@@ -23297,6 +23297,7 @@ const formatStrikethrough = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0
 /* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("Tqx9");
 /* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__);
 
+
 /**
  * WordPress dependencies
  */
@@ -25885,15 +25886,6 @@ if (typeof Object.create === 'function') {
  *
  * @return {RefCallback} Ref callback.
  */
- // Default search helpers
-
-var defaultGetName = function defaultGetName(item) {
-  return item.name || '';
-};
-
-var defaultGetTitle = function defaultGetTitle(item) {
-  return item.title;
-};
 
 function useBlockRefProvider(clientId) {
   const {
@@ -26019,10 +26011,6 @@ var external_wp_primitives_ = __webpack_require__("Tqx9");
 // CONCATENATED MODULE: ./node_modules/@wordpress/icons/build-module/library/arrow-right.js
 
 
-  return rank;
-}
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/block-editor/build-module/components/inserter/hooks/use-block-types-state.js
 /**
  * WordPress dependencies
  */
@@ -26625,7 +26613,6 @@ function getLayoutTypes() {
 /**
  * WordPress dependencies
  */
-
 
 
 
@@ -35128,9 +35115,6 @@ function runAsync(to, props, state, target) {
         state.promise = parentId ? prevPromise : undefined;
       }
     }
-  });
-  return [candidateDistance, candidateEdge];
-}
 
     if (_react_spring_shared__WEBPACK_IMPORTED_MODULE_0__[/* is */ "s"].fun(onRest)) {
       _react_spring_shared__WEBPACK_IMPORTED_MODULE_0__[/* raf */ "w"].batchedUpdates(() => {
@@ -41424,6 +41408,7 @@ var use_available_alignments = __webpack_require__("K/rC");
  */
 
 
+
 /**
  * An array which includes all possible valid alignments,
  * used to validate if an alignment is valid or not.
@@ -43236,6 +43221,7 @@ var font_family = __webpack_require__("GKUk");
 
 
 
+
 /**
  * Internal dependencies
  */
@@ -44441,17 +44427,6 @@ function MarginEdit(props) {
  */
 
 
-      if (Object(external_this_lodash_["isFunction"])(renderSuggestions) && showSuggestions && !!suggestions.length) {
-        return renderSuggestions({
-          suggestions: suggestions,
-          selectedSuggestion: selectedSuggestion,
-          suggestionsListProps: suggestionsListProps,
-          buildSuggestionItemProps: buildSuggestionItemProps,
-          isLoading: loading,
-          handleSuggestionClick: this.handleOnClick,
-          isInitialSuggestions: __experimentalShowInitialSuggestions && !(value && value.length)
-        });
-      }
 
 
 /**
@@ -44591,26 +44566,14 @@ function PaddingEdit(props) {
  * WordPress dependencies
  */
 
-var plusCircle = Object(external_this_wp_element_["createElement"])(external_this_wp_primitives_["SVG"], {
-  xmlns: "http://www.w3.org/2000/svg",
-  viewBox: "-2 -2 24 24"
-}, Object(external_this_wp_element_["createElement"])(external_this_wp_primitives_["Path"], {
-  d: "M10 1c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9zm0 16c-3.9 0-7-3.1-7-7s3.1-7 7-7 7 3.1 7 7-3.1 7-7 7zm1-11H9v3H6v2h3v3h2v-3h3V9h-3V6zM10 1c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9zm0 16c-3.9 0-7-3.1-7-7s3.1-7 7-7 7 3.1 7 7-3.1 7-7 7zm1-11H9v3H6v2h3v3h2v-3h3V9h-3V6z"
-}));
-/* harmony default export */ var plus_circle = (plusCircle);
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/block-editor/build-module/components/link-control/search-create-button.js
 
 
 
 /**
- * External dependencies
+ * Internal dependencies
  */
 
 
-/**
- * WordPress dependencies
- */
 
 
 
@@ -44762,9 +44725,11 @@ var use_display_block_controls = __webpack_require__("HgtZ");
  * External dependencies
  */
 
+
 /**
  * WordPress dependencies
  */
+
 
 
 
@@ -44777,272 +44742,6 @@ var use_display_block_controls = __webpack_require__("HgtZ");
 
 
 
-var noopSearchHandler = Promise.resolve([]);
-var LinkControlSearchInput = Object(external_this_wp_element_["forwardRef"])(function (_ref, ref) {
-  var value = _ref.value,
-      children = _ref.children,
-      _ref$currentLink = _ref.currentLink,
-      currentLink = _ref$currentLink === void 0 ? {} : _ref$currentLink,
-      _ref$className = _ref.className,
-      className = _ref$className === void 0 ? null : _ref$className,
-      _ref$placeholder = _ref.placeholder,
-      placeholder = _ref$placeholder === void 0 ? null : _ref$placeholder,
-      _ref$withCreateSugges = _ref.withCreateSuggestion,
-      withCreateSuggestion = _ref$withCreateSugges === void 0 ? false : _ref$withCreateSugges,
-      _ref$onCreateSuggesti = _ref.onCreateSuggestion,
-      onCreateSuggestion = _ref$onCreateSuggesti === void 0 ? external_this_lodash_["noop"] : _ref$onCreateSuggesti,
-      _ref$onChange = _ref.onChange,
-      onChange = _ref$onChange === void 0 ? external_this_lodash_["noop"] : _ref$onChange,
-      _ref$onSelect = _ref.onSelect,
-      onSelect = _ref$onSelect === void 0 ? external_this_lodash_["noop"] : _ref$onSelect,
-      _ref$showSuggestions = _ref.showSuggestions,
-      showSuggestions = _ref$showSuggestions === void 0 ? true : _ref$showSuggestions,
-      _ref$renderSuggestion = _ref.renderSuggestions,
-      renderSuggestions = _ref$renderSuggestion === void 0 ? function (props) {
-    return Object(external_this_wp_element_["createElement"])(LinkControlSearchResults, props);
-  } : _ref$renderSuggestion,
-      _ref$fetchSuggestions = _ref.fetchSuggestions,
-      fetchSuggestions = _ref$fetchSuggestions === void 0 ? null : _ref$fetchSuggestions,
-      _ref$allowDirectEntry = _ref.allowDirectEntry,
-      allowDirectEntry = _ref$allowDirectEntry === void 0 ? true : _ref$allowDirectEntry,
-      _ref$showInitialSugge = _ref.showInitialSuggestions,
-      showInitialSuggestions = _ref$showInitialSugge === void 0 ? false : _ref$showInitialSugge,
-      _ref$suggestionsQuery = _ref.suggestionsQuery,
-      suggestionsQuery = _ref$suggestionsQuery === void 0 ? {} : _ref$suggestionsQuery,
-      _ref$withURLSuggestio = _ref.withURLSuggestion,
-      withURLSuggestion = _ref$withURLSuggestio === void 0 ? true : _ref$withURLSuggestio,
-      createSuggestionButtonText = _ref.createSuggestionButtonText;
-  var genericSearchHandler = useSearchHandler(suggestionsQuery, allowDirectEntry, withCreateSuggestion, withURLSuggestion);
-  var searchHandler = showSuggestions ? fetchSuggestions || genericSearchHandler : noopSearchHandler;
-  var instanceId = Object(external_this_wp_compose_["useInstanceId"])(LinkControlSearchInput);
-
-  var _useState = Object(external_this_wp_element_["useState"])(),
-      _useState2 = Object(slicedToArray["a" /* default */])(_useState, 2),
-      focusedSuggestion = _useState2[0],
-      setFocusedSuggestion = _useState2[1];
-  /**
-   * Handles the user moving between different suggestions. Does not handle
-   * choosing an individual item.
-   *
-   * @param {string} selection the url of the selected suggestion.
-   * @param {Object} suggestion the suggestion object.
-   */
-
-
-  var onInputChange = function onInputChange(selection, suggestion) {
-    onChange(selection);
-    setFocusedSuggestion(suggestion);
-  };
-
-  var onFormSubmit = function onFormSubmit(event) {
-    event.preventDefault();
-    onSuggestionSelected(focusedSuggestion || {
-      url: value
-    });
-  };
-
-  var handleRenderSuggestions = function handleRenderSuggestions(props) {
-    return renderSuggestions(search_input_objectSpread(search_input_objectSpread({}, props), {}, {
-      instanceId: instanceId,
-      withCreateSuggestion: withCreateSuggestion,
-      currentInputValue: value,
-      createSuggestionButtonText: createSuggestionButtonText,
-      suggestionsQuery: suggestionsQuery,
-      handleSuggestionClick: function handleSuggestionClick(suggestion) {
-        if (props.handleSuggestionClick) {
-          props.handleSuggestionClick(suggestion);
-        }
-
-        onSuggestionSelected(suggestion);
-      }
-    }));
-  };
-
-  var onSuggestionSelected = /*#__PURE__*/function () {
-    var _ref2 = Object(asyncToGenerator["a" /* default */])( /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(function _callee(selectedSuggestion) {
-      var suggestion, _suggestion;
-
-      return external_this_regeneratorRuntime_default.a.wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              suggestion = selectedSuggestion;
-
-              if (!(CREATE_TYPE === selectedSuggestion.type)) {
-                _context.next = 12;
-                break;
-              }
-
-              _context.prev = 2;
-              _context.next = 5;
-              return onCreateSuggestion(selectedSuggestion.title);
-
-            case 5:
-              suggestion = _context.sent;
-
-              if ((_suggestion = suggestion) === null || _suggestion === void 0 ? void 0 : _suggestion.url) {
-                onSelect(suggestion);
-              }
-
-              _context.next = 11;
-              break;
-
-            case 9:
-              _context.prev = 9;
-              _context.t0 = _context["catch"](2);
-
-            case 11:
-              return _context.abrupt("return");
-
-            case 12:
-              if (allowDirectEntry || suggestion && Object.keys(suggestion).length >= 1) {
-                onSelect( // Some direct entries don't have types or IDs, and we still need to clear the previous ones.
-                search_input_objectSpread(search_input_objectSpread({}, Object(external_this_lodash_["omit"])(currentLink, 'id', 'url')), suggestion), suggestion);
-              }
-
-            case 13:
-            case "end":
-              return _context.stop();
-          }
-        }
-      }, _callee, null, [[2, 9]]);
-    }));
-
-    return function onSuggestionSelected(_x) {
-      return _ref2.apply(this, arguments);
-    };
-  }();
-
-  return Object(external_this_wp_element_["createElement"])("form", {
-    onSubmit: onFormSubmit
-  }, Object(external_this_wp_element_["createElement"])(url_input, {
-    className: className,
-    value: value,
-    onChange: onInputChange,
-    placeholder: placeholder !== null && placeholder !== void 0 ? placeholder : Object(external_this_wp_i18n_["__"])('Search or type url'),
-    __experimentalRenderSuggestions: showSuggestions ? handleRenderSuggestions : null,
-    __experimentalFetchLinkSuggestions: searchHandler,
-    __experimentalHandleURLSuggestions: true,
-    __experimentalShowInitialSuggestions: showInitialSuggestions,
-    ref: ref
-  }), children);
-});
-/* harmony default export */ var search_input = (LinkControlSearchInput);
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/block-editor/build-module/components/link-control/viewer-slot.js
-/**
- * WordPress dependencies
- */
-
-
-var viewer_slot_createSlotFill = Object(external_this_wp_components_["createSlotFill"])('BlockEditorLinkControlViewer'),
-    ViewerSlot = viewer_slot_createSlotFill.Slot,
-    ViewerFill = viewer_slot_createSlotFill.Fill;
-
-
-/* harmony default export */ var viewer_slot = (ViewerSlot);
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/block-editor/build-module/components/link-control/link-preview.js
-
-
-/**
- * External dependencies
- */
-
-/**
- * WordPress dependencies
- */
-
-/**
- * Internal dependencies
- */
-
-
-function LinkPreview(_ref) {
-  var value = _ref.value,
-      onEditClick = _ref.onEditClick;
-  var displayURL = value && Object(external_this_wp_url_["filterURLForDisplay"])(Object(external_this_wp_url_["safeDecodeURI"])(value.url)) || '';
-  return Object(external_this_wp_element_["createElement"])("div", {
-    "aria-label": Object(external_this_wp_i18n_["__"])('Currently selected'),
-    "aria-selected": "true",
-    className: classnames_default()('block-editor-link-control__search-item', {
-      'is-current': true
-    })
-  }, Object(external_this_wp_element_["createElement"])("span", {
-    className: "block-editor-link-control__search-item-header"
-  }, Object(external_this_wp_element_["createElement"])(external_this_wp_components_["ExternalLink"], {
-    className: "block-editor-link-control__search-item-title",
-    href: value.url
-  }, value && value.title || displayURL), value && value.title && Object(external_this_wp_element_["createElement"])("span", {
-    className: "block-editor-link-control__search-item-info"
-  }, displayURL)), Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], {
-    isSecondary: true,
-    onClick: function onClick() {
-      return onEditClick();
-    },
-    className: "block-editor-link-control__search-item-action"
-  }, Object(external_this_wp_i18n_["__"])('Edit')), Object(external_this_wp_element_["createElement"])(ViewerSlot, {
-    fillProps: value
-  }));
-}
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/block-editor/build-module/components/link-control/use-create-page.js
-
-
-
-
-/**
- * WordPress dependencies
- */
-
-
-function useCreatePage(handleCreatePage) {
-  var cancelableCreateSuggestion = Object(external_this_wp_element_["useRef"])();
-
-  var _useState = Object(external_this_wp_element_["useState"])(false),
-      _useState2 = Object(slicedToArray["a" /* default */])(_useState, 2),
-      isCreatingPage = _useState2[0],
-      setIsCreatingPage = _useState2[1];
-
-  var _useState3 = Object(external_this_wp_element_["useState"])(null),
-      _useState4 = Object(slicedToArray["a" /* default */])(_useState3, 2),
-      errorMessage = _useState4[0],
-      setErrorMessage = _useState4[1];
-
-  var createPage = /*#__PURE__*/function () {
-    var _ref = Object(asyncToGenerator["a" /* default */])( /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(function _callee(suggestionTitle) {
-      return external_this_regeneratorRuntime_default.a.wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              setIsCreatingPage(true);
-              setErrorMessage(null);
-              _context.prev = 2;
-              // Make cancellable in order that we can avoid setting State
-              // if the component unmounts during the call to `createSuggestion`
-              cancelableCreateSuggestion.current = makeCancelable( // Using Promise.resolve to allow createSuggestion to return a
-              // non-Promise based value.
-              Promise.resolve(handleCreatePage(suggestionTitle)));
-              _context.next = 6;
-              return cancelableCreateSuggestion.current.promise;
-
-            case 6:
-              return _context.abrupt("return", _context.sent);
-
-            case 9:
-              _context.prev = 9;
-              _context.t0 = _context["catch"](2);
-
-              if (!(_context.t0 && _context.t0.isCanceled)) {
-                _context.next = 13;
-                break;
-              }
-
-              return _context.abrupt("return");
-
-            case 13:
-              setErrorMessage(_context.t0.message || Object(external_this_wp_i18n_["__"])('An unknown error occurred during creation. Please try again.'));
-              throw _context.t0;
 
 
 const styleSupportKeys = [...TYPOGRAPHY_SUPPORT_KEYS, BORDER_SUPPORT_KEY, COLOR_SUPPORT_KEY, SPACING_SUPPORT_KEY];
@@ -47571,8 +47270,6 @@ identity_Compiler.prototype.indent = function (level) {
  * Internal dependencies
  */
 
-  var _useDispatch = Object(external_this_wp_data_["useDispatch"])('core/block-editor'),
-      clearSelectedBlock = _useDispatch.clearSelectedBlock;
 
 
 function traverseCSS(css, callback) {
@@ -50651,13 +50348,6 @@ const alignRight = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["creat
 }));
 /* harmony default export */ __webpack_exports__["a"] = (alignRight);
 
-/**
- * Given an array of theme colors checks colors for validity
- *
- * @param {Array}   colors  The array of theme colors
- *
- * @return {Array} The array of valid theme colors or the default colors
- */
 
 /***/ }),
 

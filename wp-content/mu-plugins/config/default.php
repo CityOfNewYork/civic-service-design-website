@@ -6,6 +6,7 @@
 
 /**
  * Autoload Composer Dependencies
+ *
  * @author NYC Opportunity
  */
 

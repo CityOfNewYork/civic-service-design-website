@@ -493,7 +493,6 @@ p + .components-button.is-tertiary {
   width: 24px;
   height: 24px;
   -webkit-appearance: none;
-     -moz-appearance: none;
           appearance: none;
   transition: 0.1s border-color ease-in-out;
 }
@@ -775,40 +774,6 @@ svg.components-checkbox-control__checked {
 .components-dropdown-menu__menu .components-palette-edit__menu-button {
   width: 100%;
 }
-
-.components-color-edit__color-option-main-area {
-  display: flex;
-  align-items: center; }
-  .components-color-edit__color-option-main-area .components-circular-option-picker__option-wrapper {
-    margin: 8px; }
-
-.components-color-edit__color-option.is-hover {
-  background: #e0e0e0; }
-
-.components-color-edit__cancel-button {
-  float: right; }
-
-.components-color-edit__color-option-color-name {
-  width: 100%; }
-
-.components-color-edit__label-and-insert-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-
-.components-color-edit__insert-button {
-  margin-top: -8px; }
-
-.components-color-edit__hidden-control {
-  position: relative;
-  left: -9999px; }
-
-.components-color-edit__color-option-color-name-input .components-base-control__field {
-  margin-bottom: 0;
-  margin-right: 8px; }
-
-.components-color-edit__slug-input {
-  margin-left: 8px; }
 
 .component-color-indicator {
   width: 25px;
@@ -2339,12 +2304,6 @@ input.components-combobox-control__input[type=text]:focus {
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
 }
-
-.components-datetime__timezone {
-  line-height: 30px;
-  margin-left: 4px;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; }
 
 .components-datetime__time-legend {
   font-weight: 600;

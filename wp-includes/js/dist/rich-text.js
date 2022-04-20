@@ -1666,8 +1666,6 @@ function getActiveObject(_ref) {
 }
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/get-text-content.js
-/** @typedef {import('./create').RichTextValue} RichTextValue */
-
 /**
  * Internal dependencies
  */
@@ -2254,8 +2252,6 @@ function replace_replace(_ref, pattern, replacement) {
 
 /** @typedef {import('./create').RichTextValue} RichTextValue */
 
-/** @typedef {import('./create').RichTextValue} RichTextValue */
-
 /**
  * Insert a line break character into a Rich Text value at the given
  * `startIndex`. Any content between `startIndex` and `endIndex` will be
@@ -2385,8 +2381,6 @@ function insertObject(value, formatToInsert, startIndex, endIndex) {
 // CONCATENATED MODULE: ./node_modules/@wordpress/rich-text/build-module/slice.js
 /** @typedef {import('./create').RichTextValue} RichTextValue */
 
-/** @typedef {import('./create').RichTextValue} RichTextValue */
-
 /**
  * Slice a Rich Text value from `startIndex` to `endIndex`. Indices are
  * retrieved from the selection if none are provided. This is similar to
@@ -2513,8 +2507,6 @@ function splitAtSelection(_ref2) {
 /**
  * WordPress dependencies
  */
-
-/** @typedef {import('./register-format-type').RichTextFormatType} RichTextFormatType */
 
 /**
  * Internal dependencies
@@ -3818,8 +3810,6 @@ var external_wp_element_ = __webpack_require__("GRId");
 /** @typedef {import('../register-format-type').RichTextFormatType} RichTextFormatType */
 
 /** @typedef {import('../create').RichTextValue} RichTextValue */
-
-/** @typedef {import('./create').RichTextValue} RichTextValue */
 
 /**
  * This hook, to be used in a format type's Edit component, returns the active

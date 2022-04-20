@@ -926,9 +926,6 @@ var esm_extends = __webpack_require__("wx14");
 // EXTERNAL MODULE: external ["wp","htmlEntities"]
 var external_wp_htmlEntities_ = __webpack_require__("rmEH");
 
-// EXTERNAL MODULE: external {"this":["wp","htmlEntities"]}
-var external_this_wp_htmlEntities_ = __webpack_require__(69);
-
 // EXTERNAL MODULE: ./node_modules/@wordpress/icons/build-module/icon/index.js
 var build_module_icon = __webpack_require__("iClF");
 
@@ -1053,7 +1050,6 @@ function DownloadableBlockIcon(_ref) {
 /**
  * WordPress dependencies
  */
-
 
 
 /**
@@ -1260,9 +1256,6 @@ function DownloadableBlocksList(_ref) {
     installBlockType
   } = Object(external_wp_data_["useDispatch"])(store);
 
-  var _useDispatch2 = Object(external_this_wp_data_["useDispatch"])('core/edit-post'),
-      setIsInserterOpened = _useDispatch2.setIsInserterOpened;
-
   if (!items.length) {
     return null;
   }
@@ -1285,7 +1278,6 @@ function DownloadableBlocksList(_ref) {
           installBlockType(item).then(success => {
             if (success) {
               onSelect(item);
-              setIsInserterOpened(false);
             }
           });
         }

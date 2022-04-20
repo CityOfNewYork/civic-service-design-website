@@ -405,9 +405,6 @@ const cog = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElemen
 /* harmony default export */ __webpack_exports__["a"] = (cog);
 
 
-/* harmony default export */ __webpack_exports__["a"] = (BaseOption);
-
-
 /***/ }),
 
 /***/ "Civd":
@@ -6040,15 +6037,9 @@ function WritingMenu() {
 // CONCATENATED MODULE: ./node_modules/@wordpress/edit-post/build-module/components/header/more-menu/index.js
 
 
-
-function more_menu_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function more_menu_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { more_menu_ownKeys(Object(source), true).forEach(function (key) { Object(defineProperty["a" /* default */])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { more_menu_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
 /**
  * WordPress dependencies
  */
-
 
 
 
@@ -6659,7 +6650,7 @@ function Header(_ref) {
     className: "edit-post-header__toolbar"
   }, Object(external_wp_element_["createElement"])(header_toolbar, null), Object(external_wp_element_["createElement"])(template_title, null)), Object(external_wp_element_["createElement"])("div", {
     className: "edit-post-header__settings"
-  }, !hasReducedUI && Object(external_this_wp_element_["createElement"])(external_this_wp_element_["Fragment"], null, !isPublishSidebarOpened && // This button isn't completely hidden by the publish sidebar.
+  }, !isPublishSidebarOpened && // This button isn't completely hidden by the publish sidebar.
   // We can't hide the whole toolbar when the publish sidebar is open because
   // we want to prevent mounting/unmounting the PostPublishButtonOrToggle DOM node.
   // We track that DOM node to return focus to the PostPublishButtonOrToggle

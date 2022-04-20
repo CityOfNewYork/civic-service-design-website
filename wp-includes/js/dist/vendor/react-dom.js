@@ -191,11 +191,6 @@
     if (hasOwnProperty.call(validatedAttributeNameCache, attributeName)) {
       return true;
     }
-  }
-  /**
-   * During execution of guarded functions we will capture the first error which
-   * we will rethrow to be handled by the top level error handler.
-   */
 
     if (hasOwnProperty.call(illegalAttributeNameCache, attributeName)) {
       return false;
@@ -1035,6 +1030,7 @@
     {
       return describeNativeComponentFrame(fn, false);
     }
+  }
 
   function shouldConstruct(Component) {
     var prototype = Component.prototype;
@@ -1892,8 +1888,6 @@
         if (defaultSelected === null && !options[_i2].disabled) {
           defaultSelected = options[_i2];
         }
-      } else if (node.value !== toString(value)) {
-        node.value = toString(value);
       }
 
       if (defaultSelected !== null) {
@@ -2234,23 +2228,7 @@
         firstChild.nodeValue = text;
         return;
       }
-    } else {
-      // Do not set `select.value` as exact behavior isn't consistent across all
-      // browsers for all cases.
-      var _selectedValue = toString(getToStringValue(propValue));
-
-      var defaultSelected = null;
-
-      for (var _i2 = 0; _i2 < options.length; _i2++) {
-        if (options[_i2].value === _selectedValue) {
-          options[_i2].selected = true;
-
-          if (setDefaultSelected) {
-            options[_i2].defaultSelected = true;
-          }
-
-          return;
-        }
+    }
 
     node.textContent = text;
   };
@@ -2405,7 +2383,6 @@
     if (isEmpty) {
       return '';
     }
-  }
 
     if (!isCustomProperty && typeof value === 'number' && value !== 0 && !(isUnitlessNumber.hasOwnProperty(name) && isUnitlessNumber[name])) {
       return value + 'px'; // Presumes implicit 'px' suffix for unitless numbers
@@ -3635,8 +3612,6 @@
 
     return target.nodeType === TEXT_NODE ? target.parentNode : target;
   }
-  function findCurrentHostFiber(parent) {
-    var currentParent = findCurrentFiberUsingSlowPath(parent);
 
   var restoreImpl = null;
   var restoreTarget = null;
@@ -3666,8 +3641,6 @@
       restoreImpl(internalInstance.stateNode, internalInstance.type, _props);
     }
   }
-  function findCurrentHostFiberWithNoPortals(parent) {
-    var currentParent = findCurrentFiberUsingSlowPath(parent);
 
   function setRestoreImplementation(impl) {
     restoreImpl = impl;
@@ -4582,8 +4555,7 @@
     // eslint-disable-next-line no-unreachable
 
 
-    queuedPointers.forEach(attemptReplayContinuousQueuedEventInMap);
-    queuedPointerCaptures.forEach(attemptReplayContinuousQueuedEventInMap);
+    return null;
   }
   function doesFiberContain(parentFiber, childFiber) {
     var node = childFiber;
@@ -5325,7 +5297,6 @@
       return_highestLanePriority = SelectiveHydrationLanePriority;
       return SelectiveHydrationLane;
     }
-  }
 
     if ((lanes & IdleHydrationLane) !== NoLanes) {
       return_highestLanePriority = IdleHydrationLanePriority;
@@ -7099,7 +7070,6 @@
     if (nodeName === 'input') {
       return !!supportedInputTypes[elem.type];
     }
-  }
 
     if (nodeName === 'textarea') {
       return true;
@@ -7380,11 +7350,6 @@
       handleControlledInputBlur(targetNode);
     }
   }
-  function canHydrateTextInstance(instance, text) {
-    if (text === '' || instance.nodeType !== TEXT_NODE) {
-      // Empty strings are not parsed by HTML so there won't be a correct match here.
-      return null;
-    } // This has now been refined to a text node.
 
   function registerEvents$2() {
     registerDirectEvent('onMouseEnter', ['mouseout', 'mouseover']);
@@ -7544,10 +7509,6 @@
 
     return true;
   }
-  /**
-   * Given a ReactDOMComponent or ReactDOMTextComponent, return the corresponding
-   * DOM node.
-   */
 
   /**
    * Given any node return the first leaf node without children.
@@ -7789,22 +7750,10 @@
       }
     }
   }
-  /**
-   * Collect dispatches (must be entirely collected before dispatching - see unit
-   * tests). Lazily allocate the array to conserve memory.  We must loop through
-   * each event and perform the traversal for each one. We cannot perform a
-   * single traversal for the entire collection of events because each event may
-   * have a different target.
-   */
 
   function isTextNode(node) {
     return node && node.nodeType === TEXT_NODE;
   }
-  /**
-   * Accumulates without regard to direction, does not look for phased
-   * registration names. Same as `accumulateDirectDispatchesSingle` but without
-   * requiring that the `dispatchMarker` be the same as the dispatched ID.
-   */
 
   function containsNode(outerNode, innerNode) {
     if (!outerNode || !innerNode) {
@@ -7823,11 +7772,6 @@
       return false;
     }
   }
-  /**
-   * Accumulates dispatches on an `SyntheticEvent`, but only for the
-   * `dispatchMarker`.
-   * @param {SyntheticEvent} event
-   */
 
   function isInDocument(node) {
     return node && node.ownerDocument && containsNode(node.ownerDocument.documentElement, node);
@@ -8594,14 +8538,6 @@
       return dispatchEventsForPlugins(domEventName, eventSystemFlags, nativeEvent, ancestorInst);
     });
   }
-  /**
-   * Does our fallback best-guess model think this event signifies that
-   * composition has begun?
-   *
-   * @param {string} topLevelType
-   * @param {object} nativeEvent
-   * @return {boolean}
-   */
 
   function createDispatchListener(instance, listener, currentTarget) {
     return {
@@ -8752,12 +8688,6 @@
 
     return null;
   }
-  /**
-   * Extract a SyntheticInputEvent for `beforeInput`, based on either native
-   * `textInput` or fallback behavior.
-   *
-   * @return {?object} A SyntheticInputEvent.
-   */
 
   function accumulateEnterLeaveListenersForEvent(dispatchQueue, event, target, common, inCapturePhase) {
     var registrationName = event._reactName;
@@ -8958,10 +8888,6 @@
       return testElement.innerHTML;
     };
   }
-  /**
-   * (For IE <=9) Handles a propertychange event, sending a `change` event if
-   * the value of the active element has changed.
-   */
 
   function getOwnerDocumentFromRootContainer(rootContainerElement) {
     return rootContainerElement.nodeType === DOCUMENT_NODE ? rootContainerElement : rootContainerElement.ownerDocument;
@@ -10771,7 +10697,6 @@
         return null;
       }
     }
-  }
 
     return null;
   }
@@ -22929,11 +22854,6 @@
           workInProgress = next;
           return;
         }
-      } while (true);
-
-      resetContextDependencies();
-      executionContext = prevExecutionContext;
-      popDispatcher(prevDispatcher);
 
         resetChildLanes(completedWork);
 
@@ -23523,10 +23443,6 @@
       nextEffect = nextEffect.nextEffect;
     }
   }
-  function renderDidSuspendDelayIfPossible() {
-    if (workInProgressRootExitStatus === RootIncomplete || workInProgressRootExitStatus === RootSuspended) {
-      workInProgressRootExitStatus = RootSuspendedWithDelay;
-    } // Check if there's a lower priority update somewhere else in the tree.
 
   function commitLayoutEffects(root, committedLanes) {
 
@@ -24254,6 +24170,7 @@
         subscriber.onWorkScheduled(interactions, threadID);
       }
     }
+  }
 
   function schedulePendingInteractions(root, lane) {
 
@@ -24684,8 +24601,6 @@
       }
     }
   }
-  function resolveRetryThenable(boundaryFiber, thenable) {
-    var retryTime = NoWork; // Default
 
   function findHostInstancesForFiberShallowly(fiber, hostInstances) {
     {
@@ -24720,10 +24635,6 @@
         node = node.return;
       }
     }
-
-    var msUntilTimeout = busyDelayMs + busyMinDurationMs - timeElapsed; // This is the value that is passed to `setTimeout`.
-
-    return msUntilTimeout;
   }
 
   function findChildHostInstancesForFiberShallowly(fiber, hostInstances) {
@@ -24938,6 +24849,7 @@
         workInProgress.actualDuration = 0;
         workInProgress.actualStartTime = -1;
       }
+    }
 
     workInProgress.childLanes = current.childLanes;
     workInProgress.lanes = current.lanes;

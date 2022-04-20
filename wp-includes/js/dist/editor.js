@@ -203,9 +203,7 @@ if (false) { var throwOnDirectAccess, ReactIs; } else {
 }
 
 
-/**
- * WordPress dependencies
- */
+/***/ }),
 
 /***/ "1ZqX":
 /***/ (function(module, exports) {
@@ -2640,7 +2638,7 @@ function isPostAutosavingLocked(state) {
 /**
  * Returns whether the edition of the post has been taken over.
  *
- * @param {Object} data Incoming data to build the arguments from.
+ * @param {Object} state Global application state.
  *
  * @return {boolean} Is post lock takeover.
  */
@@ -2651,7 +2649,7 @@ function selectors_isPostLockTakeover(state) {
 /**
  * Returns details about the post lock user.
  *
- * @param {Object} data Incoming data to build the arguments with.
+ * @param {Object} state Global application state.
  *
  * @return {Object} A user object.
  */
@@ -4267,10 +4265,6 @@ Object(external_wp_data_["select"])(external_wp_blocks_["store"]).getBlockTypes(
   } = _ref2;
   return Object(external_wp_data_["select"])(external_wp_blocks_["store"]).getBlockType(name);
 }).forEach(shimAttributeSource);
-
-// EXTERNAL MODULE: external {"this":["wp","apiFetch"]}
-var external_this_wp_apiFetch_ = __webpack_require__(47);
-var external_this_wp_apiFetch_default = /*#__PURE__*/__webpack_require__.n(external_this_wp_apiFetch_);
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/autocompleters/user.js
 
@@ -5966,8 +5960,6 @@ const unescapeTerms = terms => {
 // CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/page-attributes/parent.js
 
 
-
-
 /**
  * External dependencies
  */
@@ -6438,7 +6430,7 @@ function PostAuthor() {
  */
 
 /**
- * Internal dependencies
+ * WordPress dependencies
  */
 
 
@@ -6447,7 +6439,6 @@ function PostAuthor() {
  * Internal dependencies
  */
 
-    var author = __unstableGetAuthor(getEditedPostAttribute('author'));
 
 
 
@@ -8762,6 +8753,7 @@ class maybe_tags_panel_MaybeTagsPanel extends external_wp_element_["Component"] 
 
 
 
+
 /**
  * Internal dependencies
  */
@@ -8947,9 +8939,6 @@ function PostPublishPanelPrepublish(_ref) {
 }
 
 /* harmony default export */ var prepublish = (PostPublishPanelPrepublish);
-
-// EXTERNAL MODULE: external {"this":["wp","htmlEntities"]}
-var external_this_wp_htmlEntities_ = __webpack_require__(69);
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/post-publish-panel/postpublish.js
 
@@ -10959,12 +10948,6 @@ var external_wp_reusableBlocks_ = __webpack_require__("diJD");
 
 
 
-/**
- * Warns the user if there are unsaved changes before leaving the editor.
- * Compatible with Post Editor and Site Editor.
- *
- * @return {WPComponent} The component.
- */
 
 /**
  * Internal dependencies
@@ -12254,8 +12237,7 @@ const wordpress = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["create
 /* harmony default export */ __webpack_exports__["a"] = (wordpress);
 
 
-(function () {
-	'use strict';
+/***/ }),
 
 /***/ "wx14":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {

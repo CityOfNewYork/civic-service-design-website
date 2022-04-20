@@ -5922,8 +5922,6 @@ module.exports = function hasToStringTagShams() {
 	return hasSymbols() && !!Symbol.toStringTag;
 };
 
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 1 modules
-var slicedToArray = __webpack_require__(12);
 
 /***/ }),
 
@@ -20899,7 +20897,6 @@ var executeJob = function (job) { return job(); };
 
 
 
-var emotion_element_57a3a7a3_browser_esm_hasOwnProperty = Object.prototype.hasOwnProperty;
 
 
 
@@ -23746,24 +23743,12 @@ function useFlexBlock(props) {
 // CONCATENATED MODULE: ./node_modules/@wordpress/components/build-module/flex/flex-block/component.js
 
 
-function flex_styles_EMOTION_STRINGIFIED_CSS_ERROR_() { return "You have tried to stringify object returned from `css` function. It isn't supposed to be used directly (e.g. as value of the `className` prop), but rather handed to emotion so it can handle it (e.g. as value of `css` prop)."; }
 
 /**
  * Internal dependencies
  */
 
 
-var flex_styles_alignStyle = function alignStyle(_ref2) {
-  var align = _ref2.align;
-  var aligns = {
-    top: 'flex-start',
-    bottom: 'flex-end'
-  };
-  var value = aligns[align] || align;
-  return /*#__PURE__*/css_browser_esm({
-    alignItems: value
-  },  true ? "" : undefined);
-};
 
 /**
  * @param {import('../../ui/context').WordPressComponentProps<import('../types').FlexBlockProps, 'div'>} props
@@ -23917,8 +23902,6 @@ function space(value) {
     return undefined;
   } // handle empty strings, if it's the number 0 this still works
 
-var flex_Flex = Object(external_this_wp_element_["forwardRef"])(FlexComponent);
-/* harmony default export */ var flex = (flex_Flex);
 
   if (!value) {
     return '0';
@@ -23940,7 +23923,7 @@ var flex_Flex = Object(external_this_wp_element_["forwardRef"])(FlexComponent);
 
 
 /**
- * Internal dependencies
+ * WordPress dependencies
  */
 
 
@@ -24014,8 +23997,6 @@ function rtl_rtl() {
       return Object(external_wp_i18n_["isRTL"])() ? /*#__PURE__*/Object(emotion_react_browser_esm["a" /* css */])(rtlStyles,  true ? "" : undefined) : /*#__PURE__*/Object(emotion_react_browser_esm["a" /* css */])(ltrStyles,  true ? "" : undefined);
     } // @ts-ignore: `css` types are wrong, it can accept an object: https://emotion.sh/docs/object-styles#with-css
 
-function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n\t", "\n\t", "\n"]);
 
     return Object(external_wp_i18n_["isRTL"])() ? /*#__PURE__*/Object(emotion_react_browser_esm["a" /* css */])(convertLTRToRTL(ltrStyles),  true ? "" : undefined) : /*#__PURE__*/Object(emotion_react_browser_esm["a" /* css */])(ltrStyles,  true ? "" : undefined);
   };
@@ -24044,24 +24025,16 @@ rtl_rtl.watch = () => Object(external_wp_i18n_["isRTL"])();
  * WordPress dependencies
  */
 
-  return data;
-}
 
-function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n\t\t\t\t", "\n\t\t\t\t", "\n\t\t\t"]);
 
 /**
  * Internal dependencies
  */
 
-  return data;
-}
 
 
 
 
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n\t\t\t\t", "\n\t\t\t\t", "\n\t\t\t"]);
 
 /**
  *
@@ -24148,25 +24121,14 @@ function useFlex(props) {
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/components/build-module/flex/flex/component.js
 
-  return data;
-}
 
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n\t\t\t\t", "\n\t\t\t\t", "\n\t\t\t"]);
 
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
+/**
+ * Internal dependencies
+ */
 
-  return data;
-}
 
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n\t\t\t\t", "\n\t\t\t\t", "\n\t\t\t"]);
 
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
 
 /**
  * @param {import('../../ui/context').WordPressComponentProps<import('../types').FlexProps, 'div'>} props
@@ -24284,11 +24246,6 @@ function truncateMiddle(word, headLength, tailLength, ellipsis) {
   } else if (backLength === 0) {
     return word.slice(0, frontLength) + truncateStr;
   }
-};
-/**
- * @typedef {Object} TextProps
- * @property {TextVariant} variant one of TextVariant to be used
- */
 
   return word.slice(0, frontLength) + truncateStr + word.slice(wordLength - backLength);
 }
@@ -24352,10 +24309,6 @@ function truncateContent() {
  */
 
 
-var input_control_styles_ref5 =  true ? {
-  name: "x4dmss",
-  styles: "justify-content:space-between;"
-} : undefined;
 
 
 
@@ -24607,35 +24560,13 @@ var dist = __webpack_require__("5V/u");
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/components/build-module/text/utils.js
 /**
- * WordPress dependencies
+ * External dependencies
  */
 
 
 /**
  * WordPress dependencies
  */
-
-
-
-function Backdrop(_ref) {
-  var _ref$disabled = _ref.disabled,
-      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-      _ref$isFocused = _ref.isFocused,
-      isFocused = _ref$isFocused === void 0 ? false : _ref$isFocused;
-  return Object(external_this_wp_element_["createElement"])(BackdropUI, {
-    "aria-hidden": "true",
-    className: "components-input-control__backdrop",
-    disabled: disabled,
-    isFocused: isFocused
-  });
-}
-
-var MemoizedBackdrop = Object(external_this_wp_element_["memo"])(Backdrop);
-/* harmony default export */ var backdrop = (MemoizedBackdrop);
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/components/build-module/input-control/label.js
-
-
 
 
 /**
@@ -24819,10 +24750,9 @@ function getHeadingFontSize() {
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/components/build-module/text/get-line-height.js
 /**
- * WordPress dependencies
+ * External dependencies
  */
 // eslint-disable-next-line no-restricted-imports
-
 
 /**
  * Internal dependencies
@@ -25621,7 +25551,7 @@ function _extends() {
   return _extends.apply(this, arguments);
 }
 
-function react_use_gesture_esm_inheritsLoose(subClass, superClass) {
+function _inheritsLoose(subClass, superClass) {
   subClass.prototype = Object.create(superClass.prototype);
   subClass.prototype.constructor = subClass;
   subClass.__proto__ = superClass;
@@ -27042,7 +26972,7 @@ function resolveClasses(internalHandlers) {
  */
 
 var CoordinatesRecognizer = /*#__PURE__*/function (_Recognizer) {
-  react_use_gesture_esm_inheritsLoose(CoordinatesRecognizer, _Recognizer);
+  _inheritsLoose(CoordinatesRecognizer, _Recognizer);
 
   function CoordinatesRecognizer() {
     return _Recognizer.apply(this, arguments) || this;
@@ -27127,7 +27057,7 @@ function persistEvent(event) {
 }
 
 var DragRecognizer = /*#__PURE__*/function (_CoordinatesRecognize) {
-  react_use_gesture_esm_inheritsLoose(DragRecognizer, _CoordinatesRecognize);
+  _inheritsLoose(DragRecognizer, _CoordinatesRecognize);
 
   function DragRecognizer() {
     var _this;
@@ -27580,7 +27510,7 @@ function reactusegesture_esm_useDrag(handler, config) {
  */
 
 var DistanceAngleRecognizer = /*#__PURE__*/function (_Recognizer) {
-  react_use_gesture_esm_inheritsLoose(DistanceAngleRecognizer, _Recognizer);
+  _inheritsLoose(DistanceAngleRecognizer, _Recognizer);
 
   function DistanceAngleRecognizer() {
     return _Recognizer.apply(this, arguments) || this;
@@ -27626,7 +27556,7 @@ var DistanceAngleRecognizer = /*#__PURE__*/function (_Recognizer) {
 var ZOOM_CONSTANT = 7;
 var WEBKIT_DISTANCE_SCALE_FACTOR = 260;
 var PinchRecognizer = /*#__PURE__*/function (_DistanceAngleRecogni) {
-  react_use_gesture_esm_inheritsLoose(PinchRecognizer, _DistanceAngleRecogni);
+  _inheritsLoose(PinchRecognizer, _DistanceAngleRecogni);
 
   function PinchRecognizer() {
     var _this;
@@ -27929,7 +27859,7 @@ function usePinch(handler, config) {
 }
 
 var WheelRecognizer = /*#__PURE__*/function (_CoordinatesRecognize) {
-  react_use_gesture_esm_inheritsLoose(WheelRecognizer, _CoordinatesRecognize);
+  _inheritsLoose(WheelRecognizer, _CoordinatesRecognize);
 
   function WheelRecognizer() {
     var _this;
@@ -28021,7 +27951,7 @@ function useWheel(handler, config) {
 }
 
 var MoveRecognizer = /*#__PURE__*/function (_CoordinatesRecognize) {
-  react_use_gesture_esm_inheritsLoose(MoveRecognizer, _CoordinatesRecognize);
+  _inheritsLoose(MoveRecognizer, _CoordinatesRecognize);
 
   function MoveRecognizer() {
     var _this;
@@ -28186,7 +28116,7 @@ function useHover(handler, config) {
 }
 
 var ScrollRecognizer = /*#__PURE__*/function (_CoordinatesRecognize) {
-  react_use_gesture_esm_inheritsLoose(ScrollRecognizer, _CoordinatesRecognize);
+  _inheritsLoose(ScrollRecognizer, _CoordinatesRecognize);
 
   function ScrollRecognizer() {
     var _this;
@@ -28790,10 +28720,7 @@ function isValueNumeric(value) {
       /** @type {string} */
       d) => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d)).replace(/٬/g, ',').replace(/٫/g, '.');
     }
-  }, {
-    threshold: dragThreshold,
-    enabled: isDragEnabled
-  });
+  }
 
   const [delimiterRegexp, decimalRegexp] = getDelimiterAndDecimalRegex(locale);
   const valueToCheck = typeof value === 'string' ? value.replace(delimiterRegexp, '').replace(decimalRegexp, '.').replace(INTERNATIONAL_THOUSANDS_DELIMITER, '') : value;
@@ -28802,7 +28729,7 @@ function isValueNumeric(value) {
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/components/build-module/utils/hooks/use-update-effect.js
 /**
- * External dependencies
+ * WordPress dependencies
  */
 
 /**
@@ -28828,10 +28755,7 @@ function useUpdateEffect(effect, deps) {
 
 /* harmony default export */ var use_update_effect = (useUpdateEffect);
 
-/* harmony default export */ var use_jump_step = (useJumpStep);
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/components/build-module/number-control/index.js
-
+// CONCATENATED MODULE: ./node_modules/@wordpress/components/build-module/input-control/input-field.js
 
 
 
@@ -28935,7 +28859,8 @@ function InputField(_ref, ref) {
     onBlur(event);
     setIsFocused === null || setIsFocused === void 0 ? void 0 : setIsFocused(false);
     /**
-     * Handles drag to update events
+     * If isPressEnterToChange is set, this commits the value to
+     * the onChange callback.
      */
 
     if (isPressEnterToChange && isDirty) {
@@ -28988,12 +28913,12 @@ function InputField(_ref, ref) {
       case external_wp_keycodes_["ENTER"]:
         pressEnter(event);
 
-      var _nextValue;
+        if (isPressEnterToChange) {
+          event.preventDefault();
+          handleOnCommit(event);
+        }
 
-      if (distance !== 0) {
-        _nextValue = roundClamp(add(currentValue, distance), min, max, modifier);
-        state.value = _nextValue;
-      }
+        break;
     }
   };
 
@@ -29009,16 +28934,18 @@ function InputField(_ref, ref) {
     if (!distance) return;
     event.stopPropagation();
     /**
-     * Handles commit (ENTER key press or on blur if isPressEnterToChange)
+     * Quick return if no longer dragging.
+     * This prevents unnecessary value calculations.
      */
 
-
-    if (type === inputControlActionTypes.PRESS_ENTER || type === inputControlActionTypes.COMMIT) {
-      state.value = roundClamp(currentValue, min, max);
+    if (!dragging) {
+      onDragEnd(dragProps);
+      dragEnd(dragProps);
+      return;
     }
 
-    return state;
-  };
+    onDrag(dragProps);
+    drag(dragProps);
 
     if (!isDragging) {
       onDragStart(dragProps);
@@ -29065,14 +28992,12 @@ function InputField(_ref, ref) {
     type: type
   }));
 }
-/* harmony default export */ var number_control = (Object(external_this_wp_element_["forwardRef"])(NumberControl));
 
 const ForwardedComponent = Object(external_wp_element_["forwardRef"])(InputField);
 /* harmony default export */ var input_field = (ForwardedComponent);
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/components/build-module/input-control/index.js
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/components/build-module/angle-picker-control/index.js
 
 
 /**
@@ -29161,30 +29086,13 @@ const input_control_ForwardedComponent = Object(external_wp_element_["forwardRef
 function angle_picker_control_styles_EMOTION_STRINGIFIED_CSS_ERROR_() { return "You have tried to stringify object returned from `css` function. It isn't supposed to be used directly (e.g. as value of the `className` prop), but rather handed to emotion so it can handle it (e.g. as value of `css` prop)."; }
 
 /**
- * WordPress dependencies
+ * External dependencies
  */
 
 /**
- * A Higher Order Component used to be provide speak and debounced speak
- * functions.
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-a11y/#speak
- *
- * @param {WPComponent} Component The component to be wrapped.
- *
- * @return {WPComponent} The wrapped component.
+ * Internal dependencies
  */
 
-/* harmony default export */ var with_spoken_messages = (Object(external_this_wp_compose_["createHigherOrderComponent"])(function (Component) {
-  return function (props) {
-    return Object(external_this_wp_element_["createElement"])(Component, Object(esm_extends["a" /* default */])({}, props, {
-      speak: external_this_wp_a11y_["speak"],
-      debouncedSpeak: Object(external_this_wp_compose_["useDebounce"])(external_this_wp_a11y_["speak"], 500)
-    }));
-  };
-}, 'withSpokenMessages'));
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/components/build-module/autocomplete/index.js
 
 
 
@@ -29402,124 +29310,31 @@ function Spacer(props, forwardedRef) {
  * ```
  */
 
-          var keyedOptions = optionsData.map(function (optionData, optionIndex) {
-            return {
-              key: "".concat(autocompleter.name, "-").concat(optionIndex),
-              value: optionData,
-              label: autocompleter.getOptionLabel(optionData),
-              keywords: autocompleter.getOptionKeywords ? autocompleter.getOptionKeywords(optionData) : [],
-              isDisabled: autocompleter.isOptionDisabled ? autocompleter.isOptionDisabled(optionData) : false
-            };
-          }); // create a regular expression to filter the options
 
 const ConnectedSpacer = Object(context_connect["a" /* contextConnect */])(Spacer, 'Spacer');
 /* harmony default export */ var spacer_component = (ConnectedSpacer);
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/components/build-module/angle-picker-control/index.js
 
-  function AutocompleterUI(_ref) {
-    var filterValue = _ref.filterValue,
-        instanceId = _ref.instanceId,
-        listBoxId = _ref.listBoxId,
-        className = _ref.className,
-        selectedIndex = _ref.selectedIndex,
-        onChangeOptions = _ref.onChangeOptions,
-        onSelect = _ref.onSelect,
-        onReset = _ref.onReset;
 
-    var _useItems = useItems(filterValue),
-        _useItems2 = Object(slicedToArray["a" /* default */])(_useItems, 1),
-        items = _useItems2[0];
+/**
+ * External dependencies
+ */
 
-    Object(external_this_wp_element_["useLayoutEffect"])(function () {
-      onChangeOptions(items);
-    }, [items]);
+/**
+ * WordPress dependencies
+ */
 
-    if (!items.length > 0) {
-      return null;
-    }
 
-    return Object(external_this_wp_element_["createElement"])(popover["a" /* default */], {
-      focusOnMount: false,
-      onClose: onReset,
-      position: "top right",
-      className: "components-autocomplete__popover",
-      anchorRef: getRange()
-    }, Object(external_this_wp_element_["createElement"])("div", {
-      id: listBoxId,
-      role: "listbox",
-      className: "components-autocomplete__results"
-    }, Object(external_this_lodash_["map"])(items, function (option, index) {
-      return Object(external_this_wp_element_["createElement"])(build_module_button["a" /* default */], {
-        key: option.key,
-        id: "components-autocomplete-item-".concat(instanceId, "-").concat(option.key),
-        role: "option",
-        "aria-selected": index === selectedIndex,
-        disabled: option.isDisabled,
-        className: classnames_default()('components-autocomplete__result', className, {
-          'is-selected': index === selectedIndex
-        }),
-        onClick: function onClick() {
-          return onSelect(option);
-        }
-      }, option.label);
-    })));
-  }
+/**
+ * Internal dependencies
+ */
 
-  return AutocompleterUI;
-};
 
-function Autocomplete(_ref2) {
-  var children = _ref2.children,
-      isSelected = _ref2.isSelected,
-      record = _ref2.record,
-      onChange = _ref2.onChange,
-      onReplace = _ref2.onReplace,
-      completers = _ref2.completers,
-      debouncedSpeak = _ref2.debouncedSpeak;
-  var instanceId = Object(external_this_wp_compose_["useInstanceId"])(Autocomplete);
 
-  var _useState3 = Object(external_this_wp_element_["useState"])(0),
-      _useState4 = Object(slicedToArray["a" /* default */])(_useState3, 2),
-      selectedIndex = _useState4[0],
-      setSelectedIndex = _useState4[1];
 
-  var _useState5 = Object(external_this_wp_element_["useState"])([]),
-      _useState6 = Object(slicedToArray["a" /* default */])(_useState5, 2),
-      filteredOptions = _useState6[0],
-      setFilteredOptions = _useState6[1];
 
-  var _useState7 = Object(external_this_wp_element_["useState"])(''),
-      _useState8 = Object(slicedToArray["a" /* default */])(_useState7, 2),
-      filterValue = _useState8[0],
-      setFilterValue = _useState8[1];
 
-  var _useState9 = Object(external_this_wp_element_["useState"])(null),
-      _useState10 = Object(slicedToArray["a" /* default */])(_useState9, 2),
-      autocompleter = _useState10[0],
-      setAutocompleter = _useState10[1];
-
-  var _useState11 = Object(external_this_wp_element_["useState"])(null),
-      _useState12 = Object(slicedToArray["a" /* default */])(_useState11, 2),
-      AutocompleterUI = _useState12[0],
-      setAutocompleterUI = _useState12[1];
-
-  function insertCompletion(replacement) {
-    var end = record.start;
-    var start = end - autocompleter.triggerPrefix.length - filterValue.length;
-    var toInsert = Object(external_this_wp_richText_["create"])({
-      html: Object(external_this_wp_element_["renderToString"])(replacement)
-    });
-    onChange(Object(external_this_wp_richText_["insert"])(record, toInsert, start, end));
-  }
-
-  function select(option) {
-    var _ref3 = autocompleter || {},
-        getOptionCompletion = _ref3.getOptionCompletion;
-
-    if (option.isDisabled) {
-      return;
-    }
 
 
 function AnglePickerControl(_ref) {
@@ -30159,7 +29974,6 @@ function Autocomplete(_ref3) {
 /**
  * Internal dependencies
  */
-
 
 
 /**
@@ -33431,7 +33245,6 @@ var Separator = Object(createComponent["a" /* createComponent */])({
 // CONCATENATED MODULE: ./node_modules/@wordpress/components/build-module/divider/styles.js
 
 
-
 /**
  * External dependencies
  */
@@ -33481,34 +33294,7 @@ const DividerView = Object(emotion_styled_base_browser_esm["a" /* default */])("
  * Internal dependencies
  */
 
-  return Object(external_this_wp_element_["createElement"])(base_control, null, Object(external_this_wp_element_["createElement"])("fieldset", null, Object(external_this_wp_element_["createElement"])("div", {
-    className: "components-color-edit__label-and-insert-container"
-  }, Object(external_this_wp_element_["createElement"])("legend", null, Object(external_this_wp_element_["createElement"])("div", null, Object(external_this_wp_element_["createElement"])(base_control.VisualLabel, null, Object(external_this_wp_i18n_["__"])('Color palette')))), !isInsertingColor && Object(external_this_wp_element_["createElement"])(build_module_button["a" /* default */], {
-    onClick: function onClick() {
-      setIsInsertingColor(true);
-    },
-    className: "components-color-edit__insert-button",
-    icon: plus["a" /* default */]
-  })), Object(external_this_wp_element_["createElement"])("div", null, !Object(external_this_lodash_["isEmpty"])(colors) && colors.map(function (color, index) {
-    return Object(external_this_wp_element_["createElement"])(ColorOption, {
-      key: index,
-      color: color.color,
-      name: color.name,
-      slug: color.slug,
-      onChange: function onChange(newColor) {
-        _onChange2(colors.map(function (currentColor, currentIndex) {
-          if (currentIndex === index) {
-            return newColor;
-          }
 
-          return currentColor;
-        }));
-      },
-      onRemove: function onRemove() {
-        _onChange2(colors.filter(function (_currentColor, currentIndex) {
-          if (currentIndex === index) {
-            return false;
-          }
 
 function component_Divider(props, forwardedRef) {
   const contextProps = Object(use_context_system["a" /* useContextSystem */])(props, 'Divider');
@@ -33555,9 +33341,6 @@ const ConnectedDivider = Object(context_connect["a" /* contextConnect */])(compo
 
 
 
-/**
- * External dependencies
- */
 
 /**
  * @param {import('../../ui/context').WordPressComponentProps<import('../../divider').DividerProps, 'hr', false>} props
@@ -38260,12 +38043,9 @@ const z_index_Tooltip = 1000002;
 
 function tooltip_styles_EMOTION_STRINGIFIED_CSS_ERROR_() { return "You have tried to stringify object returned from `css` function. It isn't supposed to be used directly (e.g. as value of the `className` prop), but rather handed to emotion so it can handle it (e.g. as value of `css` prop)."; }
 
-
 /**
  * External dependencies
  */
-
-
 
 
 /**
@@ -39858,7 +39638,6 @@ const MINIMUM_DISTANCE_BETWEEN_INSERTER_AND_MARKER = (INSERT_POINT_WIDTH + GRADI
 /**
  * Internal dependencies
  */
-
 
 /**
  * Control point for the gradient bar.

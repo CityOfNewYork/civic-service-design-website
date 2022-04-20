@@ -115,8 +115,6 @@ __webpack_require__.r(__webpack_exports__);
  * WordPress dependencies
  */
 
- // TODO: mark the deprecated controls after all Gutenberg usages are removed
-// import deprecated from '@wordpress/deprecated';
 
 
 /**

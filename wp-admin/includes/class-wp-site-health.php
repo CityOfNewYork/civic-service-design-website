@@ -2252,62 +2252,6 @@ class WP_Site_Health {
 	}
 
 	/**
-	 * Tests if the Authorization header has the expected values.
-	 *
-	 * @since 5.6.0
-	 *
-	 * @return array
-	 */
-	public function get_test_authorization_header() {
-		$result = array(
-			'label'       => __( 'The Authorization header is working as expected.' ),
-			'status'      => 'good',
-			'badge'       => array(
-				'label' => __( 'Security' ),
-				'color' => 'blue',
-			),
-			'description' => sprintf(
-				'<p>%s</p>',
-				__( 'The Authorization header comes from the third-party applications you approve. Without it, those apps cannot connect to your site.' )
-			),
-			'actions'     => '',
-			'test'        => 'authorization_header',
-		);
-
-		if ( ! isset( $_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW'] ) ) {
-			$result['label'] = __( 'The authorization header is missing.' );
-		} elseif ( 'user' !== $_SERVER['PHP_AUTH_USER'] || 'pwd' !== $_SERVER['PHP_AUTH_PW'] ) {
-			$result['label'] = __( 'The authorization header is invalid.' );
-		} else {
-			return $result;
-		}
-
-		$result['status'] = 'recommended';
-
-		if ( ! function_exists( 'got_mod_rewrite' ) ) {
-			require_once ABSPATH . 'wp-admin/includes/misc.php';
-		}
-
-		if ( got_mod_rewrite() ) {
-			$result['actions'] .= sprintf(
-				'<p><a href="%s">%s</a></p>',
-				esc_url( admin_url( 'options-permalink.php' ) ),
-				__( 'Flush permalinks' )
-			);
-		} else {
-			$result['actions'] .= sprintf(
-				'<p><a href="%s" target="_blank" rel="noopener">%s <span class="screen-reader-text">%s</span><span aria-hidden="true" class="dashicons dashicons-external"></span></a></p>',
-				__( 'https://developer.wordpress.org/rest-api/frequently-asked-questions/#why-is-authentication-not-working' ),
-				__( 'Learn how to configure the Authorization header.' ),
-				/* translators: Accessibility text. */
-				__( '(opens in a new tab)' )
-			);
-		}
-
-		return $result;
-	}
-
-	/**
 	 * Return a set of tests that belong to the site status page.
 	 *
 	 * Each site status test is defined here, they may be `direct` tests, that run on page load, or `async` tests
